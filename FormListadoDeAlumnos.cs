@@ -13,11 +13,22 @@ namespace ViolinSuzuki_Leila
     public partial class FormListadoDeAlumnos : Form
     {
         Helper helper;
-        public FormListadoDeAlumnos()
+        private string Modelo { get; set; }
+        private int IdMarca { get; set; }
+        private int IdMedida { get; set; }
+        private double Precio { get; set; }
+
+        public FormListadoDeAlumnos(string modelo, int idMarca, int idMedida, double precio)
         {
             InitializeComponent();
             helper = new Helper();
+            Modelo = modelo;
+            IdMarca = idMarca;
+            IdMedida = idMedida;
+            Precio = precio;
+
         }
+
 
         private void FormListadoDeAlumnos_Load(object sender, EventArgs e)
         {
@@ -44,6 +55,7 @@ namespace ViolinSuzuki_Leila
         private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Alumno alumno = new Alumno();
+            List<Parametro> list = new List<Parametro>();
             //Ponerle nombre al boton de la accion
             if (dgvAlumnos.CurrentCell.ColumnIndex == 0)
             {
@@ -54,16 +66,23 @@ namespace ViolinSuzuki_Leila
 
             }
 
-            DialogResult result = MessageBox.Show("El dueño es : " + alumno.ToString(), "Atencion", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("¿"+ "El dueño es : " + alumno.ToString() + "?", "Atencion", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.Yes)
             {
-                //Cargar Violin con el ID alumno
-               
+                
+                list.Add(new Parametro("@modelo", Modelo)); 
+                list.Add(new Parametro("@id_medida", IdMedida));
+                list.Add(new Parametro("@id_marca", IdMarca));
+                list.Add(new Parametro("@precio", Precio));
+                list.Add(new Parametro("@id_alumno", alumno.IdAlumno));
 
+                bool res = helper.Insertar("SP_CARGAR_VIOLIN", list);
 
-                //bool res = helper.Insertar("SP_CARGAR_VIOLIN")
-                MessageBox.Show("Exito");
+                if (res)
+                {
+                    MessageBox.Show("Exito");
+                }
 
             }
 

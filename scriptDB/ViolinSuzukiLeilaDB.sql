@@ -468,14 +468,17 @@ GO
 
 
 --SP INSERTAR VIOLIN
-CREATE PROCEDURE SP_CARGAR_VIOLIN
+alter PROCEDURE SP_CARGAR_VIOLIN
 	@modelo varchar(50),
 	@id_medida int,
 	@id_marca int,
 	@precio money,
-	@id_alumno int
+	@id_alumno int = null
 AS 
 BEGIN
 	INSERT INTO Violines(modelo,id_medida,id_marca,precio,id_alumno)
 	VALUES (@modelo,@id_medida,@id_marca,@precio,@id_alumno)
 END
+
+
+SELECT * FROM Violines
