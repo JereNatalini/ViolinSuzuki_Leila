@@ -35,8 +35,8 @@ namespace ViolinSuzuki_Leila
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormReporte report = new FormReporte();
-            report.Show();
+            FormCargarPersona formCargarPersona = new FormCargarPersona();
+            formCargarPersona.Show();
         }
     }
 }

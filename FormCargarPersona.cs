@@ -44,52 +44,67 @@ namespace ViolinSuzuki_Leila
                 parametros.Add(new Parametro("@id_tipo_responsable", cboTipoResp.SelectedValue));
             }
 
-            //Se insertar igualmente aunque el contacto esté mal, hay que solucionar eso
-            bool resultado = helper.Insertar(storedProcedure, parametros);
-
-            if (resultado)
+            if (Validar())
             {
-                List<Parametro> paramContacto = new List<Parametro>();
-                string id_alumno = "SP_OBTENER_ID_ALUMNO";
-                string id_responsable = "SP_OBTENER_ID_RESPONSABLE";
-                int? idAlumno = esAlumno ? ObtenerUltimoID(id_alumno) : null;
-                int? idResponsable = esAlumno ? null : ObtenerUltimoID(id_responsable);
+                bool resultado = helper.Insertar(storedProcedure, parametros);
 
-                paramContacto.Add(new Parametro("id_alumno", idAlumno));
-                paramContacto.Add(new Parametro("@id_responsable", idResponsable));
-
-                if (!string.IsNullOrEmpty(txtTelefono.Text))
+                if (resultado)
                 {
-                    paramContacto.Add(new Parametro("@id_tipo_contacto", 1));
-                    paramContacto.Add(new Parametro("@contacto", txtTelefono.Text));
-                }
-                else if (!string.IsNullOrWhiteSpace(txtEmail.Text))
-                {
-                    paramContacto.Add(new Parametro("@id_tipo_contacto", 2));
-                    paramContacto.Add(new Parametro("@contacto", txtEmail.Text));
-                }
-                else
-                {
-                    paramContacto.Add(new Parametro("@id_tipo_contacto", 1));
-                    paramContacto.Add(new Parametro("@contacto", null));
-                }
+                    List<Parametro> paramContacto = new List<Parametro>();
+                    string id_alumno = "SP_OBTENER_ID_ALUMNO";
+                    string id_responsable = "SP_OBTENER_ID_RESPONSABLE";
+                    int? idAlumno = esAlumno ? ObtenerUltimoID(id_alumno) : null;
+                    int? idResponsable = esAlumno ? null : ObtenerUltimoID(id_responsable);
+                    bool res;
 
-                //Hay que llamar al metodo para insertar el contacto
-                bool res = helper.Insertar("SP_INSERTAR_CONTACTO", paramContacto);
 
-                if (res)
-                {
 
-                    MessageBox.Show("Carga Exitosa", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiarCampos();
+                    if (!string.IsNullOrEmpty(txtTelefono.Text))
+                    {
+                        paramContacto.Add(new Parametro("@id_alumno", idAlumno));
+                        paramContacto.Add(new Parametro("@id_responsable", idResponsable));
+                        paramContacto.Add(new Parametro("@id_tipo_contacto", 1));
+                        paramContacto.Add(new Parametro("@contacto", txtTelefono.Text));
+
+                        res = helper.Insertar("SP_INSERTAR_CONTACTO", paramContacto);
+                    }
+                    else if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+                    {
+                            paramContacto.Clear();
+                        paramContacto.Add(new Parametro("@id_alumno", idAlumno));
+                        paramContacto.Add(new Parametro("@id_responsable", idResponsable));
+                        paramContacto.Add(new Parametro("@id_tipo_contacto", 2));
+                        paramContacto.Add(new Parametro("@contacto", txtEmail.Text));
+
+                        res = helper.Insertar("SP_INSERTAR_CONTACTO", paramContacto);
+                    }
+                    else
+                    {
+                        paramContacto.Add(new Parametro("@id_alumno", idAlumno));
+                        paramContacto.Add(new Parametro("@id_responsable", idResponsable));
+                        paramContacto.Add(new Parametro("@id_tipo_contacto", 1));
+                        paramContacto.Add(new Parametro("@contacto", null));
+
+                        res = helper.Insertar("SP_INSERTAR_CONTACTO", paramContacto);
+                    }
+
+                    //Hay que llamar al metodo para insertar el contacto
+
+
+                    if (res)
+                    {
+
+                        MessageBox.Show("Carga Exitosa", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Pincho bro");
+                    }
+
                 }
-                else
-                {
-                    MessageBox.Show("Pincho bro");
-                }
-
             }
-
+            
         }
 
         private void limpiarCampos()
@@ -138,6 +153,7 @@ namespace ViolinSuzuki_Leila
         {
             limpiarCampos();
             CargarCombo("PROVINCIA", cboProvincia);
+            CargarCombo("TIPO_RESPONSABLE", cboTipoResp);
         }
 
 
@@ -181,6 +197,47 @@ namespace ViolinSuzuki_Leila
             dtpFechaNac.Enabled = true;
             txtColegio.Enabled = true;
             cboTipoResp.Enabled = false;
+        }
+
+        private bool Validar()
+        {
+            bool retornar = false;
+            if (!rbtAlumno.Checked && !rbtResponsable.Checked)
+            {
+                MessageBox.Show("Debe seleccionar Alumno o Responsable.", "Error", MessageBoxButtons.OK);
+                return retornar;
+            }
+            if (txtNombre.Text == string.Empty)
+            {
+                MessageBox.Show("Debe ingresar un nombre.", "Error", MessageBoxButtons.OK);
+                return retornar;
+            }
+            if (txtApellido.Text == string.Empty)
+            {
+                MessageBox.Show("Debe ingresar un apellido.", "Error", MessageBoxButtons.OK);
+                return retornar;
+            }
+            if (txtDni.Text == string.Empty || txtDni.Text.Length<8)
+            {
+                MessageBox.Show("Debe ingresar un DNI valido.", "Error", MessageBoxButtons.OK);
+                return retornar;
+            }
+            if (txtCalle.Text == string.Empty)
+            {
+                MessageBox.Show("Debe ingresar una calle.", "Error", MessageBoxButtons.OK);
+                return retornar;
+            }
+            if (txtAltura.Text == string.Empty) 
+            {
+                MessageBox.Show("Debe ingresar una altura.", "Error", MessageBoxButtons.OK);
+                return retornar;
+            }
+            else
+            {
+                retornar = true;
+                return retornar;
+            }
+
         }
     }
 }

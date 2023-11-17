@@ -65,22 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.cs" />
-    <Compile Include="Reportes\DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormCargarPersona.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCargarPersona.Designer.cs">
       <DependentUpon>FormCargarPersona.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\FormReporte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\FormReporte.Designer.cs">
-      <DependentUpon>FormReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="MainForm.cs">
@@ -98,9 +87,6 @@
     <EmbeddedResource Include="FormCargarPersona.resx">
       <DependentUpon>FormCargarPersona.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\FormReporte.resx">
-      <DependentUpon>FormReporte.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,18 +99,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
-    <None Include="Reportes\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Reportes\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,6 +127,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
