@@ -68,5 +68,10 @@ namespace ViolinSuzuki_Leila
             get { return nombre; }
             set { nombre = value; }
         }
+
+        public override string ToString()
+        {
+            return Nombre + ", " + Apellido;
+        }
     }
 }

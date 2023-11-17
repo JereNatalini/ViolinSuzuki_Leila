@@ -12,13 +12,17 @@ namespace ViolinSuzuki_Leila
 {
     public partial class FormListadoDeAlumnos : Form
     {
+        Helper helper;
         public FormListadoDeAlumnos()
         {
             InitializeComponent();
+            helper = new Helper();
         }
 
         private void FormListadoDeAlumnos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal1.SP_LISTAR_ALUMNOS' Puede moverla o quitarla según sea necesario.
+            this.sP_LISTAR_ALUMNOSTableAdapter.Fill(this.dataSetPrincipal1.SP_LISTAR_ALUMNOS);
             // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.SP_LISTAR_ALUMNOS' Puede moverla o quitarla según sea necesario.
             this.sP_LISTAR_ALUMNOSTableAdapter.Fill(this.dataSetPrincipal.SP_LISTAR_ALUMNOS);
 
@@ -40,8 +44,48 @@ namespace ViolinSuzuki_Leila
         private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Alumno alumno = new Alumno();
+            //Ponerle nombre al boton de la accion
+            if (dgvAlumnos.CurrentCell.ColumnIndex == 0)
+            {
+                DataGridViewRow filaSeleccionada = dgvAlumnos.Rows[e.RowIndex];
+                alumno.IdAlumno = (int)filaSeleccionada.Cells[1].Value;
+                alumno.Nombre = filaSeleccionada.Cells[2].Value.ToString();
+                alumno.Apellido = filaSeleccionada.Cells[3].Value.ToString();
+
+            }
+
+            DialogResult result = MessageBox.Show("El dueño es : " + alumno.ToString(), "Atencion", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                //Cargar Violin con el ID alumno
+               
+
+
+                //bool res = helper.Insertar("SP_CARGAR_VIOLIN")
+                MessageBox.Show("Exito");
+
+            }
+
+
+            
+
 
 
         }
+
+        private void fillToolStripButton_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.sP_LISTAR_ALUMNOSTableAdapter.Fill(this.dataSetPrincipal1.SP_LISTAR_ALUMNOS);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
     }
 }

@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCargarViolines));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.cboMedidas = new System.Windows.Forms.ComboBox();
             this.cboMarcas = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,19 +52,19 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtModelo
             // 
-            this.textBox1.Location = new System.Drawing.Point(189, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 20);
-            this.textBox1.TabIndex = 21;
+            this.txtModelo.Location = new System.Drawing.Point(189, 84);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(264, 20);
+            this.txtModelo.TabIndex = 21;
             // 
-            // textBox2
+            // txtPrecio
             // 
-            this.textBox2.Location = new System.Drawing.Point(189, 208);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(264, 20);
-            this.textBox2.TabIndex = 22;
+            this.txtPrecio.Location = new System.Drawing.Point(189, 208);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(264, 20);
+            this.txtPrecio.TabIndex = 22;
             // 
             // cboMedidas
             // 
@@ -146,8 +146,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboMarcas);
             this.Controls.Add(this.cboMedidas);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormCargarViolines";
             this.Text = "FormCargarViolines";
@@ -161,8 +161,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.ComboBox cboMedidas;
         private System.Windows.Forms.ComboBox cboMarcas;
         private System.Windows.Forms.Label label1;

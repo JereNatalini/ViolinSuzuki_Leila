@@ -344,6 +344,25 @@ INSERT INTO Provincias(provincia) values('Cordoba')
 --INSERT CIUDADES
 INSERT INTO Ciudades(id_provincia, ciudad) values(1,'Cordoba Capital')
 
+--Insert tipo responsables
+INSERT INTO Tipo_Responsable(tipo_responsable) VALUES 
+('Madre'),
+('Padre'),
+('Abuela/o'),
+('Hermana/o');
+
+--INSERT Provincias
+INSERT INTO Provincias(provincia) VALUES 
+('Cordoba'),
+('Buenos Aires');
+
+--INSERT Ciudades
+INSERT INTO Ciudades(ciudad, id_provincia) VALUES 
+('Cordoba Capital', 1),
+('Alta Gracia', 1),
+('Capital Federal', 2);
+
+
 GO
 
 --SP CARGAR COMBO PROVINCIA
@@ -438,8 +457,25 @@ BEGIN
 END
 GO
 
+--SP LISTAR ALUMNOS 
+CREATE PROCEDURE SP_LISTAR_ALUMNOS
+AS
+BEGIN
+    SELECT * FROM Alumnos
+END
+GO
 
 
 
-
-
+--SP INSERTAR VIOLIN
+CREATE PROCEDURE SP_CARGAR_VIOLIN
+	@modelo varchar(50),
+	@id_medida int,
+	@id_marca int,
+	@precio money,
+	@id_alumno int
+AS 
+BEGIN
+	INSERT INTO Violines(modelo,id_medida,id_marca,precio,id_alumno)
+	VALUES (@modelo,@id_medida,@id_marca,@precio,@id_alumno)
+END
