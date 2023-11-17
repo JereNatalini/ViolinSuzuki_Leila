@@ -65,11 +65,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.cs" />
+    <Compile Include="DataSetPrincipal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormCargarPersona.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCargarPersona.Designer.cs">
       <DependentUpon>FormCargarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCargarViolines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCargarViolines.Designer.cs">
+      <DependentUpon>FormCargarViolines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListadoDeAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListadoDeAlumnos.Designer.cs">
+      <DependentUpon>FormListadoDeAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTiposDeCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTiposDeCarga.Designer.cs">
+      <DependentUpon>FormTiposDeCarga.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="MainForm.cs">
@@ -87,6 +110,15 @@
     <EmbeddedResource Include="FormCargarPersona.resx">
       <DependentUpon>FormCargarPersona.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCargarViolines.resx">
+      <DependentUpon>FormCargarViolines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListadoDeAlumnos.resx">
+      <DependentUpon>FormListadoDeAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTiposDeCarga.resx">
+      <DependentUpon>FormTiposDeCarga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +131,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSetPrincipal.xsc">
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPrincipal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrincipal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPrincipal.xss">
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

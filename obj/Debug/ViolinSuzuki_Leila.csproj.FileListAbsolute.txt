@@ -145,3 +145,6 @@ C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\bin\Debug\zh-CHT\
 C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.csproj.CopyComplete
+C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarViolines.resources
+C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormTiposDeCarga.resources
+C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListadoDeAlumnos.resources

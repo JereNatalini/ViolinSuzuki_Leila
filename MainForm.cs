@@ -33,10 +33,18 @@ namespace ViolinSuzuki_Leila
             formCargarPersona.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void cargarViolinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCargarPersona formCargarPersona = new FormCargarPersona();
-            formCargarPersona.Show();
+            FormCargarViolines formCargarViolines = new FormCargarViolines();
+            formCargarViolines.Show();
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            FormTiposDeCarga formTiposDeCarga = new FormTiposDeCarga();
+            formTiposDeCarga.ShowDialog();
         }
     }
 }
