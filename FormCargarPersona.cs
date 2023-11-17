@@ -68,7 +68,7 @@ namespace ViolinSuzuki_Leila
 
                         res = helper.Insertar("SP_INSERTAR_CONTACTO", paramContacto);
                     }
-                    else if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+                    if (!string.IsNullOrWhiteSpace(txtEmail.Text))
                     {
                             paramContacto.Clear();
                         paramContacto.Add(new Parametro("@id_alumno", idAlumno));
