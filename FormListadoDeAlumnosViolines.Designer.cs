@@ -1,6 +1,6 @@
 ﻿namespace ViolinSuzuki_Leila
 {
-    partial class FormListadoDeAlumnos
+    partial class FormListadoDeAlumnosViolines
     {
         /// <summary>
         /// Required designer variable.
@@ -30,26 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
-            this.sPLISTARALUMNOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetPrincipal1 = new ViolinSuzuki_Leila.DataSetPrincipal();
-            this.sPLISTARALUMNOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetPrincipal = new ViolinSuzuki_Leila.DataSetPrincipal();
-            this.sP_LISTAR_ALUMNOSTableAdapter = new ViolinSuzuki_Leila.DataSetPrincipalTableAdapters.SP_LISTAR_ALUMNOSTableAdapter();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.fillToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecnacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colegioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPLISTARALUMNOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetPrincipal1 = new ViolinSuzuki_Leila.DataSetPrincipal();
+            this.sPLISTARALUMNOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetPrincipal = new ViolinSuzuki_Leila.DataSetPrincipal();
+            this.sP_LISTAR_ALUMNOSTableAdapter = new ViolinSuzuki_Leila.DataSetPrincipalTableAdapters.SP_LISTAR_ALUMNOSTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
+            this.fillToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sPLISTARALUMNOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPLISTARALUMNOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal)).BeginInit();
-            this.fillToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAlumnos
@@ -71,29 +72,11 @@
             this.dgvAlumnos.TabIndex = 0;
             this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellContentClick);
             // 
-            // sPLISTARALUMNOSBindingSource1
+            // btnSeleccionar
             // 
-            this.sPLISTARALUMNOSBindingSource1.DataMember = "SP_LISTAR_ALUMNOS";
-            this.sPLISTARALUMNOSBindingSource1.DataSource = this.dataSetPrincipal1;
-            // 
-            // dataSetPrincipal1
-            // 
-            this.dataSetPrincipal1.DataSetName = "DataSetPrincipal";
-            this.dataSetPrincipal1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sPLISTARALUMNOSBindingSource
-            // 
-            this.sPLISTARALUMNOSBindingSource.DataMember = "SP_LISTAR_ALUMNOS";
-            this.sPLISTARALUMNOSBindingSource.DataSource = this.dataSetPrincipal;
-            // 
-            // dataSetPrincipal
-            // 
-            this.dataSetPrincipal.DataSetName = "DataSetPrincipal";
-            this.dataSetPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sP_LISTAR_ALUMNOSTableAdapter
-            // 
-            this.sP_LISTAR_ALUMNOSTableAdapter.ClearBeforeFill = true;
+            this.btnSeleccionar.HeaderText = "Accion";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Text = "Seleccionar";
             // 
             // fillToolStrip
             // 
@@ -112,12 +95,6 @@
             this.fillToolStripButton.Size = new System.Drawing.Size(26, 22);
             this.fillToolStripButton.Text = "Fill";
             this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click_1);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.HeaderText = "Accion";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Text = "Seleccionar";
             // 
             // idalumnoDataGridViewTextBoxColumn
             // 
@@ -156,24 +133,60 @@
             this.observacionesDataGridViewTextBoxColumn.HeaderText = "observaciones";
             this.observacionesDataGridViewTextBoxColumn.Name = "observacionesDataGridViewTextBoxColumn";
             // 
+            // sPLISTARALUMNOSBindingSource1
+            // 
+            this.sPLISTARALUMNOSBindingSource1.DataMember = "SP_LISTAR_ALUMNOS";
+            this.sPLISTARALUMNOSBindingSource1.DataSource = this.dataSetPrincipal1;
+            // 
+            // dataSetPrincipal1
+            // 
+            this.dataSetPrincipal1.DataSetName = "DataSetPrincipal";
+            this.dataSetPrincipal1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sPLISTARALUMNOSBindingSource
+            // 
+            this.sPLISTARALUMNOSBindingSource.DataMember = "SP_LISTAR_ALUMNOS";
+            this.sPLISTARALUMNOSBindingSource.DataSource = this.dataSetPrincipal;
+            // 
+            // dataSetPrincipal
+            // 
+            this.dataSetPrincipal.DataSetName = "DataSetPrincipal";
+            this.dataSetPrincipal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sP_LISTAR_ALUMNOSTableAdapter
+            // 
+            this.sP_LISTAR_ALUMNOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(45, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Seleccione un alumno";
+            // 
             // FormListadoDeAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(879, 458);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.fillToolStrip);
             this.Controls.Add(this.dgvAlumnos);
             this.Name = "FormListadoDeAlumnos";
             this.Text = "FormListadoDeAlumnos";
             this.Load += new System.EventHandler(this.FormListadoDeAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
+            this.fillToolStrip.ResumeLayout(false);
+            this.fillToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sPLISTARALUMNOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPLISTARALUMNOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal)).EndInit();
-            this.fillToolStrip.ResumeLayout(false);
-            this.fillToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +209,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecnacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colegioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacionesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
     }
 }

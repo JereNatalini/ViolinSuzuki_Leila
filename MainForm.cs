@@ -46,5 +46,10 @@ namespace ViolinSuzuki_Leila
             FormTiposDeCarga formTiposDeCarga = new FormTiposDeCarga();
             formTiposDeCarga.ShowDialog();
         }
+
+        private void btnClase_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

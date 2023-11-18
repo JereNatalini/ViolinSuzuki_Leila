@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ViolinSuzuki_Leila
 {
-    public partial class FormListadoDeAlumnos : Form
+    public partial class FormListadoDeAlumnosViolines : Form
     {
         Helper helper;
         private string Modelo { get; set; }
@@ -18,7 +18,7 @@ namespace ViolinSuzuki_Leila
         private int IdMedida { get; set; }
         private double Precio { get; set; }
 
-        public FormListadoDeAlumnos(string modelo, int idMarca, int idMedida, double precio)
+        public FormListadoDeAlumnosViolines(string modelo, int idMarca, int idMedida, double precio)
         {
             InitializeComponent();
             helper = new Helper();

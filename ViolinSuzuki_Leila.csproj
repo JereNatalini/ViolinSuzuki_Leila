@@ -70,6 +70,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormCargarClase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCargarClase.Designer.cs">
+      <DependentUpon>FormCargarClase.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCargarPersona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,11 @@
     <Compile Include="FormCargarViolines.Designer.cs">
       <DependentUpon>FormCargarViolines.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormListadoDeAlumnos.cs">
+    <Compile Include="FormListadoDeAlumnosViolines.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormListadoDeAlumnos.Designer.cs">
-      <DependentUpon>FormListadoDeAlumnos.cs</DependentUpon>
+    <Compile Include="FormListadoDeAlumnosViolines.Designer.cs">
+      <DependentUpon>FormListadoDeAlumnosViolines.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTiposDeCarga.cs">
       <SubType>Form</SubType>
@@ -107,14 +113,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Responsable.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormCargarClase.resx">
+      <DependentUpon>FormCargarClase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCargarPersona.resx">
       <DependentUpon>FormCargarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCargarViolines.resx">
       <DependentUpon>FormCargarViolines.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormListadoDeAlumnos.resx">
-      <DependentUpon>FormListadoDeAlumnos.cs</DependentUpon>
+    <EmbeddedResource Include="FormListadoDeAlumnosViolines.resx">
+      <DependentUpon>FormListadoDeAlumnosViolines.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTiposDeCarga.resx">
       <DependentUpon>FormTiposDeCarga.cs</DependentUpon>

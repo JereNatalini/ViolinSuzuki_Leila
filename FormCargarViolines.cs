@@ -56,7 +56,7 @@ namespace ViolinSuzuki_Leila
             DialogResult resultado = MessageBox.Show("¿El violin pertenece a un alumno?", "Atencion!", MessageBoxButtons.YesNo);
             if (resultado == DialogResult.Yes)
             {
-                FormListadoDeAlumnos formListadoDeAlumnos = new FormListadoDeAlumnos(modelo,id_marca,id_medida,precio);
+                FormListadoDeAlumnosViolines formListadoDeAlumnos = new FormListadoDeAlumnosViolines(modelo,id_marca,id_medida,precio);
                 formListadoDeAlumnos.Show();
             }
             else

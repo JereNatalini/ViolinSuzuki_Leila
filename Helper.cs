@@ -16,7 +16,7 @@ namespace ViolinSuzuki_Leila
 
         public Helper()
         {
-            cnnString = @"Data Source=DESKTOP-EEU1F57\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
+            cnnString = @"Data Source=DESKTOP-VC6AJLL\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
             cnn = new SqlConnection(cnnString);
             cmd = new SqlCommand();
         }

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnClase = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,6 +52,8 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(36)))));
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.label2);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.btnClase);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.label1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.btnCargar);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.pictureBox1);
@@ -67,6 +71,28 @@
             // 
             this.toolStripContainer1.TopToolStripPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(36)))));
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(468, 408);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 68);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Nueva \r\nClase";
+            // 
+            // btnClase
+            // 
+            this.btnClase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClase.BackgroundImage")));
+            this.btnClase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClase.Location = new System.Drawing.Point(451, 294);
+            this.btnClase.Name = "btnClase";
+            this.btnClase.Size = new System.Drawing.Size(111, 111);
+            this.btnClase.TabIndex = 3;
+            this.btnClase.UseVisualStyleBackColor = true;
+            this.btnClase.Click += new System.EventHandler(this.btnClase_Click);
             // 
             // label1
             // 
@@ -171,6 +197,8 @@
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem cargarViolinToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnClase;
     }
 }
 
