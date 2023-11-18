@@ -147,7 +147,6 @@ C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\bin\Debug\zh-HANT
 C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.csproj.CopyComplete
 C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarViolines.resources
 C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormTiposDeCarga.resources
-C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListadoDeAlumnos.resources
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -222,3 +221,7 @@ C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.csproj.CopyComplete
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.exe
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.pdb
+C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarClase.resources
+C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListadoDeAlumnosViolines.resources
+C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarAlumnosClases.resources
+C:\Users\JUAN\Desktop\ViolinSuzukiLeila\App\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarResponsablesClases.resources

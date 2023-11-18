@@ -49,7 +49,8 @@ namespace ViolinSuzuki_Leila
 
         private void btnClase_Click(object sender, EventArgs e)
         {
-
+            FormListarAlumnosClases formListarAlumnosClases = new FormListarAlumnosClases();
+            formListarAlumnosClases.ShowDialog();
         }
     }
 }

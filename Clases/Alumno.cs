@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ViolinSuzuki_Leila
 {
-    internal class Alumno : Persona
+    public class Alumno : Persona
     {
         private int idAlumno;
         private DateTime fec_nac;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ViolinSuzuki_Leila
 {
-    internal class Responsable
+    public class Responsable : Persona
     {
         private int idResonsable;
         private int idTipoResp;

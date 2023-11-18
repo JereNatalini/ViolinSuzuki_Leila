@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ViolinSuzuki_Leila
 {
-    internal abstract class Persona
+    public abstract class Persona
     {
         private string nombre;
         private string apellido;

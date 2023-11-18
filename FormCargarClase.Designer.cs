@@ -38,6 +38,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FormCargarClase";
             this.Text = "FormCargarClase";
+            this.Load += new System.EventHandler(this.FormCargarClase_Load);
             this.ResumeLayout(false);
 
         }
