@@ -497,3 +497,57 @@ BEGIN
     FROM Progresos
     ORDER BY id_responsable DESC;	
 END
+GO
+-- SP INSERTAR MAESTRO
+ALTER PROCEDURE SP_INSERTAR_MAESTRO
+@idAlumno int,
+@idResponsable int=null,
+@progresoNro int OUTPUT
+AS
+BEGIN
+	INSERT INTO Progresos(fecha, id_alumno, id_responsable)
+	VALUES(GETDATE(),@idAlumno, @idResponsable)
+	SET @progresoNro = SCOPE_IDENTITY()
+END
+GO
+-- SP INSERTAR DETALLE
+create PROCEDURE [dbo].[SP_INSERTAR_DETALLE] 
+	@progresoNro int,
+	@detalle int, 
+	@idCancion int, 
+	@observaciones varchar(150)
+AS
+BEGIN
+	INSERT INTO Detalles_Progreso(id_progreso, id_detalle_progreso,id_cancion, observaciones)
+    VALUES (@progresoNro, @detalle, @idCancion, @observaciones);
+  
+END
+GO
+--SP CARGAR COMBO LIBRO
+CREATE PROCEDURE SP_CARGAR_COMBO_LIBROS
+AS
+BEGIN
+	SELECT * FROM Libros_Suzuki
+END
+GO
+--SP CARGAR COMBO CANCION
+CREATE PROCEDURE SP_CARGAR_COMBO_CANCION
+@idLibro int
+AS
+BEGIN
+	SELECT * FROM Canciones
+	WHERE id_libro = @idLibro
+END
+GO
+
+--BORRAR COLUMNA ID_LIBRO
+alter table Detalles_Progreso
+drop constraint FK_DETALLES_PROGRESO_LIBROS
+alter table Detalles_Progreso
+drop column id_libro
+--CAMBIAR NOMBRE DE COLUMNA DETALLES EN DETALLES_PROGRESO
+alter table Detalles_Progreso
+drop column detalles
+alter table Detalles_Progreso
+add observaciones varchar(230)
+
