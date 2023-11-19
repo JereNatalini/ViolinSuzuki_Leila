@@ -12,7 +12,7 @@ namespace ViolinSuzuki_Leila.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -53,6 +53,17 @@ namespace ViolinSuzuki_Leila.Properties {
         public string VIOLIN_SUZUKI_LEILAConnectionString2 {
             get {
                 return ((string)(this["VIOLIN_SUZUKI_LEILAConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NTB62275\\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Se" +
+            "curity=True")]
+        public string VIOLIN_SUZUKI_LEILAConnectionString3 {
+            get {
+                return ((string)(this["VIOLIN_SUZUKI_LEILAConnectionString3"]));
             }
         }
     }

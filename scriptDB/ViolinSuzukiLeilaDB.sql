@@ -188,12 +188,10 @@ create table Detalles_Progreso
 (
 id_detalle_progreso int,
 id_progreso int,
-id_libro int,
 id_cancion int,
 observaciones varchar (230),
 CONSTRAINT PK_DETALLES_PROGRESO PRIMARY KEY (id_detalle_progreso, id_progreso),
 CONSTRAINT FK_DETALLES_PROGRESO_PROGRESO FOREIGN KEY (id_progreso) REFERENCES Progresos (id_progreso),
-CONSTRAINT FK_DETALLES_PROGRESO_LIBROS FOREIGN KEY (id_libro) REFERENCES Libros_Suzuki (id_libro),
 CONSTRAINT FK_DETALLES_PROGRESO_CANCIONES FOREIGN KEY (id_cancion) REFERENCES Canciones (id_cancion)
 )
 
@@ -338,11 +336,7 @@ INSERT INTO Canciones (cancion,id_libro) VALUES('1.Conc en La Mayor, K.219, Moza
 /*LIBRO 10*/
 INSERT INTO Canciones (cancion,id_libro) VALUES('1.Conc en Re Mayor, K.218, Mozart',10)
 
---INSERT PROVINCIAS
-INSERT INTO Provincias(provincia) values('Cordoba')
 
---INSERT CIUDADES
-INSERT INTO Ciudades(id_provincia, ciudad) values(1,'Cordoba Capital')
 
 --Insert tipo responsables
 INSERT INTO Tipo_Responsable(tipo_responsable) VALUES 
@@ -357,13 +351,13 @@ INSERT INTO Provincias(provincia) VALUES
 ('Buenos Aires');
 
 --INSERT Ciudades
-INSERT INTO Ciudades(ciudad, id_provincia) VALUES 
-('Cordoba Capital', 1),
+INSERT INTO Ciudades(ciudad, id_provincia) VALUES
 ('Alta Gracia', 1),
-('Capital Federal', 2);
-
-
+('Capital Federal', 2),
+('Cordoba Capital',1)
 GO
+
+DBCC CHECKIDENT ('Ciudades', RESEED, 0)
 
 --SP CARGAR COMBO PROVINCIA
 CREATE PROCEDURE SP_CARGAR_COMBO_PROVINCIA
@@ -465,6 +459,24 @@ BEGIN
 END
 GO
 
+--SP INSERTAR RESPONSABLE
+GO
+CREATE PROCEDURE [dbo].[SP_CARGAR_RESPONSABLE]
+@nombre varchar(50),
+@apellido varchar(50),
+@dni int,
+@calle varchar(50),
+@altura varchar(50),
+@id_ciudad int,
+@observaciones varchar(150),
+--parametros particulares de responsables
+@id_tipo_responsable int
+AS
+BEGIN
+INSERT INTO Responsables(nombre,apellido,dni, calle, altura,id_ciudad, fec_alta, id_tipo_responsable, observaciones)
+VALUES(@nombre,@apellido,@dni,@calle,@altura,@id_ciudad,getdate(),@id_tipo_responsable,@observaciones)
+END
+
 
 
 --SP INSERTAR VIOLIN
@@ -499,7 +511,7 @@ BEGIN
 END
 GO
 -- SP INSERTAR MAESTRO
-ALTER PROCEDURE SP_INSERTAR_MAESTRO
+CREATE PROCEDURE SP_INSERTAR_MAESTRO
 @idAlumno int,
 @idResponsable int=null,
 @progresoNro int OUTPUT
@@ -511,7 +523,7 @@ BEGIN
 END
 GO
 -- SP INSERTAR DETALLE
-ALTER PROCEDURE [dbo].[SP_INSERTAR_DETALLE] 
+CREATE PROCEDURE [dbo].[SP_INSERTAR_DETALLE] 
 	@progresoNro int,
 	@detalle int, 
 	@idCancion int, 
@@ -538,6 +550,10 @@ BEGIN
 	WHERE id_libro = @idLibro
 END
 GO
+
+
+
+
 
 
 
