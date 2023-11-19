@@ -22,10 +22,7 @@ namespace ViolinSuzuki_Leila
 
         private void FormListarResponsablesClases_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal4.SP_LISTAR_RESPONSABLES' Puede moverla o quitarla según sea necesario.
-            this.sP_LISTAR_RESPONSABLESTableAdapter.Fill(this.dataSetPrincipal4.SP_LISTAR_RESPONSABLES);
-            // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal3.SP_TEST_DGV_RESPONSABLES' Puede moverla o quitarla según sea necesario.
-            this.sP_TEST_DGV_RESPONSABLESTableAdapter.Fill(this.dataSetPrincipal3.SP_TEST_DGV_RESPONSABLES);
+            
             // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.SP_LISTAR_RESPONSABLES' Puede moverla o quitarla según sea necesario.
             this.sP_LISTAR_RESPONSABLESTableAdapter.Fill(this.dataSetPrincipal.SP_LISTAR_RESPONSABLES);
 
@@ -48,6 +45,14 @@ namespace ViolinSuzuki_Leila
                 formCargarClase.Show();
                 Close();
             }
+        }
+
+        private void btnSinResponsable_Click(object sender, EventArgs e)
+        {
+            Progreso progreso = new Progreso(alumno);
+            FormCargarClase formCargarClase = new FormCargarClase(progreso);
+            formCargarClase.Show();
+            Close();
         }
     }
 }

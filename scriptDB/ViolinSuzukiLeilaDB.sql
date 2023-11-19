@@ -468,7 +468,7 @@ GO
 
 
 --SP INSERTAR VIOLIN
-alter PROCEDURE SP_CARGAR_VIOLIN
+CREATE PROCEDURE SP_CARGAR_VIOLIN
 	@modelo varchar(50),
 	@id_medida int,
 	@id_marca int,
@@ -479,6 +479,21 @@ BEGIN
 	INSERT INTO Violines(modelo,id_medida,id_marca,precio,id_alumno)
 	VALUES (@modelo,@id_medida,@id_marca,@precio,@id_alumno)
 END
-
-
-SELECT * FROM Violines
+go
+--SP LISTAR RESPONSABLE
+CREATE PROCEDURE SP_LISTAR_RESPONSABLES
+AS
+BEGIN
+    select r.id_responsable, r.nombre, r.apellido,T.tipo_responsable, r.id_tipo_responsable 
+    from Responsables r, Tipo_Responsable T
+    WHERE R.id_tipo_responsable = T.id_tipo_responsable
+END
+GO
+--SP CONSULTAR ULTIMO ID PROGRESO
+CREATE PROCEDURE SP_ULTIMO_ID_PROGRESO
+AS
+BEGIN
+	    SELECT TOP 1 *
+    FROM Progresos
+    ORDER BY id_responsable DESC;	
+END

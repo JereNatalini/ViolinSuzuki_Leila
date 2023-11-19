@@ -2,15 +2,16 @@
 <xs:schema id="DataSetPrincipal" targetNamespace="http://tempuri.org/DataSetPrincipal.xsd" xmlns:mstns="http://tempuri.org/DataSetPrincipal.xsd" xmlns="http://tempuri.org/DataSetPrincipal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VIOLIN_SUZUKI_LEILAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VIOLIN_SUZUKI_LEILAConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ViolinSuzuki_Leila.Properties.Settings.GlobalReference.Default.VIOLIN_SUZUKI_LEILAConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VIOLIN_SUZUKI_LEILAConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="VIOLIN_SUZUKI_LEILAConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ViolinSuzuki_Leila.Properties.Settings.GlobalReference.Default.VIOLIN_SUZUKI_LEILAConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VIOLIN_SUZUKI_LEILAConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VIOLIN_SUZUKI_LEILAConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ViolinSuzuki_Leila.Properties.Settings.GlobalReference.Default.VIOLIN_SUZUKI_LEILAConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VIOLIN_SUZUKI_LEILAConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VIOLIN_SUZUKI_LEILAConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ViolinSuzuki_Leila.Properties.Settings.GlobalReference.Default.VIOLIN_SUZUKI_LEILAConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_LISTAR_ALUMNOSTableAdapter" GeneratorDataComponentClassName="SP_LISTAR_ALUMNOSTableAdapter" Name="SP_LISTAR_ALUMNOS" UserDataComponentName="SP_LISTAR_ALUMNOSTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="VIOLIN_SUZUKI_LEILAConnectionString (Settings)" DbObjectName="VIOLIN_SUZUKI_LEILA.dbo.SP_LISTAR_ALUMNOS" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="VIOLIN_SUZUKI_LEILAConnectionString2 (Settings)" DbObjectName="VIOLIN_SUZUKI_LEILA.dbo.SP_LISTAR_ALUMNOS" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SP_LISTAR_ALUMNOS</CommandText>
@@ -38,7 +39,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_LISTAR_RESPONSABLESTableAdapter" GeneratorDataComponentClassName="SP_LISTAR_RESPONSABLESTableAdapter" Name="SP_LISTAR_RESPONSABLES" UserDataComponentName="SP_LISTAR_RESPONSABLESTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="VIOLIN_SUZUKI_LEILAConnectionString (Settings)" DbObjectName="VIOLIN_SUZUKI_LEILA.dbo.SP_LISTAR_RESPONSABLES" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="VIOLIN_SUZUKI_LEILAConnectionString2 (Settings)" DbObjectName="VIOLIN_SUZUKI_LEILA.dbo.SP_LISTAR_RESPONSABLES" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SP_LISTAR_RESPONSABLES</CommandText>
@@ -58,33 +59,6 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_TEST_DGV_RESPONSABLESTableAdapter" GeneratorDataComponentClassName="SP_TEST_DGV_RESPONSABLESTableAdapter" Name="SP_TEST_DGV_RESPONSABLES" UserDataComponentName="SP_TEST_DGV_RESPONSABLESTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="VIOLIN_SUZUKI_LEILAConnectionString (Settings)" DbObjectName="VIOLIN_SUZUKI_LEILA.dbo.SP_TEST_DGV_RESPONSABLES" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
-                    <CommandText>dbo.SP_TEST_DGV_RESPONSABLES</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="id_responsable" DataSetColumn="id_responsable" />
-              <Mapping SourceColumn="id_tipo_responsable" DataSetColumn="id_tipo_responsable" />
-              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
-              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
-              <Mapping SourceColumn="calle" DataSetColumn="calle" />
-              <Mapping SourceColumn="altura" DataSetColumn="altura" />
-              <Mapping SourceColumn="id_ciudad" DataSetColumn="id_ciudad" />
-              <Mapping SourceColumn="fec_alta" DataSetColumn="fec_alta" />
-              <Mapping SourceColumn="observaciones" DataSetColumn="observaciones" />
-              <Mapping SourceColumn="dni" DataSetColumn="dni" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -93,50 +67,50 @@
   <xs:element name="DataSetPrincipal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetPrincipal" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPrincipal">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SP_LISTAR_ALUMNOS" msprop:Generator_RowClassName="SP_LISTAR_ALUMNOSRow" msprop:Generator_RowEvHandlerName="SP_LISTAR_ALUMNOSRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_LISTAR_ALUMNOSRowDeleted" msprop:Generator_RowDeletingName="SP_LISTAR_ALUMNOSRowDeleting" msprop:Generator_RowEvArgName="SP_LISTAR_ALUMNOSRowChangeEvent" msprop:Generator_TablePropName="SP_LISTAR_ALUMNOS" msprop:Generator_RowChangedName="SP_LISTAR_ALUMNOSRowChanged" msprop:Generator_UserTableName="SP_LISTAR_ALUMNOS" msprop:Generator_RowChangingName="SP_LISTAR_ALUMNOSRowChanging" msprop:Generator_TableClassName="SP_LISTAR_ALUMNOSDataTable" msprop:Generator_TableVarName="tableSP_LISTAR_ALUMNOS">
+        <xs:element name="SP_LISTAR_ALUMNOS" msprop:Generator_RowEvHandlerName="SP_LISTAR_ALUMNOSRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_LISTAR_ALUMNOSRowDeleted" msprop:Generator_RowDeletingName="SP_LISTAR_ALUMNOSRowDeleting" msprop:Generator_RowEvArgName="SP_LISTAR_ALUMNOSRowChangeEvent" msprop:Generator_TablePropName="SP_LISTAR_ALUMNOS" msprop:Generator_RowChangedName="SP_LISTAR_ALUMNOSRowChanged" msprop:Generator_RowChangingName="SP_LISTAR_ALUMNOSRowChanging" msprop:Generator_TableClassName="SP_LISTAR_ALUMNOSDataTable" msprop:Generator_RowClassName="SP_LISTAR_ALUMNOSRow" msprop:Generator_TableVarName="tableSP_LISTAR_ALUMNOS" msprop:Generator_UserTableName="SP_LISTAR_ALUMNOS">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id_alumno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="id_alumno" msprop:Generator_ColumnPropNameInTable="id_alumnoColumn" msprop:Generator_ColumnPropNameInRow="id_alumno" msprop:Generator_ColumnVarNameInTable="columnid_alumno" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" minOccurs="0">
+              <xs:element name="id_alumno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="id_alumno" msprop:Generator_ColumnPropNameInTable="id_alumnoColumn" msprop:Generator_ColumnVarNameInTable="columnid_alumno" msprop:Generator_UserColumnName="id_alumno" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="apellido" msprop:Generator_UserColumnName="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" minOccurs="0">
+              <xs:element name="apellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_UserColumnName="apellido" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="dni" msprop:Generator_UserColumnName="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_ColumnVarNameInTable="columndni" type="xs:int" minOccurs="0" />
-              <xs:element name="calle" msprop:Generator_UserColumnName="calle" msprop:Generator_ColumnPropNameInTable="calleColumn" msprop:Generator_ColumnPropNameInRow="calle" msprop:Generator_ColumnVarNameInTable="columncalle" minOccurs="0">
+              <xs:element name="dni" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_ColumnVarNameInTable="columndni" msprop:Generator_UserColumnName="dni" type="xs:int" minOccurs="0" />
+              <xs:element name="calle" msprop:Generator_ColumnPropNameInRow="calle" msprop:Generator_ColumnPropNameInTable="calleColumn" msprop:Generator_ColumnVarNameInTable="columncalle" msprop:Generator_UserColumnName="calle" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="altura" msprop:Generator_UserColumnName="altura" msprop:Generator_ColumnPropNameInTable="alturaColumn" msprop:Generator_ColumnPropNameInRow="altura" msprop:Generator_ColumnVarNameInTable="columnaltura" minOccurs="0">
+              <xs:element name="altura" msprop:Generator_ColumnPropNameInRow="altura" msprop:Generator_ColumnPropNameInTable="alturaColumn" msprop:Generator_ColumnVarNameInTable="columnaltura" msprop:Generator_UserColumnName="altura" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="id_ciudad" msprop:Generator_UserColumnName="id_ciudad" msprop:Generator_ColumnPropNameInTable="id_ciudadColumn" msprop:Generator_ColumnPropNameInRow="id_ciudad" msprop:Generator_ColumnVarNameInTable="columnid_ciudad" type="xs:int" minOccurs="0" />
-              <xs:element name="fec_alta" msprop:Generator_UserColumnName="fec_alta" msprop:Generator_ColumnPropNameInTable="fec_altaColumn" msprop:Generator_ColumnPropNameInRow="fec_alta" msprop:Generator_ColumnVarNameInTable="columnfec_alta" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="fec_nac" msprop:Generator_UserColumnName="fec_nac" msprop:Generator_ColumnPropNameInTable="fec_nacColumn" msprop:Generator_ColumnPropNameInRow="fec_nac" msprop:Generator_ColumnVarNameInTable="columnfec_nac" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="colegio" msprop:Generator_UserColumnName="colegio" msprop:Generator_ColumnPropNameInTable="colegioColumn" msprop:Generator_ColumnPropNameInRow="colegio" msprop:Generator_ColumnVarNameInTable="columncolegio" minOccurs="0">
+              <xs:element name="id_ciudad" msprop:Generator_ColumnPropNameInRow="id_ciudad" msprop:Generator_ColumnPropNameInTable="id_ciudadColumn" msprop:Generator_ColumnVarNameInTable="columnid_ciudad" msprop:Generator_UserColumnName="id_ciudad" type="xs:int" minOccurs="0" />
+              <xs:element name="fec_alta" msprop:Generator_ColumnPropNameInRow="fec_alta" msprop:Generator_ColumnPropNameInTable="fec_altaColumn" msprop:Generator_ColumnVarNameInTable="columnfec_alta" msprop:Generator_UserColumnName="fec_alta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fec_nac" msprop:Generator_ColumnPropNameInRow="fec_nac" msprop:Generator_ColumnPropNameInTable="fec_nacColumn" msprop:Generator_ColumnVarNameInTable="columnfec_nac" msprop:Generator_UserColumnName="fec_nac" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="colegio" msprop:Generator_ColumnPropNameInRow="colegio" msprop:Generator_ColumnPropNameInTable="colegioColumn" msprop:Generator_ColumnVarNameInTable="columncolegio" msprop:Generator_UserColumnName="colegio" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="observaciones" msprop:Generator_UserColumnName="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" minOccurs="0">
+              <xs:element name="observaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_UserColumnName="observaciones" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
@@ -175,52 +149,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SP_TEST_DGV_RESPONSABLES" msprop:Generator_RowEvHandlerName="SP_TEST_DGV_RESPONSABLESRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_TEST_DGV_RESPONSABLESRowDeleted" msprop:Generator_RowDeletingName="SP_TEST_DGV_RESPONSABLESRowDeleting" msprop:Generator_RowEvArgName="SP_TEST_DGV_RESPONSABLESRowChangeEvent" msprop:Generator_TablePropName="SP_TEST_DGV_RESPONSABLES" msprop:Generator_RowChangedName="SP_TEST_DGV_RESPONSABLESRowChanged" msprop:Generator_RowChangingName="SP_TEST_DGV_RESPONSABLESRowChanging" msprop:Generator_TableClassName="SP_TEST_DGV_RESPONSABLESDataTable" msprop:Generator_RowClassName="SP_TEST_DGV_RESPONSABLESRow" msprop:Generator_TableVarName="tableSP_TEST_DGV_RESPONSABLES" msprop:Generator_UserTableName="SP_TEST_DGV_RESPONSABLES">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id_responsable" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="id_responsable" msprop:Generator_ColumnPropNameInTable="id_responsableColumn" msprop:Generator_ColumnVarNameInTable="columnid_responsable" msprop:Generator_UserColumnName="id_responsable" type="xs:int" />
-              <xs:element name="id_tipo_responsable" msprop:Generator_ColumnPropNameInRow="id_tipo_responsable" msprop:Generator_ColumnPropNameInTable="id_tipo_responsableColumn" msprop:Generator_ColumnVarNameInTable="columnid_tipo_responsable" msprop:Generator_UserColumnName="id_tipo_responsable" type="xs:int" minOccurs="0" />
-              <xs:element name="nombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_UserColumnName="nombre" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="40" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="apellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_UserColumnName="apellido" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="40" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="calle" msprop:Generator_ColumnPropNameInRow="calle" msprop:Generator_ColumnPropNameInTable="calleColumn" msprop:Generator_ColumnVarNameInTable="columncalle" msprop:Generator_UserColumnName="calle" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="altura" msprop:Generator_ColumnPropNameInRow="altura" msprop:Generator_ColumnPropNameInTable="alturaColumn" msprop:Generator_ColumnVarNameInTable="columnaltura" msprop:Generator_UserColumnName="altura" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="id_ciudad" msprop:Generator_ColumnPropNameInRow="id_ciudad" msprop:Generator_ColumnPropNameInTable="id_ciudadColumn" msprop:Generator_ColumnVarNameInTable="columnid_ciudad" msprop:Generator_UserColumnName="id_ciudad" type="xs:int" minOccurs="0" />
-              <xs:element name="fec_alta" msprop:Generator_ColumnPropNameInRow="fec_alta" msprop:Generator_ColumnPropNameInTable="fec_altaColumn" msprop:Generator_ColumnVarNameInTable="columnfec_alta" msprop:Generator_UserColumnName="fec_alta" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="observaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_UserColumnName="observaciones" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="200" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="dni" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_ColumnVarNameInTable="columndni" msprop:Generator_UserColumnName="dni" type="xs:int" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -229,10 +157,6 @@
     </xs:unique>
     <xs:unique name="SP_LISTAR_RESPONSABLES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:SP_LISTAR_RESPONSABLES" />
-      <xs:field xpath="mstns:id_responsable" />
-    </xs:unique>
-    <xs:unique name="SP_TEST_DGV_RESPONSABLES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:SP_TEST_DGV_RESPONSABLES" />
       <xs:field xpath="mstns:id_responsable" />
     </xs:unique>
   </xs:element>

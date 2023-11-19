@@ -19,10 +19,10 @@ namespace ViolinSuzuki_Leila
 
         private void FormListarAlumnosClases_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.SP_LISTAR_RESPONSABLES' Puede moverla o quitarla según sea necesario.
-            this.sP_LISTAR_RESPONSABLESTableAdapter.Fill(this.dataSetPrincipal.SP_LISTAR_RESPONSABLES);
-            // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.SP_LISTAR_ALUMNOS' Puede moverla o quitarla según sea necesario.
-            this.sP_LISTAR_ALUMNOSTableAdapter.Fill(this.dataSetPrincipal.SP_LISTAR_ALUMNOS);
+            // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal1.SP_LISTAR_ALUMNOS' Puede moverla o quitarla según sea necesario.
+            this.sP_LISTAR_ALUMNOSTableAdapter.Fill(this.dataSetPrincipal1.SP_LISTAR_ALUMNOS);
+            btnSeleccionar.Text = "Seleccionar";
+
 
         }
 

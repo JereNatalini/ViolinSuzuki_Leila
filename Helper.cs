@@ -16,7 +16,7 @@ namespace ViolinSuzuki_Leila
 
         public Helper()
         {
-            cnnString = @"Data Source=DESKTOP-VC6AJLL\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
+            cnnString = @"Data Source=JUANSANTACROCE\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
             cnn = new SqlConnection(cnnString);
             cmd = new SqlCommand();
         }
@@ -57,6 +57,7 @@ namespace ViolinSuzuki_Leila
 
         public int? ConsultarID(string nombreSP)
         {
+            int? result;
             cnn.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cnn;
@@ -65,7 +66,16 @@ namespace ViolinSuzuki_Leila
             cmd.Parameters.Clear();
             DataTable dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
-            int? result = Convert.ToInt32(dt.Rows[0][0]);
+            //Este bloque es por si no hay ID´s porq no hay registros todavia
+            try
+            {
+                result = Convert.ToInt32(dt.Rows[0][0]);
+            }
+            catch 
+            {
+                result = 0;
+            }
+
             cnn.Close();
             return result;
         }

@@ -21,6 +21,15 @@ namespace ViolinSuzuki_Leila.Clases
 			this.alumno = alumno;
         }
 
+        public Progreso(Alumno alumno)
+        {
+            idProgreso = 0;
+            fechaHora = DateTime.Now;
+            this.responsable = null;
+            this.alumno = alumno;
+        }
+
+
         public Responsable pResponsable
 		{
 			get { return responsable; }

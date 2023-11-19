@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataSetPrincipal = new ViolinSuzuki_Leila.DataSetPrincipal();
             this.sP_LISTAR_ALUMNOSTableAdapter = new ViolinSuzuki_Leila.DataSetPrincipalTableAdapters.SP_LISTAR_ALUMNOSTableAdapter();
-            this.sPLISTARALUMNOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPLISTARRESPONSABLESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sP_LISTAR_RESPONSABLESTableAdapter = new ViolinSuzuki_Leila.DataSetPrincipalTableAdapters.SP_LISTAR_RESPONSABLESTableAdapter();
+            this.dataSetPrincipal1 = new ViolinSuzuki_Leila.DataSetPrincipal();
+            this.sPLISTARALUMNOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacionesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPLISTARALUMNOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPLISTARRESPONSABLESBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,11 +76,6 @@
             this.dgvAlumnos.TabIndex = 1;
             this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.HeaderText = "Seleccionar";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            // 
             // dataSetPrincipal
             // 
             this.dataSetPrincipal.DataSetName = "DataSetPrincipal";
@@ -90,28 +85,19 @@
             // 
             this.sP_LISTAR_ALUMNOSTableAdapter.ClearBeforeFill = true;
             // 
+            // sP_LISTAR_RESPONSABLESTableAdapter
+            // 
+            this.sP_LISTAR_RESPONSABLESTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataSetPrincipal1
+            // 
+            this.dataSetPrincipal1.DataSetName = "DataSetPrincipal";
+            this.dataSetPrincipal1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // sPLISTARALUMNOSBindingSource
             // 
             this.sPLISTARALUMNOSBindingSource.DataMember = "SP_LISTAR_ALUMNOS";
-            this.sPLISTARALUMNOSBindingSource.DataSource = this.dataSetPrincipal;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // observacionesDataGridViewTextBoxColumn
-            // 
-            this.observacionesDataGridViewTextBoxColumn.DataPropertyName = "observaciones";
-            this.observacionesDataGridViewTextBoxColumn.HeaderText = "observaciones";
-            this.observacionesDataGridViewTextBoxColumn.Name = "observacionesDataGridViewTextBoxColumn";
+            this.sPLISTARALUMNOSBindingSource.DataSource = this.dataSetPrincipal1;
             // 
             // idalumnoDataGridViewTextBoxColumn
             // 
@@ -120,14 +106,28 @@
             this.idalumnoDataGridViewTextBoxColumn.Name = "idalumnoDataGridViewTextBoxColumn";
             this.idalumnoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // sPLISTARRESPONSABLESBindingSource
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.sPLISTARRESPONSABLESBindingSource.DataMember = "SP_LISTAR_RESPONSABLES";
-            this.sPLISTARRESPONSABLESBindingSource.DataSource = this.dataSetPrincipal;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             // 
-            // sP_LISTAR_RESPONSABLESTableAdapter
+            // apellidoDataGridViewTextBoxColumn
             // 
-            this.sP_LISTAR_RESPONSABLESTableAdapter.ClearBeforeFill = true;
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            // 
+            // observacionesDataGridViewTextBoxColumn
+            // 
+            this.observacionesDataGridViewTextBoxColumn.DataPropertyName = "observaciones";
+            this.observacionesDataGridViewTextBoxColumn.HeaderText = "observaciones";
+            this.observacionesDataGridViewTextBoxColumn.Name = "observacionesDataGridViewTextBoxColumn";
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.HeaderText = "Seleccionar";
+            this.btnSeleccionar.Name = "btnSeleccionar";
             // 
             // FormListarAlumnosClases
             // 
@@ -142,8 +142,8 @@
             this.Load += new System.EventHandler(this.FormListarAlumnosClases_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPrincipal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPLISTARALUMNOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPLISTARRESPONSABLESBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,13 +155,13 @@
         private System.Windows.Forms.DataGridView dgvAlumnos;
         private DataSetPrincipal dataSetPrincipal;
         private DataSetPrincipalTableAdapters.SP_LISTAR_ALUMNOSTableAdapter sP_LISTAR_ALUMNOSTableAdapter;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private DataSetPrincipalTableAdapters.SP_LISTAR_RESPONSABLESTableAdapter sP_LISTAR_RESPONSABLESTableAdapter;
+        private DataSetPrincipal dataSetPrincipal1;
+        private System.Windows.Forms.BindingSource sPLISTARALUMNOSBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacionesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource sPLISTARALUMNOSBindingSource;
-        private System.Windows.Forms.BindingSource sPLISTARRESPONSABLESBindingSource;
-        private DataSetPrincipalTableAdapters.SP_LISTAR_RESPONSABLESTableAdapter sP_LISTAR_RESPONSABLESTableAdapter;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
     }
 }
