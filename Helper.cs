@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ViolinSuzuki_Leila.Clases;
 
 namespace ViolinSuzuki_Leila
 {
@@ -119,6 +120,64 @@ namespace ViolinSuzuki_Leila
             }
             cnn.Close();
             return res;
+        }
+
+        public bool Confirmar(Progreso p)
+        {
+            bool resultado = true;
+            SqlTransaction t = null;
+
+            try
+            {
+                cnn.Open();
+                t = cnn.BeginTransaction();
+                //Insert Maestro
+                SqlCommand cmdM = new SqlCommand("SP_INSERTAR_MAESTRO", cnn, t);
+                cmdM.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idAlumno", p.pAlumno.IdAlumno);
+                cmd.Parameters.AddWithValue("@idResponsable", p.pResponsable.IdResponsable);
+                //Parametro de salida
+                SqlParameter pOut = new SqlParameter();
+                pOut.ParameterName = "@progresoNro";
+                pOut.DbType = DbType.Int32;
+                pOut.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pOut);
+                cmd.ExecuteNonQuery();
+
+                int progresoNro = (int)pOut.Value;
+
+                //Insert Detalle
+                SqlCommand cmdDetalle;
+                int detalleNro = 1;
+                foreach (DetalleProgreso item in p.detalles)
+                {
+                    cmdDetalle = new SqlCommand("SP_INSERTAR_DETALLE", cnn, t);
+                    cmdDetalle.CommandType = CommandType.StoredProcedure;
+                    cmdDetalle.Parameters.AddWithValue("@progresoNro", progresoNro);
+                    cmdDetalle.Parameters.AddWithValue("@detalle", detalleNro);
+                    cmdDetalle.Parameters.AddWithValue("@idCancion", item.pCancion.idCancion);
+                    cmdDetalle.Parameters.AddWithValue("@observaciones", item.pObservaciones);
+                    cmdDetalle.ExecuteNonQuery();
+
+                    detalleNro++;
+                }
+                t.Commit();
+
+
+            }
+            catch (Exception)
+            {
+                if (t != null)
+                    t.Rollback();
+                resultado = false;
+            }
+
+            finally
+            {
+                if (cnn != null && cnn.State == ConnectionState.Open)
+                    cnn.Close();
+            }
+            return resultado;
         }
     }
 }

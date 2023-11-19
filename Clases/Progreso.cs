@@ -12,6 +12,7 @@ namespace ViolinSuzuki_Leila.Clases
 		private DateTime fechaHora;
 		private Alumno alumno;
 		private Responsable responsable;
+		public List<DetalleProgreso> detalles;
 
         public Progreso(Alumno alumno, Responsable responsable)
         {
@@ -19,6 +20,7 @@ namespace ViolinSuzuki_Leila.Clases
 			fechaHora = DateTime.Now;
 			this.responsable = responsable;
 			this.alumno = alumno;
+			detalles = new List<DetalleProgreso>();
         }
 
         public Progreso(Alumno alumno)
@@ -27,6 +29,7 @@ namespace ViolinSuzuki_Leila.Clases
             fechaHora = DateTime.Now;
             this.responsable = null;
             this.alumno = alumno;
+			detalles = new List<DetalleProgreso>();
         }
 
 
@@ -55,5 +58,15 @@ namespace ViolinSuzuki_Leila.Clases
 			set { idProgreso = value; }
 		}
 
+
+		public void AgregarDetalle(DetalleProgreso detalle)
+		{
+			detalles.Add(detalle);
+		}
+
+		public void QuitarDetalle(int indice)
+		{
+			detalles.RemoveAt(indice);
+		}
 	}
 }

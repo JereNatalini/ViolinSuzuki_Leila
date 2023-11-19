@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Alumno.cs" />
+    <Compile Include="Clases\Cancion.cs" />
     <Compile Include="Clases\Progreso.cs" />
     <Compile Include="DataSetPrincipal.Designer.cs">
       <AutoGen>True</AutoGen>

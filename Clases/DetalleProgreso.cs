@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ViolinSuzuki_Leila.Clases;
 
 namespace ViolinSuzuki_Leila
 {
     public class DetalleProgreso
     {
-        private int idDetalleProgreso;
-        private int idProgreso;
-        private int idLibro;
-        private int idCancion;
+        private Cancion cancion;
         private string Observaciones;
 
         public string pObservaciones
@@ -21,36 +19,16 @@ namespace ViolinSuzuki_Leila
         }
 
 
-        public int pIdCancion
+        public Cancion pCancion
         {
-            get { return idCancion; }
-            set { idCancion = value; }
+            get { return cancion; }
+            set { cancion = value; }
         }
 
-
-        public int pIdLibro
+        public DetalleProgreso(Cancion c, string obs)
         {
-            get { return idLibro; }
-            set { idLibro = value; }
-        }
-
-
-        public int pIdProgreso
-        {
-            get { return idProgreso; }
-            set { idProgreso = value; }
-        }
-
-
-        public int pIdDetalleProgreso
-        {
-            get { return idDetalleProgreso; }
-            set { idDetalleProgreso = value; }
-        }
-
-        public DetalleProgreso()
-        {
-            
+            cancion = c;
+            Observaciones = obs;
         }
     }
 }
