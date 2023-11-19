@@ -175,7 +175,7 @@ CONSTRAINT FK_VIOLINES_ALUMNOS FOREIGN KEY (id_alumno) REFERENCES Alumnos (id_al
 
 create table Progresos
 (
-id_progreso int identity (1,1),
+id_progreso int identity,
 fecha datetime,
 id_alumno int,
 id_responsable int,
@@ -186,11 +186,11 @@ CONSTRAINT FK_PROGRESOS_RESPONSABLES FOREIGN KEY (id_responsable) REFERENCES Res
 
 create table Detalles_Progreso
 (
-id_detalle_progreso int identity (1,1),
+id_detalle_progreso int,
 id_progreso int,
 id_libro int,
 id_cancion int,
-detalles varchar (230),
+observaciones varchar (230),
 CONSTRAINT PK_DETALLES_PROGRESO PRIMARY KEY (id_detalle_progreso, id_progreso),
 CONSTRAINT FK_DETALLES_PROGRESO_PROGRESO FOREIGN KEY (id_progreso) REFERENCES Progresos (id_progreso),
 CONSTRAINT FK_DETALLES_PROGRESO_LIBROS FOREIGN KEY (id_libro) REFERENCES Libros_Suzuki (id_libro),
@@ -511,7 +511,7 @@ BEGIN
 END
 GO
 -- SP INSERTAR DETALLE
-create PROCEDURE [dbo].[SP_INSERTAR_DETALLE] 
+ALTER PROCEDURE [dbo].[SP_INSERTAR_DETALLE] 
 	@progresoNro int,
 	@detalle int, 
 	@idCancion int, 
@@ -520,7 +520,6 @@ AS
 BEGIN
 	INSERT INTO Detalles_Progreso(id_progreso, id_detalle_progreso,id_cancion, observaciones)
     VALUES (@progresoNro, @detalle, @idCancion, @observaciones);
-  
 END
 GO
 --SP CARGAR COMBO LIBRO
@@ -540,14 +539,9 @@ BEGIN
 END
 GO
 
---BORRAR COLUMNA ID_LIBRO
-alter table Detalles_Progreso
-drop constraint FK_DETALLES_PROGRESO_LIBROS
-alter table Detalles_Progreso
-drop column id_libro
---CAMBIAR NOMBRE DE COLUMNA DETALLES EN DETALLES_PROGRESO
-alter table Detalles_Progreso
-drop column detalles
-alter table Detalles_Progreso
-add observaciones varchar(230)
+
+
+
+
+
 

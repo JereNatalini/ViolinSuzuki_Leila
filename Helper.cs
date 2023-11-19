@@ -134,15 +134,15 @@ namespace ViolinSuzuki_Leila
                 //Insert Maestro
                 SqlCommand cmdM = new SqlCommand("SP_INSERTAR_MAESTRO", cnn, t);
                 cmdM.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idAlumno", p.pAlumno.IdAlumno);
-                cmd.Parameters.AddWithValue("@idResponsable", p.pResponsable.IdResponsable);
+                cmdM.Parameters.AddWithValue("@idAlumno", p.pAlumno.IdAlumno);
+                cmdM.Parameters.AddWithValue("@idResponsable", p.pResponsable.IdResponsable);
                 //Parametro de salida
                 SqlParameter pOut = new SqlParameter();
                 pOut.ParameterName = "@progresoNro";
                 pOut.DbType = DbType.Int32;
                 pOut.Direction = ParameterDirection.Output;
-                cmd.Parameters.Add(pOut);
-                cmd.ExecuteNonQuery();
+                cmdM.Parameters.Add(pOut);
+                cmdM.ExecuteNonQuery();
 
                 int progresoNro = (int)pOut.Value;
 

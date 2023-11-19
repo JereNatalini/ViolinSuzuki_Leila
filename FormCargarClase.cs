@@ -48,7 +48,6 @@ namespace ViolinSuzuki_Leila
             {
                 nClase = 1;
             }
-
             return nClase.Value;
         }
 
@@ -123,6 +122,35 @@ namespace ViolinSuzuki_Leila
         {
             int idLibro = cboLibro.SelectedIndex;
             CargarComboCanciones(idLibro + 1); //SE LE SUMA 1 POR DIFERENCIAS DE INDICES ENTRE VS Y SSMS
+        }
+
+        private void GuardarProgreso()
+        {
+            if (helper.Confirmar(progreso))
+            {
+                MessageBox.Show("Presupuesto registrado", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("ERROR. No se pudo registrar el presupuesto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (dgvDetalles.Rows.Count == 0)
+            {
+                MessageBox.Show("Debe ingresar al menos una actividad!", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            GuardarProgreso();
+        }
+
+        private void dgvDetalles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

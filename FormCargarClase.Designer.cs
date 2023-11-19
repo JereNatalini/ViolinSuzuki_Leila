@@ -49,6 +49,7 @@
             this.colCancion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,6 +154,7 @@
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.Size = new System.Drawing.Size(732, 284);
             this.dgvDetalles.TabIndex = 8;
+            this.dgvDetalles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalles_CellContentClick);
             // 
             // cboLibro
             // 
@@ -246,12 +248,23 @@
             this.btnBorrar.HeaderText = "Borrar";
             this.btnBorrar.Name = "btnBorrar";
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(618, 531);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(126, 23);
+            this.btnGuardar.TabIndex = 16;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // FormCargarClase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(756, 566);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.label7);
@@ -300,5 +313,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCancion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colObservaciones;
         private System.Windows.Forms.DataGridViewButtonColumn btnBorrar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
