@@ -12,9 +12,16 @@ namespace ViolinSuzuki_Leila.Reportes
 {
     public partial class FormReporteClase : Form
     {
+        public int idProgreso { get; set; }
         public FormReporteClase()
         {
             InitializeComponent();
+        }
+
+        private void FormReporteClase_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }
