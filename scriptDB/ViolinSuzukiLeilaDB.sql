@@ -591,8 +591,31 @@ BEGIN
 	SELECT * FROM V_CONSULTAR_VIOLINES
 END
 GO
-
-
-
-
+--VISTA PARA SP CONSULTAR PROGRESOS
+ALTER VIEW V_CONSULTAR_PROGRESOS
+AS
+SELECT P.id_progreso AS ID, A.nombre+' '+ A.apellido AS ALUMNO,COALESCE( R.nombre+' '+ R.apellido, 'SIN RESPONSABLE') AS RESPONSABLE, P.fecha
+FROM Progresos P, Alumnos A, Responsables R
+WHERE P.id_alumno = A.id_alumno
+AND P.id_responsable = R.id_responsable
+--SP CONSULTAR PROGRESOS
+CREATE PROCEDURE SP_CONSULTAR_PROGRESOS
+AS
+BEGIN
+	SELECT * FROM V_CONSULTAR_PROGRESOS
+END
+GO
+-- SP MOSTRAR REPORTE CLASES
+ALTER PROCEDURE SP_REPORTE_CLASES
+@idProgreso int
+AS
+BEGIN
+	SELECT P.id_progreso as ID,A.nombre+' '+ A.apellido AS ALUMNO,R.nombre+' '+ R.apellido AS RESPONSABLE, D.id_detalle_progreso AS 'ACTIVIDAD N°', D.id_cancion AS CANCION, D.observaciones AS OBSERVACIONES
+	FROM Progresos P, Detalles_Progreso D, Alumnos A, Responsables R
+	WHERE P.id_progreso = D.id_progreso
+	AND P.id_alumno = A.id_alumno
+	AND P.id_responsable = R.id_responsable
+	AND P.id_progreso = @idProgreso
+	ORDER BY id_detalle_progreso
+END
 
