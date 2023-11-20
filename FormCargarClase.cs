@@ -128,12 +128,12 @@ namespace ViolinSuzuki_Leila
         {
             if (helper.Confirmar(progreso))
             {
-                MessageBox.Show("Presupuesto registrado", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Clase Registrada", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
             }
             else
             {
-                MessageBox.Show("ERROR. No se pudo registrar el presupuesto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR. No se pudo registrar la clase", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -39,6 +39,8 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.cargarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarViolinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -52,6 +54,8 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(36)))));
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.label3);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.btnConsultar);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.label2);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.btnClase);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.label1);
@@ -77,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(468, 408);
+            this.label2.Location = new System.Drawing.Point(461, 408);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 68);
             this.label2.TabIndex = 4;
@@ -87,7 +91,7 @@
             // 
             this.btnClase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClase.BackgroundImage")));
             this.btnClase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClase.Location = new System.Drawing.Point(451, 294);
+            this.btnClase.Location = new System.Drawing.Point(444, 294);
             this.btnClase.Name = "btnClase";
             this.btnClase.Size = new System.Drawing.Size(111, 111);
             this.btnClase.TabIndex = 3;
@@ -164,6 +168,28 @@
             this.cargarViolinToolStripMenuItem.Text = "Cargar Violin";
             this.cargarViolinToolStripMenuItem.Click += new System.EventHandler(this.cargarViolinToolStripMenuItem_Click);
             // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultar.BackgroundImage")));
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultar.Location = new System.Drawing.Point(782, 294);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(111, 111);
+            this.btnConsultar.TabIndex = 5;
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(776, 408);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 34);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Consultar";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +225,8 @@
         private System.Windows.Forms.ToolStripMenuItem cargarViolinToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnClase;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }
 

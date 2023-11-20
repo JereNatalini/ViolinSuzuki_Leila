@@ -383,3 +383,7 @@ C:\Users\Naranjax\Desktop\repositorios\UTN\NataliniUTN\ViolinSuzuki_Leila\obj\De
 C:\Users\Naranjax\Desktop\repositorios\UTN\NataliniUTN\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.csproj.CopyComplete
 C:\Users\Naranjax\Desktop\repositorios\UTN\NataliniUTN\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.exe
 C:\Users\Naranjax\Desktop\repositorios\UTN\NataliniUTN\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.pdb
+C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarAlumnos.resources
+C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormTiposDeConsulta.resources
+C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarResponsables.resources
+C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarViolines.resources

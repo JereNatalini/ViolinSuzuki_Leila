@@ -91,6 +91,24 @@
     <Compile Include="FormCargarViolines.Designer.cs">
       <DependentUpon>FormCargarViolines.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsultarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarAlumnos.Designer.cs">
+      <DependentUpon>FormConsultarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultarResponsables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarResponsables.Designer.cs">
+      <DependentUpon>FormConsultarResponsables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsultarViolines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsultarViolines.Designer.cs">
+      <DependentUpon>FormConsultarViolines.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListadoDeAlumnosViolines.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,12 @@
     <Compile Include="FormTiposDeCarga.Designer.cs">
       <DependentUpon>FormTiposDeCarga.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTiposDeConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTiposDeConsulta.Designer.cs">
+      <DependentUpon>FormTiposDeConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -137,6 +161,15 @@
     <EmbeddedResource Include="FormCargarViolines.resx">
       <DependentUpon>FormCargarViolines.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarAlumnos.resx">
+      <DependentUpon>FormConsultarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarResponsables.resx">
+      <DependentUpon>FormConsultarResponsables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsultarViolines.resx">
+      <DependentUpon>FormConsultarViolines.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListadoDeAlumnosViolines.resx">
       <DependentUpon>FormListadoDeAlumnosViolines.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTiposDeCarga.resx">
       <DependentUpon>FormTiposDeCarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTiposDeConsulta.resx">
+      <DependentUpon>FormTiposDeConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
