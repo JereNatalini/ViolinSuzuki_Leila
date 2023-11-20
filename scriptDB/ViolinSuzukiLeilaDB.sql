@@ -478,7 +478,7 @@ VALUES(@nombre,@apellido,@dni,@calle,@altura,@id_ciudad,getdate(),@id_tipo_respo
 END
 
 
-
+go
 --SP INSERTAR VIOLIN
 CREATE PROCEDURE SP_CARGAR_VIOLIN
 	@modelo varchar(50),
@@ -590,7 +590,7 @@ AS
 BEGIN
 	SELECT * FROM V_CONSULTAR_VIOLINES
 END
-GO
+GO,
 
 
 
