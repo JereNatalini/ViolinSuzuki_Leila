@@ -34,5 +34,11 @@ namespace ViolinSuzuki_Leila
             FormConsultarViolines formConsultarViolines = new FormConsultarViolines();  
             formConsultarViolines.Show();
         }
+
+        private void btnConsultarClases_Click(object sender, EventArgs e)
+        {
+            FormConsultarClases formConsultarClases = new FormConsultarClases();
+            formConsultarClases.Show();
+        }
     }
 }

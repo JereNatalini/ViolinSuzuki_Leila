@@ -387,3 +387,4 @@ C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debu
 C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormTiposDeConsulta.resources
 C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarResponsables.resources
 C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarViolines.resources
+C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarClases.resources

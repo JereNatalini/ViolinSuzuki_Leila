@@ -32,6 +32,11 @@ namespace ViolinSuzuki_Leila.Clases
 			detalles = new List<DetalleProgreso>();
         }
 
+        public Progreso()
+        {
+			idProgreso = 0;
+        }
+
 
         public Responsable pResponsable
 		{

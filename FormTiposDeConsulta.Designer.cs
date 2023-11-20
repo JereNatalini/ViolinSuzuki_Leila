@@ -111,6 +111,7 @@
             this.btnConsultarClases.Size = new System.Drawing.Size(163, 155);
             this.btnConsultarClases.TabIndex = 7;
             this.btnConsultarClases.UseVisualStyleBackColor = true;
+            this.btnConsultarClases.Click += new System.EventHandler(this.btnConsultarClases_Click);
             // 
             // label3
             // 
