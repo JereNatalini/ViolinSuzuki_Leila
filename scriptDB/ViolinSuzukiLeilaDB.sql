@@ -550,12 +550,47 @@ BEGIN
 	WHERE id_libro = @idLibro
 END
 GO
-
-
-
-
-
-
+--VISTA PARA SP CONSULTAR ALUMNOS
+CREATE VIEW V_CONSULTAR_ALUMNOS
+AS
+SELECT A.id_alumno as ID, A.nombre+ ' '+ A.apellido as Nombre, dni as DNI, A.calle+ ' ' + A.altura as DIRECCION, C.ciudad as CIUDAD, A.fec_nac as FECHA_DE_NACIMIENTO, A.colegio as COLEGIO,(SELECT contacto from Contactos con where con.id_alumno = a.id_alumno and con.id_tipo_contacto=1) as TELEFONO,(SELECT contacto from Contactos con where con.id_alumno = a.id_alumno and con.id_tipo_contacto=2) as EMAIL,A.observaciones as OBSERVACIONES, A.fec_alta as FECHA_DE_ALTA
+	FROM ALUMNOS A, CIUDADES C
+	WHERE C.id_ciudad = A.id_ciudad
+--SP CONSULTAR ALUMNOS
+CREATE PROCEDURE SP_CONSULTAR_ALUMNOS
+AS
+BEGIN
+	SELECT * FROM V_CONSULTAR_ALUMNOS
+END
+GO
+--VISTA PARA SP CONSULTAR RESPONSABLES
+CREATE VIEW V_CONSULTAR_RESPONSABLES
+AS
+SELECT R.id_responsable as ID,  R.nombre+ ' '+ R.apellido as Nombre,R.dni as DNI ,R.calle+ ' ' + R.altura as DIRECCION,C.ciudad as CIUDAD, (SELECT contacto from Contactos con where con.id_responsable= R.id_responsable and con.id_tipo_contacto=1) as TELEFONO,(SELECT contacto from Contactos con where con.id_responsable = R.id_responsable and con.id_tipo_contacto=2) as EMAIL,R.observaciones as OBSERVACIONES, R.fec_alta as FECHA_DE_ALTA
+FROM Responsables R, Ciudades C
+WHERE R.id_ciudad = C.id_ciudad
+--SP CONSULTAR RESPONSABLES
+CREATE PROCEDURE SP_CONSULTAR_RESPONSABLES
+AS
+BEGIN
+	SELECT * FROM V_CONSULTAR_RESPONSABLES
+END
+GO
+--VISTA PARA SP CONSULTAR VIOLINES
+CREATE VIEW V_CONSULTAR_VIOLINES
+AS
+SELECT V.id_violin AS ID, M.medida AS MEDIDA, MA.marca AS MARCA, V.precio AS PRECIO, A.nombre+ ' ' + A.apellido AS 'PERTENECE A:'
+FROM Violines V, Medidas M, Marcas MA, Alumnos A
+WHERE V.id_alumno = A.id_alumno
+AND V.id_medida = M.id_medida
+AND V.id_marca = MA.id_marca
+--SP CONSULTAR VIOLINES
+CREATE PROCEDURE SP_CONSULTAR_VIOLINES
+AS
+BEGIN
+	SELECT * FROM V_CONSULTAR_VIOLINES
+END
+GO
 
 
 
