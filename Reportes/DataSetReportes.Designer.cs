@@ -24,7 +24,7 @@ namespace ViolinSuzuki_Leila.Reportes {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetReportes : global::System.Data.DataSet {
         
-        private SP_REPORTE_CLASESDataTable tableSP_REPORTE_CLASES;
+        private SP_REPORTE_PROGRESODataTable tableSP_REPORTE_PROGRESO;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace ViolinSuzuki_Leila.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["SP_REPORTE_CLASES"] != null)) {
-                    base.Tables.Add(new SP_REPORTE_CLASESDataTable(ds.Tables["SP_REPORTE_CLASES"]));
+                if ((ds.Tables["SP_REPORTE_PROGRESO"] != null)) {
+                    base.Tables.Add(new SP_REPORTE_PROGRESODataTable(ds.Tables["SP_REPORTE_PROGRESO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ViolinSuzuki_Leila.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_REPORTE_CLASESDataTable SP_REPORTE_CLASES {
+        public SP_REPORTE_PROGRESODataTable SP_REPORTE_PROGRESO {
             get {
-                return this.tableSP_REPORTE_CLASES;
+                return this.tableSP_REPORTE_PROGRESO;
             }
         }
         
@@ -152,8 +152,8 @@ namespace ViolinSuzuki_Leila.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["SP_REPORTE_CLASES"] != null)) {
-                    base.Tables.Add(new SP_REPORTE_CLASESDataTable(ds.Tables["SP_REPORTE_CLASES"]));
+                if ((ds.Tables["SP_REPORTE_PROGRESO"] != null)) {
+                    base.Tables.Add(new SP_REPORTE_PROGRESODataTable(ds.Tables["SP_REPORTE_PROGRESO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ViolinSuzuki_Leila.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSP_REPORTE_CLASES = ((SP_REPORTE_CLASESDataTable)(base.Tables["SP_REPORTE_CLASES"]));
+            this.tableSP_REPORTE_PROGRESO = ((SP_REPORTE_PROGRESODataTable)(base.Tables["SP_REPORTE_PROGRESO"]));
             if ((initTable == true)) {
-                if ((this.tableSP_REPORTE_CLASES != null)) {
-                    this.tableSP_REPORTE_CLASES.InitVars();
+                if ((this.tableSP_REPORTE_PROGRESO != null)) {
+                    this.tableSP_REPORTE_PROGRESO.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace ViolinSuzuki_Leila.Reportes {
             this.Namespace = "http://tempuri.org/DataSetReportes.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSP_REPORTE_CLASES = new SP_REPORTE_CLASESDataTable();
-            base.Tables.Add(this.tableSP_REPORTE_CLASES);
+            this.tableSP_REPORTE_PROGRESO = new SP_REPORTE_PROGRESODataTable();
+            base.Tables.Add(this.tableSP_REPORTE_PROGRESO);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_REPORTE_CLASES() {
+        private bool ShouldSerializeSP_REPORTE_PROGRESO() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace ViolinSuzuki_Leila.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_REPORTE_CLASESRowChangeEventHandler(object sender, SP_REPORTE_CLASESRowChangeEvent e);
+        public delegate void SP_REPORTE_PROGRESORowChangeEventHandler(object sender, SP_REPORTE_PROGRESORowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_REPORTE_CLASESDataTable : global::System.Data.TypedTableBase<SP_REPORTE_CLASESRow> {
+        public partial class SP_REPORTE_PROGRESODataTable : global::System.Data.TypedTableBase<SP_REPORTE_PROGRESORow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -285,7 +285,7 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             private global::System.Data.DataColumn columnRESPONSABLE;
             
-            private global::System.Data.DataColumn _columnACTIVIDAD_N_;
+            private global::System.Data.DataColumn columnACTIVIDAD;
             
             private global::System.Data.DataColumn columnCANCION;
             
@@ -293,8 +293,8 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_CLASESDataTable() {
-                this.TableName = "SP_REPORTE_CLASES";
+            public SP_REPORTE_PROGRESODataTable() {
+                this.TableName = "SP_REPORTE_PROGRESO";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +302,7 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_REPORTE_CLASESDataTable(global::System.Data.DataTable table) {
+            internal SP_REPORTE_PROGRESODataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,7 +319,7 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected SP_REPORTE_CLASESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SP_REPORTE_PROGRESODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -350,9 +350,9 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn _ACTIVIDAD_N_Column {
+            public global::System.Data.DataColumn ACTIVIDADColumn {
                 get {
-                    return this._columnACTIVIDAD_N_;
+                    return this.columnACTIVIDAD;
                 }
             }
             
@@ -383,50 +383,50 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_CLASESRow this[int index] {
+            public SP_REPORTE_PROGRESORow this[int index] {
                 get {
-                    return ((SP_REPORTE_CLASESRow)(this.Rows[index]));
+                    return ((SP_REPORTE_PROGRESORow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_REPORTE_CLASESRowChangeEventHandler SP_REPORTE_CLASESRowChanging;
+            public event SP_REPORTE_PROGRESORowChangeEventHandler SP_REPORTE_PROGRESORowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_REPORTE_CLASESRowChangeEventHandler SP_REPORTE_CLASESRowChanged;
+            public event SP_REPORTE_PROGRESORowChangeEventHandler SP_REPORTE_PROGRESORowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_REPORTE_CLASESRowChangeEventHandler SP_REPORTE_CLASESRowDeleting;
+            public event SP_REPORTE_PROGRESORowChangeEventHandler SP_REPORTE_PROGRESORowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_REPORTE_CLASESRowChangeEventHandler SP_REPORTE_CLASESRowDeleted;
+            public event SP_REPORTE_PROGRESORowChangeEventHandler SP_REPORTE_PROGRESORowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSP_REPORTE_CLASESRow(SP_REPORTE_CLASESRow row) {
+            public void AddSP_REPORTE_PROGRESORow(SP_REPORTE_PROGRESORow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_CLASESRow AddSP_REPORTE_CLASESRow(string ALUMNO, string RESPONSABLE, int _ACTIVIDAD_N_, int CANCION, string OBSERVACIONES) {
-                SP_REPORTE_CLASESRow rowSP_REPORTE_CLASESRow = ((SP_REPORTE_CLASESRow)(this.NewRow()));
+            public SP_REPORTE_PROGRESORow AddSP_REPORTE_PROGRESORow(int ID, string ALUMNO, string RESPONSABLE, int ACTIVIDAD, int CANCION, string OBSERVACIONES) {
+                SP_REPORTE_PROGRESORow rowSP_REPORTE_PROGRESORow = ((SP_REPORTE_PROGRESORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ID,
                         ALUMNO,
                         RESPONSABLE,
-                        _ACTIVIDAD_N_,
+                        ACTIVIDAD,
                         CANCION,
                         OBSERVACIONES};
-                rowSP_REPORTE_CLASESRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_REPORTE_CLASESRow);
-                return rowSP_REPORTE_CLASESRow;
+                rowSP_REPORTE_PROGRESORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_REPORTE_PROGRESORow);
+                return rowSP_REPORTE_PROGRESORow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SP_REPORTE_CLASESDataTable cln = ((SP_REPORTE_CLASESDataTable)(base.Clone()));
+                SP_REPORTE_PROGRESODataTable cln = ((SP_REPORTE_PROGRESODataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -434,7 +434,7 @@ namespace ViolinSuzuki_Leila.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_REPORTE_CLASESDataTable();
+                return new SP_REPORTE_PROGRESODataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -443,7 +443,7 @@ namespace ViolinSuzuki_Leila.Reportes {
                 this.columnID = base.Columns["ID"];
                 this.columnALUMNO = base.Columns["ALUMNO"];
                 this.columnRESPONSABLE = base.Columns["RESPONSABLE"];
-                this._columnACTIVIDAD_N_ = base.Columns["ACTIVIDAD N°"];
+                this.columnACTIVIDAD = base.Columns["ACTIVIDAD"];
                 this.columnCANCION = base.Columns["CANCION"];
                 this.columnOBSERVACIONES = base.Columns["OBSERVACIONES"];
             }
@@ -457,49 +457,45 @@ namespace ViolinSuzuki_Leila.Reportes {
                 base.Columns.Add(this.columnALUMNO);
                 this.columnRESPONSABLE = new global::System.Data.DataColumn("RESPONSABLE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRESPONSABLE);
-                this._columnACTIVIDAD_N_ = new global::System.Data.DataColumn("ACTIVIDAD N°", typeof(int), null, global::System.Data.MappingType.Element);
-                this._columnACTIVIDAD_N_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnACTIVIDAD_N_");
-                this._columnACTIVIDAD_N_.ExtendedProperties.Add("Generator_UserColumnName", "ACTIVIDAD N°");
-                base.Columns.Add(this._columnACTIVIDAD_N_);
+                this.columnACTIVIDAD = new global::System.Data.DataColumn("ACTIVIDAD", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACTIVIDAD);
                 this.columnCANCION = new global::System.Data.DataColumn("CANCION", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCANCION);
                 this.columnOBSERVACIONES = new global::System.Data.DataColumn("OBSERVACIONES", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOBSERVACIONES);
-                this.columnID.AutoIncrement = true;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnALUMNO.ReadOnly = true;
                 this.columnALUMNO.MaxLength = 81;
                 this.columnRESPONSABLE.ReadOnly = true;
                 this.columnRESPONSABLE.MaxLength = 81;
-                this._columnACTIVIDAD_N_.AllowDBNull = false;
+                this.columnACTIVIDAD.AllowDBNull = false;
                 this.columnOBSERVACIONES.MaxLength = 230;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_CLASESRow NewSP_REPORTE_CLASESRow() {
-                return ((SP_REPORTE_CLASESRow)(this.NewRow()));
+            public SP_REPORTE_PROGRESORow NewSP_REPORTE_PROGRESORow() {
+                return ((SP_REPORTE_PROGRESORow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_REPORTE_CLASESRow(builder);
+                return new SP_REPORTE_PROGRESORow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SP_REPORTE_CLASESRow);
+                return typeof(SP_REPORTE_PROGRESORow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SP_REPORTE_CLASESRowChanged != null)) {
-                    this.SP_REPORTE_CLASESRowChanged(this, new SP_REPORTE_CLASESRowChangeEvent(((SP_REPORTE_CLASESRow)(e.Row)), e.Action));
+                if ((this.SP_REPORTE_PROGRESORowChanged != null)) {
+                    this.SP_REPORTE_PROGRESORowChanged(this, new SP_REPORTE_PROGRESORowChangeEvent(((SP_REPORTE_PROGRESORow)(e.Row)), e.Action));
                 }
             }
             
@@ -507,8 +503,8 @@ namespace ViolinSuzuki_Leila.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SP_REPORTE_CLASESRowChanging != null)) {
-                    this.SP_REPORTE_CLASESRowChanging(this, new SP_REPORTE_CLASESRowChangeEvent(((SP_REPORTE_CLASESRow)(e.Row)), e.Action));
+                if ((this.SP_REPORTE_PROGRESORowChanging != null)) {
+                    this.SP_REPORTE_PROGRESORowChanging(this, new SP_REPORTE_PROGRESORowChangeEvent(((SP_REPORTE_PROGRESORow)(e.Row)), e.Action));
                 }
             }
             
@@ -516,8 +512,8 @@ namespace ViolinSuzuki_Leila.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SP_REPORTE_CLASESRowDeleted != null)) {
-                    this.SP_REPORTE_CLASESRowDeleted(this, new SP_REPORTE_CLASESRowChangeEvent(((SP_REPORTE_CLASESRow)(e.Row)), e.Action));
+                if ((this.SP_REPORTE_PROGRESORowDeleted != null)) {
+                    this.SP_REPORTE_PROGRESORowDeleted(this, new SP_REPORTE_PROGRESORowChangeEvent(((SP_REPORTE_PROGRESORow)(e.Row)), e.Action));
                 }
             }
             
@@ -525,14 +521,14 @@ namespace ViolinSuzuki_Leila.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SP_REPORTE_CLASESRowDeleting != null)) {
-                    this.SP_REPORTE_CLASESRowDeleting(this, new SP_REPORTE_CLASESRowChangeEvent(((SP_REPORTE_CLASESRow)(e.Row)), e.Action));
+                if ((this.SP_REPORTE_PROGRESORowDeleting != null)) {
+                    this.SP_REPORTE_PROGRESORowDeleting(this, new SP_REPORTE_PROGRESORowChangeEvent(((SP_REPORTE_PROGRESORow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSP_REPORTE_CLASESRow(SP_REPORTE_CLASESRow row) {
+            public void RemoveSP_REPORTE_PROGRESORow(SP_REPORTE_PROGRESORow row) {
                 this.Rows.Remove(row);
             }
             
@@ -559,7 +555,7 @@ namespace ViolinSuzuki_Leila.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_REPORTE_CLASESDataTable";
+                attribute2.FixedValue = "SP_REPORTE_PROGRESODataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -603,25 +599,25 @@ namespace ViolinSuzuki_Leila.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SP_REPORTE_CLASESRow : global::System.Data.DataRow {
+        public partial class SP_REPORTE_PROGRESORow : global::System.Data.DataRow {
             
-            private SP_REPORTE_CLASESDataTable tableSP_REPORTE_CLASES;
+            private SP_REPORTE_PROGRESODataTable tableSP_REPORTE_PROGRESO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_REPORTE_CLASESRow(global::System.Data.DataRowBuilder rb) : 
+            internal SP_REPORTE_PROGRESORow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSP_REPORTE_CLASES = ((SP_REPORTE_CLASESDataTable)(this.Table));
+                this.tableSP_REPORTE_PROGRESO = ((SP_REPORTE_PROGRESODataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableSP_REPORTE_CLASES.IDColumn]));
+                    return ((int)(this[this.tableSP_REPORTE_PROGRESO.IDColumn]));
                 }
                 set {
-                    this[this.tableSP_REPORTE_CLASES.IDColumn] = value;
+                    this[this.tableSP_REPORTE_PROGRESO.IDColumn] = value;
                 }
             }
             
@@ -630,14 +626,14 @@ namespace ViolinSuzuki_Leila.Reportes {
             public string ALUMNO {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_REPORTE_CLASES.ALUMNOColumn]));
+                        return ((string)(this[this.tableSP_REPORTE_PROGRESO.ALUMNOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ALUMNO\' de la tabla \'SP_REPORTE_CLASES\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ALUMNO\' de la tabla \'SP_REPORTE_PROGRESO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_REPORTE_CLASES.ALUMNOColumn] = value;
+                    this[this.tableSP_REPORTE_PROGRESO.ALUMNOColumn] = value;
                 }
             }
             
@@ -646,25 +642,26 @@ namespace ViolinSuzuki_Leila.Reportes {
             public string RESPONSABLE {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_REPORTE_CLASES.RESPONSABLEColumn]));
+                        return ((string)(this[this.tableSP_REPORTE_PROGRESO.RESPONSABLEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RESPONSABLE\' de la tabla \'SP_REPORTE_CLASES\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RESPONSABLE\' de la tabla \'SP_REPORTE_PROGRESO\' es DBNull." +
+                                "", e);
                     }
                 }
                 set {
-                    this[this.tableSP_REPORTE_CLASES.RESPONSABLEColumn] = value;
+                    this[this.tableSP_REPORTE_PROGRESO.RESPONSABLEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int _ACTIVIDAD_N_ {
+            public int ACTIVIDAD {
                 get {
-                    return ((int)(this[this.tableSP_REPORTE_CLASES._ACTIVIDAD_N_Column]));
+                    return ((int)(this[this.tableSP_REPORTE_PROGRESO.ACTIVIDADColumn]));
                 }
                 set {
-                    this[this.tableSP_REPORTE_CLASES._ACTIVIDAD_N_Column] = value;
+                    this[this.tableSP_REPORTE_PROGRESO.ACTIVIDADColumn] = value;
                 }
             }
             
@@ -673,14 +670,14 @@ namespace ViolinSuzuki_Leila.Reportes {
             public int CANCION {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_REPORTE_CLASES.CANCIONColumn]));
+                        return ((int)(this[this.tableSP_REPORTE_PROGRESO.CANCIONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CANCION\' de la tabla \'SP_REPORTE_CLASES\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CANCION\' de la tabla \'SP_REPORTE_PROGRESO\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_REPORTE_CLASES.CANCIONColumn] = value;
+                    this[this.tableSP_REPORTE_PROGRESO.CANCIONColumn] = value;
                 }
             }
             
@@ -689,64 +686,64 @@ namespace ViolinSuzuki_Leila.Reportes {
             public string OBSERVACIONES {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_REPORTE_CLASES.OBSERVACIONESColumn]));
+                        return ((string)(this[this.tableSP_REPORTE_PROGRESO.OBSERVACIONESColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES\' de la tabla \'SP_REPORTE_CLASES\' es DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES\' de la tabla \'SP_REPORTE_PROGRESO\' es DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_REPORTE_CLASES.OBSERVACIONESColumn] = value;
+                    this[this.tableSP_REPORTE_PROGRESO.OBSERVACIONESColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsALUMNONull() {
-                return this.IsNull(this.tableSP_REPORTE_CLASES.ALUMNOColumn);
+                return this.IsNull(this.tableSP_REPORTE_PROGRESO.ALUMNOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetALUMNONull() {
-                this[this.tableSP_REPORTE_CLASES.ALUMNOColumn] = global::System.Convert.DBNull;
+                this[this.tableSP_REPORTE_PROGRESO.ALUMNOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsRESPONSABLENull() {
-                return this.IsNull(this.tableSP_REPORTE_CLASES.RESPONSABLEColumn);
+                return this.IsNull(this.tableSP_REPORTE_PROGRESO.RESPONSABLEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetRESPONSABLENull() {
-                this[this.tableSP_REPORTE_CLASES.RESPONSABLEColumn] = global::System.Convert.DBNull;
+                this[this.tableSP_REPORTE_PROGRESO.RESPONSABLEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsCANCIONNull() {
-                return this.IsNull(this.tableSP_REPORTE_CLASES.CANCIONColumn);
+                return this.IsNull(this.tableSP_REPORTE_PROGRESO.CANCIONColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCANCIONNull() {
-                this[this.tableSP_REPORTE_CLASES.CANCIONColumn] = global::System.Convert.DBNull;
+                this[this.tableSP_REPORTE_PROGRESO.CANCIONColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsOBSERVACIONESNull() {
-                return this.IsNull(this.tableSP_REPORTE_CLASES.OBSERVACIONESColumn);
+                return this.IsNull(this.tableSP_REPORTE_PROGRESO.OBSERVACIONESColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetOBSERVACIONESNull() {
-                this[this.tableSP_REPORTE_CLASES.OBSERVACIONESColumn] = global::System.Convert.DBNull;
+                this[this.tableSP_REPORTE_PROGRESO.OBSERVACIONESColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -754,22 +751,22 @@ namespace ViolinSuzuki_Leila.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_REPORTE_CLASESRowChangeEvent : global::System.EventArgs {
+        public class SP_REPORTE_PROGRESORowChangeEvent : global::System.EventArgs {
             
-            private SP_REPORTE_CLASESRow eventRow;
+            private SP_REPORTE_PROGRESORow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_CLASESRowChangeEvent(SP_REPORTE_CLASESRow row, global::System.Data.DataRowAction action) {
+            public SP_REPORTE_PROGRESORowChangeEvent(SP_REPORTE_PROGRESORow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_CLASESRow Row {
+            public SP_REPORTE_PROGRESORow Row {
                 get {
                     return this.eventRow;
                 }
@@ -797,7 +794,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_REPORTE_CLASESTableAdapter : global::System.ComponentModel.Component {
+    public partial class SP_REPORTE_PROGRESOTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -811,7 +808,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SP_REPORTE_CLASESTableAdapter() {
+        public SP_REPORTE_PROGRESOTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -908,11 +905,11 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_REPORTE_CLASES";
+            tableMapping.DataSetTable = "SP_REPORTE_PROGRESO";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("ALUMNO", "ALUMNO");
             tableMapping.ColumnMappings.Add("RESPONSABLE", "RESPONSABLE");
-            tableMapping.ColumnMappings.Add("ACTIVIDAD N°", "ACTIVIDAD N°");
+            tableMapping.ColumnMappings.Add("ACTIVIDAD", "ACTIVIDAD");
             tableMapping.ColumnMappings.Add("CANCION", "CANCION");
             tableMapping.ColumnMappings.Add("OBSERVACIONES", "OBSERVACIONES");
             this._adapter.TableMappings.Add(tableMapping);
@@ -922,7 +919,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString4;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -931,7 +928,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_REPORTE_CLASES";
+            this._commandCollection[0].CommandText = "dbo.SP_REPORTE_PROGRESO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProgreso", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -941,7 +938,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetReportes.SP_REPORTE_CLASESDataTable dataTable, global::System.Nullable<int> idProgreso) {
+        public virtual int Fill(DataSetReportes.SP_REPORTE_PROGRESODataTable dataTable, global::System.Nullable<int> idProgreso) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idProgreso.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idProgreso.Value));
@@ -960,7 +957,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetReportes.SP_REPORTE_CLASESDataTable GetData(global::System.Nullable<int> idProgreso) {
+        public virtual DataSetReportes.SP_REPORTE_PROGRESODataTable GetData(global::System.Nullable<int> idProgreso) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idProgreso.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idProgreso.Value));
@@ -968,7 +965,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            DataSetReportes.SP_REPORTE_CLASESDataTable dataTable = new DataSetReportes.SP_REPORTE_CLASESDataTable();
+            DataSetReportes.SP_REPORTE_PROGRESODataTable dataTable = new DataSetReportes.SP_REPORTE_PROGRESODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

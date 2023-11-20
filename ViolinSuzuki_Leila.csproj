@@ -220,7 +220,7 @@
     <EmbeddedResource Include="Reportes\FormReporteClase.resx">
       <DependentUpon>FormReporteClase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteClase.rdlc" />
+    <EmbeddedResource Include="Reportes\Reporte.rdlc" />
     <None Include="DataSetPrincipal.xsc">
       <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
     </None>

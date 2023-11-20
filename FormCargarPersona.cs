@@ -239,5 +239,10 @@ namespace ViolinSuzuki_Leila
             }
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

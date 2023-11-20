@@ -606,11 +606,11 @@ BEGIN
 END
 GO
 -- SP MOSTRAR REPORTE CLASES
-ALTER PROCEDURE SP_REPORTE_CLASES
+create PROCEDURE SP_REPORTE_PROGRESO
 @idProgreso int
 AS
 BEGIN
-	SELECT P.id_progreso as ID,A.nombre+' '+ A.apellido AS ALUMNO,R.nombre+' '+ R.apellido AS RESPONSABLE, D.id_detalle_progreso AS 'ACTIVIDAD N°', D.id_cancion AS CANCION, D.observaciones AS OBSERVACIONES
+	SELECT D.id_detalle_progreso as ID,A.nombre+' '+ A.apellido AS ALUMNO,R.nombre+' '+ R.apellido AS RESPONSABLE, D.id_detalle_progreso AS ACTIVIDAD, D.id_cancion AS CANCION, D.observaciones AS OBSERVACIONES
 	FROM Progresos P, Detalles_Progreso D, Alumnos A, Responsables R
 	WHERE P.id_progreso = D.id_progreso
 	AND P.id_alumno = A.id_alumno
@@ -619,3 +619,5 @@ BEGIN
 	ORDER BY id_detalle_progreso
 END
 
+-------SP_REPORTE_CLASE ELIMINAR
+DROP PROCEDURE SP_REPORTE_CLASES

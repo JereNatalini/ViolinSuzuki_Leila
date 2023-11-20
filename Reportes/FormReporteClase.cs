@@ -20,6 +20,8 @@ namespace ViolinSuzuki_Leila.Reportes
 
         private void FormReporteClase_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dataSetReportes.SP_REPORTE_PROGRESO' Puede moverla o quitarla según sea necesario.
+            this.sP_REPORTE_PROGRESOTableAdapter.Fill(this.dataSetReportes.SP_REPORTE_PROGRESO,idProgreso);
 
             this.reportViewer1.RefreshReport();
         }
