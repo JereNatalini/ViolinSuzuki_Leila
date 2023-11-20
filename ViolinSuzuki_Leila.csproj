@@ -64,6 +64,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calendario\Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario\Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario\DetalleEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario\DetalleEvento.Designer.cs">
+      <DependentUpon>DetalleEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario\FormEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario\FormEvento.Designer.cs">
+      <DependentUpon>FormEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario\HelperCalendar.cs" />
+    <Compile Include="Calendario\UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Calendario\UserControlBlank.Designer.cs">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario\UserControlDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Calendario\UserControlDays.Designer.cs">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Alumno.cs" />
     <Compile Include="Clases\Cancion.cs" />
     <Compile Include="Clases\Progreso.cs" />
@@ -169,6 +200,21 @@
       <DependentUpon>FormReporteClase.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Calendario\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario\DetalleEvento.resx">
+      <DependentUpon>DetalleEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario\FormEvento.resx">
+      <DependentUpon>FormEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario\UserControlBlank.resx">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario\UserControlDays.resx">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCargarClase.resx">
       <DependentUpon>FormCargarClase.cs</DependentUpon>
     </EmbeddedResource>

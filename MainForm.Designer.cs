@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnClase = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,8 +41,7 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.cargarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarViolinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnCalendario = new System.Windows.Forms.ToolStripLabel();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -75,6 +76,28 @@
             // 
             this.toolStripContainer1.TopToolStripPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(36)))));
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(776, 408);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 34);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Consultar";
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultar.BackgroundImage")));
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultar.Location = new System.Drawing.Point(782, 294);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(111, 111);
+            this.btnConsultar.TabIndex = 5;
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // label2
             // 
@@ -135,10 +158,11 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.btnCalendario});
             this.toolStrip1.Location = new System.Drawing.Point(4, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(67, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(162, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // toolStripDropDownButton1
@@ -157,38 +181,26 @@
             // cargarPersonaToolStripMenuItem
             // 
             this.cargarPersonaToolStripMenuItem.Name = "cargarPersonaToolStripMenuItem";
-            this.cargarPersonaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.cargarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cargarPersonaToolStripMenuItem.Text = "Cargar Persona";
             this.cargarPersonaToolStripMenuItem.Click += new System.EventHandler(this.cargarPersonaToolStripMenuItem_Click);
             // 
             // cargarViolinToolStripMenuItem
             // 
             this.cargarViolinToolStripMenuItem.Name = "cargarViolinToolStripMenuItem";
-            this.cargarViolinToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.cargarViolinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cargarViolinToolStripMenuItem.Text = "Cargar Violin";
             this.cargarViolinToolStripMenuItem.Click += new System.EventHandler(this.cargarViolinToolStripMenuItem_Click);
             // 
-            // btnConsultar
+            // btnCalendario
             // 
-            this.btnConsultar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultar.BackgroundImage")));
-            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConsultar.Location = new System.Drawing.Point(782, 294);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(111, 111);
-            this.btnConsultar.TabIndex = 5;
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(776, 408);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 34);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Consultar";
+            this.btnCalendario.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnCalendario.Image = ((System.Drawing.Image)(resources.GetObject("btnCalendario.Image")));
+            this.btnCalendario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCalendario.Name = "btnCalendario";
+            this.btnCalendario.Size = new System.Drawing.Size(64, 22);
+            this.btnCalendario.Text = "Calendario";
+            this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
             // 
             // MainForm
             // 
@@ -227,6 +239,7 @@
         private System.Windows.Forms.Button btnClase;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.ToolStripLabel btnCalendario;
     }
 }
 

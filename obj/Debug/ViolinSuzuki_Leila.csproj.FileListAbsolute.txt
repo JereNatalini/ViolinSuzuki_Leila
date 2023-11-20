@@ -212,7 +212,6 @@ C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\bin\Debug\zh-HANT\Microsoft.R
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.csproj.AssemblyReference.cache
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarPersona.resources
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarViolines.resources
-C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListadoDeAlumnos.resources
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormTiposDeCarga.resources
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.MainForm.resources
 C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.Properties.Resources.resources
@@ -472,3 +471,18 @@ C:\Users\Kikurem\Desktop\violin tp\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Lei
 C:\Users\Kikurem\Desktop\violin tp\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.csproj.CopyComplete
 C:\Users\Kikurem\Desktop\violin tp\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.exe
 C:\Users\Kikurem\Desktop\violin tp\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.pdb
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.Calendar.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.Calendario.DetalleEvento.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.Calendario.FormEvento.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.Calendario.UserControlBlank.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.Calendario.UserControlDays.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarClase.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarAlumnos.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarClases.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarResponsables.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormConsultarViolines.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListadoDeAlumnosViolines.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarAlumnosClases.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarResponsablesClases.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormTiposDeConsulta.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.Reportes.FormReporteClase.resources

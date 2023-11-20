@@ -58,5 +58,11 @@ namespace ViolinSuzuki_Leila
             FormTiposDeConsulta formTiposDeConsulta = new FormTiposDeConsulta();
             formTiposDeConsulta.Show();
         }
+
+        private void btnCalendario_Click(object sender, EventArgs e)
+        {
+            Calendar calendar = new Calendar();
+            calendar.Show();
+        }
     }
 }
