@@ -7,26 +7,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViolinSuzuki_Leila.Clases;
 
 namespace ViolinSuzuki_Leila
 {
     public partial class FormTiposDeCarga : Form
     {
+        private FormCargarPersona formCargarPersona;
+        private FormCargarViolines formCargarViolines;
+
         public FormTiposDeCarga()
         {
             InitializeComponent();
         }
-
+        private void AbrirFormCargarPersona()
+        {
+            formCargarPersona = new FormCargarPersona();
+            formCargarPersona.FormularioAnterior = this; // Establecer referencia al formulario anterior
+            formCargarPersona.Show();
+            this.Hide();
+        }
+        private void AbrirFormCargarViolines()
+        {
+            formCargarViolines = new FormCargarViolines();
+            formCargarViolines.FormularioAnterior = this; // Establecer referencia al formulario anterior
+            formCargarViolines.Show();
+            this.Hide();
+        }
         private void btnPersona_Click(object sender, EventArgs e)
         {
-            FormCargarPersona formCargarPersona = new FormCargarPersona();
-            formCargarPersona.Show();
+            AbrirFormCargarPersona();
         }
 
         private void btnViolines_Click(object sender, EventArgs e)
         {
-            FormCargarViolines formCargarViolines = new FormCargarViolines();
-            formCargarViolines.Show();
+            AbrirFormCargarViolines();
+        }
+
+        private void FormTiposDeCarga_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

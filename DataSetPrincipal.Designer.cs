@@ -24,17 +24,17 @@ namespace ViolinSuzuki_Leila {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetPrincipal : global::System.Data.DataSet {
         
-        private SP_LISTAR_ALUMNOSDataTable tableSP_LISTAR_ALUMNOS;
-        
-        private SP_CONSULTAR_ALUMNOSDataTable tableSP_CONSULTAR_ALUMNOS;
+        private SP_CONSULTAR_RESPONSABLESDataTable tableSP_CONSULTAR_RESPONSABLES;
         
         private SP_LISTAR_RESPONSABLESDataTable tableSP_LISTAR_RESPONSABLES;
         
-        private SP_CONSULTAR_PROGRESOSDataTable tableSP_CONSULTAR_PROGRESOS;
+        private SP_CONSULTAR_ALUMNOSDataTable tableSP_CONSULTAR_ALUMNOS;
         
         private SP_CONSULTAR_VIOLINESDataTable tableSP_CONSULTAR_VIOLINES;
         
-        private SP_CONSULTAR_RESPONSABLESDataTable tableSP_CONSULTAR_RESPONSABLES;
+        private SP_CONSULTAR_PROGRESOSDataTable tableSP_CONSULTAR_PROGRESOS;
+        
+        private SP_LISTAR_ALUMNOSDataTable tableSP_LISTAR_ALUMNOS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -64,23 +64,23 @@ namespace ViolinSuzuki_Leila {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["SP_LISTAR_ALUMNOS"] != null)) {
-                    base.Tables.Add(new SP_LISTAR_ALUMNOSDataTable(ds.Tables["SP_LISTAR_ALUMNOS"]));
-                }
-                if ((ds.Tables["SP_CONSULTAR_ALUMNOS"] != null)) {
-                    base.Tables.Add(new SP_CONSULTAR_ALUMNOSDataTable(ds.Tables["SP_CONSULTAR_ALUMNOS"]));
+                if ((ds.Tables["SP_CONSULTAR_RESPONSABLES"] != null)) {
+                    base.Tables.Add(new SP_CONSULTAR_RESPONSABLESDataTable(ds.Tables["SP_CONSULTAR_RESPONSABLES"]));
                 }
                 if ((ds.Tables["SP_LISTAR_RESPONSABLES"] != null)) {
                     base.Tables.Add(new SP_LISTAR_RESPONSABLESDataTable(ds.Tables["SP_LISTAR_RESPONSABLES"]));
                 }
-                if ((ds.Tables["SP_CONSULTAR_PROGRESOS"] != null)) {
-                    base.Tables.Add(new SP_CONSULTAR_PROGRESOSDataTable(ds.Tables["SP_CONSULTAR_PROGRESOS"]));
+                if ((ds.Tables["SP_CONSULTAR_ALUMNOS"] != null)) {
+                    base.Tables.Add(new SP_CONSULTAR_ALUMNOSDataTable(ds.Tables["SP_CONSULTAR_ALUMNOS"]));
                 }
                 if ((ds.Tables["SP_CONSULTAR_VIOLINES"] != null)) {
                     base.Tables.Add(new SP_CONSULTAR_VIOLINESDataTable(ds.Tables["SP_CONSULTAR_VIOLINES"]));
                 }
-                if ((ds.Tables["SP_CONSULTAR_RESPONSABLES"] != null)) {
-                    base.Tables.Add(new SP_CONSULTAR_RESPONSABLESDataTable(ds.Tables["SP_CONSULTAR_RESPONSABLES"]));
+                if ((ds.Tables["SP_CONSULTAR_PROGRESOS"] != null)) {
+                    base.Tables.Add(new SP_CONSULTAR_PROGRESOSDataTable(ds.Tables["SP_CONSULTAR_PROGRESOS"]));
+                }
+                if ((ds.Tables["SP_LISTAR_ALUMNOS"] != null)) {
+                    base.Tables.Add(new SP_LISTAR_ALUMNOSDataTable(ds.Tables["SP_LISTAR_ALUMNOS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -104,19 +104,9 @@ namespace ViolinSuzuki_Leila {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_LISTAR_ALUMNOSDataTable SP_LISTAR_ALUMNOS {
+        public SP_CONSULTAR_RESPONSABLESDataTable SP_CONSULTAR_RESPONSABLES {
             get {
-                return this.tableSP_LISTAR_ALUMNOS;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_CONSULTAR_ALUMNOSDataTable SP_CONSULTAR_ALUMNOS {
-            get {
-                return this.tableSP_CONSULTAR_ALUMNOS;
+                return this.tableSP_CONSULTAR_RESPONSABLES;
             }
         }
         
@@ -134,9 +124,9 @@ namespace ViolinSuzuki_Leila {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_CONSULTAR_PROGRESOSDataTable SP_CONSULTAR_PROGRESOS {
+        public SP_CONSULTAR_ALUMNOSDataTable SP_CONSULTAR_ALUMNOS {
             get {
-                return this.tableSP_CONSULTAR_PROGRESOS;
+                return this.tableSP_CONSULTAR_ALUMNOS;
             }
         }
         
@@ -154,9 +144,19 @@ namespace ViolinSuzuki_Leila {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_CONSULTAR_RESPONSABLESDataTable SP_CONSULTAR_RESPONSABLES {
+        public SP_CONSULTAR_PROGRESOSDataTable SP_CONSULTAR_PROGRESOS {
             get {
-                return this.tableSP_CONSULTAR_RESPONSABLES;
+                return this.tableSP_CONSULTAR_PROGRESOS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SP_LISTAR_ALUMNOSDataTable SP_LISTAR_ALUMNOS {
+            get {
+                return this.tableSP_LISTAR_ALUMNOS;
             }
         }
         
@@ -227,23 +227,23 @@ namespace ViolinSuzuki_Leila {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["SP_LISTAR_ALUMNOS"] != null)) {
-                    base.Tables.Add(new SP_LISTAR_ALUMNOSDataTable(ds.Tables["SP_LISTAR_ALUMNOS"]));
-                }
-                if ((ds.Tables["SP_CONSULTAR_ALUMNOS"] != null)) {
-                    base.Tables.Add(new SP_CONSULTAR_ALUMNOSDataTable(ds.Tables["SP_CONSULTAR_ALUMNOS"]));
+                if ((ds.Tables["SP_CONSULTAR_RESPONSABLES"] != null)) {
+                    base.Tables.Add(new SP_CONSULTAR_RESPONSABLESDataTable(ds.Tables["SP_CONSULTAR_RESPONSABLES"]));
                 }
                 if ((ds.Tables["SP_LISTAR_RESPONSABLES"] != null)) {
                     base.Tables.Add(new SP_LISTAR_RESPONSABLESDataTable(ds.Tables["SP_LISTAR_RESPONSABLES"]));
                 }
-                if ((ds.Tables["SP_CONSULTAR_PROGRESOS"] != null)) {
-                    base.Tables.Add(new SP_CONSULTAR_PROGRESOSDataTable(ds.Tables["SP_CONSULTAR_PROGRESOS"]));
+                if ((ds.Tables["SP_CONSULTAR_ALUMNOS"] != null)) {
+                    base.Tables.Add(new SP_CONSULTAR_ALUMNOSDataTable(ds.Tables["SP_CONSULTAR_ALUMNOS"]));
                 }
                 if ((ds.Tables["SP_CONSULTAR_VIOLINES"] != null)) {
                     base.Tables.Add(new SP_CONSULTAR_VIOLINESDataTable(ds.Tables["SP_CONSULTAR_VIOLINES"]));
                 }
-                if ((ds.Tables["SP_CONSULTAR_RESPONSABLES"] != null)) {
-                    base.Tables.Add(new SP_CONSULTAR_RESPONSABLESDataTable(ds.Tables["SP_CONSULTAR_RESPONSABLES"]));
+                if ((ds.Tables["SP_CONSULTAR_PROGRESOS"] != null)) {
+                    base.Tables.Add(new SP_CONSULTAR_PROGRESOSDataTable(ds.Tables["SP_CONSULTAR_PROGRESOS"]));
+                }
+                if ((ds.Tables["SP_LISTAR_ALUMNOS"] != null)) {
+                    base.Tables.Add(new SP_LISTAR_ALUMNOSDataTable(ds.Tables["SP_LISTAR_ALUMNOS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -278,16 +278,10 @@ namespace ViolinSuzuki_Leila {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSP_LISTAR_ALUMNOS = ((SP_LISTAR_ALUMNOSDataTable)(base.Tables["SP_LISTAR_ALUMNOS"]));
+            this.tableSP_CONSULTAR_RESPONSABLES = ((SP_CONSULTAR_RESPONSABLESDataTable)(base.Tables["SP_CONSULTAR_RESPONSABLES"]));
             if ((initTable == true)) {
-                if ((this.tableSP_LISTAR_ALUMNOS != null)) {
-                    this.tableSP_LISTAR_ALUMNOS.InitVars();
-                }
-            }
-            this.tableSP_CONSULTAR_ALUMNOS = ((SP_CONSULTAR_ALUMNOSDataTable)(base.Tables["SP_CONSULTAR_ALUMNOS"]));
-            if ((initTable == true)) {
-                if ((this.tableSP_CONSULTAR_ALUMNOS != null)) {
-                    this.tableSP_CONSULTAR_ALUMNOS.InitVars();
+                if ((this.tableSP_CONSULTAR_RESPONSABLES != null)) {
+                    this.tableSP_CONSULTAR_RESPONSABLES.InitVars();
                 }
             }
             this.tableSP_LISTAR_RESPONSABLES = ((SP_LISTAR_RESPONSABLESDataTable)(base.Tables["SP_LISTAR_RESPONSABLES"]));
@@ -296,10 +290,10 @@ namespace ViolinSuzuki_Leila {
                     this.tableSP_LISTAR_RESPONSABLES.InitVars();
                 }
             }
-            this.tableSP_CONSULTAR_PROGRESOS = ((SP_CONSULTAR_PROGRESOSDataTable)(base.Tables["SP_CONSULTAR_PROGRESOS"]));
+            this.tableSP_CONSULTAR_ALUMNOS = ((SP_CONSULTAR_ALUMNOSDataTable)(base.Tables["SP_CONSULTAR_ALUMNOS"]));
             if ((initTable == true)) {
-                if ((this.tableSP_CONSULTAR_PROGRESOS != null)) {
-                    this.tableSP_CONSULTAR_PROGRESOS.InitVars();
+                if ((this.tableSP_CONSULTAR_ALUMNOS != null)) {
+                    this.tableSP_CONSULTAR_ALUMNOS.InitVars();
                 }
             }
             this.tableSP_CONSULTAR_VIOLINES = ((SP_CONSULTAR_VIOLINESDataTable)(base.Tables["SP_CONSULTAR_VIOLINES"]));
@@ -308,10 +302,16 @@ namespace ViolinSuzuki_Leila {
                     this.tableSP_CONSULTAR_VIOLINES.InitVars();
                 }
             }
-            this.tableSP_CONSULTAR_RESPONSABLES = ((SP_CONSULTAR_RESPONSABLESDataTable)(base.Tables["SP_CONSULTAR_RESPONSABLES"]));
+            this.tableSP_CONSULTAR_PROGRESOS = ((SP_CONSULTAR_PROGRESOSDataTable)(base.Tables["SP_CONSULTAR_PROGRESOS"]));
             if ((initTable == true)) {
-                if ((this.tableSP_CONSULTAR_RESPONSABLES != null)) {
-                    this.tableSP_CONSULTAR_RESPONSABLES.InitVars();
+                if ((this.tableSP_CONSULTAR_PROGRESOS != null)) {
+                    this.tableSP_CONSULTAR_PROGRESOS.InitVars();
+                }
+            }
+            this.tableSP_LISTAR_ALUMNOS = ((SP_LISTAR_ALUMNOSDataTable)(base.Tables["SP_LISTAR_ALUMNOS"]));
+            if ((initTable == true)) {
+                if ((this.tableSP_LISTAR_ALUMNOS != null)) {
+                    this.tableSP_LISTAR_ALUMNOS.InitVars();
                 }
             }
         }
@@ -324,29 +324,23 @@ namespace ViolinSuzuki_Leila {
             this.Namespace = "http://tempuri.org/DataSetPrincipal.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSP_LISTAR_ALUMNOS = new SP_LISTAR_ALUMNOSDataTable();
-            base.Tables.Add(this.tableSP_LISTAR_ALUMNOS);
-            this.tableSP_CONSULTAR_ALUMNOS = new SP_CONSULTAR_ALUMNOSDataTable();
-            base.Tables.Add(this.tableSP_CONSULTAR_ALUMNOS);
-            this.tableSP_LISTAR_RESPONSABLES = new SP_LISTAR_RESPONSABLESDataTable();
-            base.Tables.Add(this.tableSP_LISTAR_RESPONSABLES);
-            this.tableSP_CONSULTAR_PROGRESOS = new SP_CONSULTAR_PROGRESOSDataTable();
-            base.Tables.Add(this.tableSP_CONSULTAR_PROGRESOS);
-            this.tableSP_CONSULTAR_VIOLINES = new SP_CONSULTAR_VIOLINESDataTable();
-            base.Tables.Add(this.tableSP_CONSULTAR_VIOLINES);
             this.tableSP_CONSULTAR_RESPONSABLES = new SP_CONSULTAR_RESPONSABLESDataTable();
             base.Tables.Add(this.tableSP_CONSULTAR_RESPONSABLES);
+            this.tableSP_LISTAR_RESPONSABLES = new SP_LISTAR_RESPONSABLESDataTable();
+            base.Tables.Add(this.tableSP_LISTAR_RESPONSABLES);
+            this.tableSP_CONSULTAR_ALUMNOS = new SP_CONSULTAR_ALUMNOSDataTable();
+            base.Tables.Add(this.tableSP_CONSULTAR_ALUMNOS);
+            this.tableSP_CONSULTAR_VIOLINES = new SP_CONSULTAR_VIOLINESDataTable();
+            base.Tables.Add(this.tableSP_CONSULTAR_VIOLINES);
+            this.tableSP_CONSULTAR_PROGRESOS = new SP_CONSULTAR_PROGRESOSDataTable();
+            base.Tables.Add(this.tableSP_CONSULTAR_PROGRESOS);
+            this.tableSP_LISTAR_ALUMNOS = new SP_LISTAR_ALUMNOSDataTable();
+            base.Tables.Add(this.tableSP_LISTAR_ALUMNOS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_LISTAR_ALUMNOS() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_CONSULTAR_ALUMNOS() {
+        private bool ShouldSerializeSP_CONSULTAR_RESPONSABLES() {
             return false;
         }
         
@@ -358,7 +352,7 @@ namespace ViolinSuzuki_Leila {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_CONSULTAR_PROGRESOS() {
+        private bool ShouldSerializeSP_CONSULTAR_ALUMNOS() {
             return false;
         }
         
@@ -370,7 +364,13 @@ namespace ViolinSuzuki_Leila {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_CONSULTAR_RESPONSABLES() {
+        private bool ShouldSerializeSP_CONSULTAR_PROGRESOS() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeSP_LISTAR_ALUMNOS() {
             return false;
         }
         
@@ -430,56 +430,52 @@ namespace ViolinSuzuki_Leila {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_LISTAR_ALUMNOSRowChangeEventHandler(object sender, SP_LISTAR_ALUMNOSRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_CONSULTAR_ALUMNOSRowChangeEventHandler(object sender, SP_CONSULTAR_ALUMNOSRowChangeEvent e);
+        public delegate void SP_CONSULTAR_RESPONSABLESRowChangeEventHandler(object sender, SP_CONSULTAR_RESPONSABLESRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void SP_LISTAR_RESPONSABLESRowChangeEventHandler(object sender, SP_LISTAR_RESPONSABLESRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_CONSULTAR_PROGRESOSRowChangeEventHandler(object sender, SP_CONSULTAR_PROGRESOSRowChangeEvent e);
+        public delegate void SP_CONSULTAR_ALUMNOSRowChangeEventHandler(object sender, SP_CONSULTAR_ALUMNOSRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void SP_CONSULTAR_VIOLINESRowChangeEventHandler(object sender, SP_CONSULTAR_VIOLINESRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_CONSULTAR_RESPONSABLESRowChangeEventHandler(object sender, SP_CONSULTAR_RESPONSABLESRowChangeEvent e);
+        public delegate void SP_CONSULTAR_PROGRESOSRowChangeEventHandler(object sender, SP_CONSULTAR_PROGRESOSRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void SP_LISTAR_ALUMNOSRowChangeEventHandler(object sender, SP_LISTAR_ALUMNOSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_LISTAR_ALUMNOSDataTable : global::System.Data.TypedTableBase<SP_LISTAR_ALUMNOSRow> {
+        public partial class SP_CONSULTAR_RESPONSABLESDataTable : global::System.Data.TypedTableBase<SP_CONSULTAR_RESPONSABLESRow> {
             
-            private global::System.Data.DataColumn columnid_alumno;
+            private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnnombre;
+            private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnapellido;
+            private global::System.Data.DataColumn columnDNI;
             
-            private global::System.Data.DataColumn columndni;
+            private global::System.Data.DataColumn columnDIRECCION;
             
-            private global::System.Data.DataColumn columncalle;
+            private global::System.Data.DataColumn columnCIUDAD;
             
-            private global::System.Data.DataColumn columnaltura;
+            private global::System.Data.DataColumn columnTELEFONO;
             
-            private global::System.Data.DataColumn columnid_ciudad;
+            private global::System.Data.DataColumn columnEMAIL;
             
-            private global::System.Data.DataColumn columnfec_alta;
+            private global::System.Data.DataColumn columnOBSERVACIONES;
             
-            private global::System.Data.DataColumn columnfec_nac;
-            
-            private global::System.Data.DataColumn columncolegio;
-            
-            private global::System.Data.DataColumn columnobservaciones;
+            private global::System.Data.DataColumn columnFECHA_DE_ALTA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_ALUMNOSDataTable() {
-                this.TableName = "SP_LISTAR_ALUMNOS";
+            public SP_CONSULTAR_RESPONSABLESDataTable() {
+                this.TableName = "SP_CONSULTAR_RESPONSABLES";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -487,7 +483,7 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_LISTAR_ALUMNOSDataTable(global::System.Data.DataTable table) {
+            internal SP_CONSULTAR_RESPONSABLESDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -504,96 +500,80 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected SP_LISTAR_ALUMNOSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SP_CONSULTAR_RESPONSABLESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_alumnoColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnid_alumno;
+                    return this.columnID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
+            public global::System.Data.DataColumn NombreColumn {
                 get {
-                    return this.columnnombre;
+                    return this.columnNombre;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn apellidoColumn {
+            public global::System.Data.DataColumn DNIColumn {
                 get {
-                    return this.columnapellido;
+                    return this.columnDNI;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn dniColumn {
+            public global::System.Data.DataColumn DIRECCIONColumn {
                 get {
-                    return this.columndni;
+                    return this.columnDIRECCION;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn calleColumn {
+            public global::System.Data.DataColumn CIUDADColumn {
                 get {
-                    return this.columncalle;
+                    return this.columnCIUDAD;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn alturaColumn {
+            public global::System.Data.DataColumn TELEFONOColumn {
                 get {
-                    return this.columnaltura;
+                    return this.columnTELEFONO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_ciudadColumn {
+            public global::System.Data.DataColumn EMAILColumn {
                 get {
-                    return this.columnid_ciudad;
+                    return this.columnEMAIL;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn fec_altaColumn {
+            public global::System.Data.DataColumn OBSERVACIONESColumn {
                 get {
-                    return this.columnfec_alta;
+                    return this.columnOBSERVACIONES;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn fec_nacColumn {
+            public global::System.Data.DataColumn FECHA_DE_ALTAColumn {
                 get {
-                    return this.columnfec_nac;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn colegioColumn {
-                get {
-                    return this.columncolegio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn observacionesColumn {
-                get {
-                    return this.columnobservaciones;
+                    return this.columnFECHA_DE_ALTA;
                 }
             }
             
@@ -608,62 +588,60 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_ALUMNOSRow this[int index] {
+            public SP_CONSULTAR_RESPONSABLESRow this[int index] {
                 get {
-                    return ((SP_LISTAR_ALUMNOSRow)(this.Rows[index]));
+                    return ((SP_CONSULTAR_RESPONSABLESRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowChanging;
+            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowChanged;
+            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowDeleting;
+            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowDeleted;
+            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSP_LISTAR_ALUMNOSRow(SP_LISTAR_ALUMNOSRow row) {
+            public void AddSP_CONSULTAR_RESPONSABLESRow(SP_CONSULTAR_RESPONSABLESRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_ALUMNOSRow AddSP_LISTAR_ALUMNOSRow(string nombre, string apellido, int dni, string calle, string altura, int id_ciudad, System.DateTime fec_alta, System.DateTime fec_nac, string colegio, string observaciones) {
-                SP_LISTAR_ALUMNOSRow rowSP_LISTAR_ALUMNOSRow = ((SP_LISTAR_ALUMNOSRow)(this.NewRow()));
+            public SP_CONSULTAR_RESPONSABLESRow AddSP_CONSULTAR_RESPONSABLESRow(int ID, string Nombre, int DNI, string DIRECCION, string CIUDAD, string TELEFONO, string EMAIL, string OBSERVACIONES, System.DateTime FECHA_DE_ALTA) {
+                SP_CONSULTAR_RESPONSABLESRow rowSP_CONSULTAR_RESPONSABLESRow = ((SP_CONSULTAR_RESPONSABLESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        nombre,
-                        apellido,
-                        dni,
-                        calle,
-                        altura,
-                        id_ciudad,
-                        fec_alta,
-                        fec_nac,
-                        colegio,
-                        observaciones};
-                rowSP_LISTAR_ALUMNOSRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_LISTAR_ALUMNOSRow);
-                return rowSP_LISTAR_ALUMNOSRow;
+                        ID,
+                        Nombre,
+                        DNI,
+                        DIRECCION,
+                        CIUDAD,
+                        TELEFONO,
+                        EMAIL,
+                        OBSERVACIONES,
+                        FECHA_DE_ALTA};
+                rowSP_CONSULTAR_RESPONSABLESRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_CONSULTAR_RESPONSABLESRow);
+                return rowSP_CONSULTAR_RESPONSABLESRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_ALUMNOSRow FindByid_alumno(int id_alumno) {
-                return ((SP_LISTAR_ALUMNOSRow)(this.Rows.Find(new object[] {
-                            id_alumno})));
+            public SP_CONSULTAR_RESPONSABLESRow FindByID(int ID) {
+                return ((SP_CONSULTAR_RESPONSABLESRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SP_LISTAR_ALUMNOSDataTable cln = ((SP_LISTAR_ALUMNOSDataTable)(base.Clone()));
+                SP_CONSULTAR_RESPONSABLESDataTable cln = ((SP_CONSULTAR_RESPONSABLESDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -671,88 +649,84 @@ namespace ViolinSuzuki_Leila {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_LISTAR_ALUMNOSDataTable();
+                return new SP_CONSULTAR_RESPONSABLESDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid_alumno = base.Columns["id_alumno"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columnapellido = base.Columns["apellido"];
-                this.columndni = base.Columns["dni"];
-                this.columncalle = base.Columns["calle"];
-                this.columnaltura = base.Columns["altura"];
-                this.columnid_ciudad = base.Columns["id_ciudad"];
-                this.columnfec_alta = base.Columns["fec_alta"];
-                this.columnfec_nac = base.Columns["fec_nac"];
-                this.columncolegio = base.Columns["colegio"];
-                this.columnobservaciones = base.Columns["observaciones"];
+                this.columnID = base.Columns["ID"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnDNI = base.Columns["DNI"];
+                this.columnDIRECCION = base.Columns["DIRECCION"];
+                this.columnCIUDAD = base.Columns["CIUDAD"];
+                this.columnTELEFONO = base.Columns["TELEFONO"];
+                this.columnEMAIL = base.Columns["EMAIL"];
+                this.columnOBSERVACIONES = base.Columns["OBSERVACIONES"];
+                this.columnFECHA_DE_ALTA = base.Columns["FECHA_DE_ALTA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid_alumno = new global::System.Data.DataColumn("id_alumno", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_alumno);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnapellido);
-                this.columndni = new global::System.Data.DataColumn("dni", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndni);
-                this.columncalle = new global::System.Data.DataColumn("calle", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncalle);
-                this.columnaltura = new global::System.Data.DataColumn("altura", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaltura);
-                this.columnid_ciudad = new global::System.Data.DataColumn("id_ciudad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_ciudad);
-                this.columnfec_alta = new global::System.Data.DataColumn("fec_alta", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfec_alta);
-                this.columnfec_nac = new global::System.Data.DataColumn("fec_nac", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfec_nac);
-                this.columncolegio = new global::System.Data.DataColumn("colegio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncolegio);
-                this.columnobservaciones = new global::System.Data.DataColumn("observaciones", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnobservaciones);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnDNI = new global::System.Data.DataColumn("DNI", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDNI);
+                this.columnDIRECCION = new global::System.Data.DataColumn("DIRECCION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIRECCION);
+                this.columnCIUDAD = new global::System.Data.DataColumn("CIUDAD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCIUDAD);
+                this.columnTELEFONO = new global::System.Data.DataColumn("TELEFONO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTELEFONO);
+                this.columnEMAIL = new global::System.Data.DataColumn("EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMAIL);
+                this.columnOBSERVACIONES = new global::System.Data.DataColumn("OBSERVACIONES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOBSERVACIONES);
+                this.columnFECHA_DE_ALTA = new global::System.Data.DataColumn("FECHA_DE_ALTA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_DE_ALTA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_alumno}, true));
-                this.columnid_alumno.AutoIncrement = true;
-                this.columnid_alumno.AllowDBNull = false;
-                this.columnid_alumno.ReadOnly = true;
-                this.columnid_alumno.Unique = true;
-                this.columnnombre.MaxLength = 40;
-                this.columnapellido.MaxLength = 40;
-                this.columncalle.MaxLength = 50;
-                this.columnaltura.MaxLength = 10;
-                this.columncolegio.MaxLength = 50;
-                this.columnobservaciones.MaxLength = 200;
+                                this.columnID}, true));
+                this.columnID.AllowDBNull = false;
+                this.columnID.Unique = true;
+                this.columnNombre.ReadOnly = true;
+                this.columnNombre.MaxLength = 81;
+                this.columnDIRECCION.ReadOnly = true;
+                this.columnDIRECCION.MaxLength = 61;
+                this.columnCIUDAD.MaxLength = 40;
+                this.columnTELEFONO.ReadOnly = true;
+                this.columnTELEFONO.MaxLength = 40;
+                this.columnEMAIL.ReadOnly = true;
+                this.columnEMAIL.MaxLength = 40;
+                this.columnOBSERVACIONES.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_ALUMNOSRow NewSP_LISTAR_ALUMNOSRow() {
-                return ((SP_LISTAR_ALUMNOSRow)(this.NewRow()));
+            public SP_CONSULTAR_RESPONSABLESRow NewSP_CONSULTAR_RESPONSABLESRow() {
+                return ((SP_CONSULTAR_RESPONSABLESRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_LISTAR_ALUMNOSRow(builder);
+                return new SP_CONSULTAR_RESPONSABLESRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SP_LISTAR_ALUMNOSRow);
+                return typeof(SP_CONSULTAR_RESPONSABLESRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SP_LISTAR_ALUMNOSRowChanged != null)) {
-                    this.SP_LISTAR_ALUMNOSRowChanged(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_RESPONSABLESRowChanged != null)) {
+                    this.SP_CONSULTAR_RESPONSABLESRowChanged(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -760,8 +734,8 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SP_LISTAR_ALUMNOSRowChanging != null)) {
-                    this.SP_LISTAR_ALUMNOSRowChanging(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_RESPONSABLESRowChanging != null)) {
+                    this.SP_CONSULTAR_RESPONSABLESRowChanging(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -769,8 +743,8 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SP_LISTAR_ALUMNOSRowDeleted != null)) {
-                    this.SP_LISTAR_ALUMNOSRowDeleted(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_RESPONSABLESRowDeleted != null)) {
+                    this.SP_CONSULTAR_RESPONSABLESRowDeleted(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -778,14 +752,14 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SP_LISTAR_ALUMNOSRowDeleting != null)) {
-                    this.SP_LISTAR_ALUMNOSRowDeleting(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_RESPONSABLESRowDeleting != null)) {
+                    this.SP_CONSULTAR_RESPONSABLESRowDeleting(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSP_LISTAR_ALUMNOSRow(SP_LISTAR_ALUMNOSRow row) {
+            public void RemoveSP_CONSULTAR_RESPONSABLESRow(SP_CONSULTAR_RESPONSABLESRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -812,7 +786,326 @@ namespace ViolinSuzuki_Leila {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_LISTAR_ALUMNOSDataTable";
+                attribute2.FixedValue = "SP_CONSULTAR_RESPONSABLESDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SP_LISTAR_RESPONSABLESDataTable : global::System.Data.TypedTableBase<SP_LISTAR_RESPONSABLESRow> {
+            
+            private global::System.Data.DataColumn columnid_responsable;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columnapellido;
+            
+            private global::System.Data.DataColumn columntipo_responsable;
+            
+            private global::System.Data.DataColumn columnid_tipo_responsable;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_LISTAR_RESPONSABLESDataTable() {
+                this.TableName = "SP_LISTAR_RESPONSABLES";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_LISTAR_RESPONSABLESDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected SP_LISTAR_RESPONSABLESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_responsableColumn {
+                get {
+                    return this.columnid_responsable;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn apellidoColumn {
+                get {
+                    return this.columnapellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tipo_responsableColumn {
+                get {
+                    return this.columntipo_responsable;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_tipo_responsableColumn {
+                get {
+                    return this.columnid_tipo_responsable;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_LISTAR_RESPONSABLESRow this[int index] {
+                get {
+                    return ((SP_LISTAR_RESPONSABLESRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddSP_LISTAR_RESPONSABLESRow(SP_LISTAR_RESPONSABLESRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_LISTAR_RESPONSABLESRow AddSP_LISTAR_RESPONSABLESRow(string nombre, string apellido, string tipo_responsable, int id_tipo_responsable) {
+                SP_LISTAR_RESPONSABLESRow rowSP_LISTAR_RESPONSABLESRow = ((SP_LISTAR_RESPONSABLESRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        nombre,
+                        apellido,
+                        tipo_responsable,
+                        id_tipo_responsable};
+                rowSP_LISTAR_RESPONSABLESRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_LISTAR_RESPONSABLESRow);
+                return rowSP_LISTAR_RESPONSABLESRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_LISTAR_RESPONSABLESRow FindByid_responsable(int id_responsable) {
+                return ((SP_LISTAR_RESPONSABLESRow)(this.Rows.Find(new object[] {
+                            id_responsable})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SP_LISTAR_RESPONSABLESDataTable cln = ((SP_LISTAR_RESPONSABLESDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SP_LISTAR_RESPONSABLESDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnid_responsable = base.Columns["id_responsable"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columnapellido = base.Columns["apellido"];
+                this.columntipo_responsable = base.Columns["tipo_responsable"];
+                this.columnid_tipo_responsable = base.Columns["id_tipo_responsable"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnid_responsable = new global::System.Data.DataColumn("id_responsable", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_responsable);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellido);
+                this.columntipo_responsable = new global::System.Data.DataColumn("tipo_responsable", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_responsable);
+                this.columnid_tipo_responsable = new global::System.Data.DataColumn("id_tipo_responsable", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_tipo_responsable);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid_responsable}, true));
+                this.columnid_responsable.AutoIncrement = true;
+                this.columnid_responsable.AllowDBNull = false;
+                this.columnid_responsable.ReadOnly = true;
+                this.columnid_responsable.Unique = true;
+                this.columnnombre.MaxLength = 40;
+                this.columnapellido.MaxLength = 40;
+                this.columntipo_responsable.MaxLength = 20;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_LISTAR_RESPONSABLESRow NewSP_LISTAR_RESPONSABLESRow() {
+                return ((SP_LISTAR_RESPONSABLESRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SP_LISTAR_RESPONSABLESRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SP_LISTAR_RESPONSABLESRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SP_LISTAR_RESPONSABLESRowChanged != null)) {
+                    this.SP_LISTAR_RESPONSABLESRowChanged(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SP_LISTAR_RESPONSABLESRowChanging != null)) {
+                    this.SP_LISTAR_RESPONSABLESRowChanging(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SP_LISTAR_RESPONSABLESRowDeleted != null)) {
+                    this.SP_LISTAR_RESPONSABLESRowDeleted(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SP_LISTAR_RESPONSABLESRowDeleting != null)) {
+                    this.SP_LISTAR_RESPONSABLESRowDeleting(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveSP_LISTAR_RESPONSABLESRow(SP_LISTAR_RESPONSABLESRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSetPrincipal ds = new DataSetPrincipal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SP_LISTAR_RESPONSABLESDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1267,22 +1560,22 @@ namespace ViolinSuzuki_Leila {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_LISTAR_RESPONSABLESDataTable : global::System.Data.TypedTableBase<SP_LISTAR_RESPONSABLESRow> {
+        public partial class SP_CONSULTAR_VIOLINESDataTable : global::System.Data.TypedTableBase<SP_CONSULTAR_VIOLINESRow> {
             
-            private global::System.Data.DataColumn columnid_responsable;
+            private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnnombre;
+            private global::System.Data.DataColumn columnMEDIDA;
             
-            private global::System.Data.DataColumn columnapellido;
+            private global::System.Data.DataColumn columnMARCA;
             
-            private global::System.Data.DataColumn columntipo_responsable;
+            private global::System.Data.DataColumn columnPRECIO;
             
-            private global::System.Data.DataColumn columnid_tipo_responsable;
+            private global::System.Data.DataColumn _columnPERTENECE_A_;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_RESPONSABLESDataTable() {
-                this.TableName = "SP_LISTAR_RESPONSABLES";
+            public SP_CONSULTAR_VIOLINESDataTable() {
+                this.TableName = "SP_CONSULTAR_VIOLINES";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1290,7 +1583,7 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_LISTAR_RESPONSABLESDataTable(global::System.Data.DataTable table) {
+            internal SP_CONSULTAR_VIOLINESDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1307,48 +1600,48 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected SP_LISTAR_RESPONSABLESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SP_CONSULTAR_VIOLINESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_responsableColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnid_responsable;
+                    return this.columnID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
+            public global::System.Data.DataColumn MEDIDAColumn {
                 get {
-                    return this.columnnombre;
+                    return this.columnMEDIDA;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn apellidoColumn {
+            public global::System.Data.DataColumn MARCAColumn {
                 get {
-                    return this.columnapellido;
+                    return this.columnMARCA;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn tipo_responsableColumn {
+            public global::System.Data.DataColumn PRECIOColumn {
                 get {
-                    return this.columntipo_responsable;
+                    return this.columnPRECIO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_tipo_responsableColumn {
+            public global::System.Data.DataColumn _PERTENECE_A_Column {
                 get {
-                    return this.columnid_tipo_responsable;
+                    return this._columnPERTENECE_A_;
                 }
             }
             
@@ -1363,56 +1656,56 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_RESPONSABLESRow this[int index] {
+            public SP_CONSULTAR_VIOLINESRow this[int index] {
                 get {
-                    return ((SP_LISTAR_RESPONSABLESRow)(this.Rows[index]));
+                    return ((SP_CONSULTAR_VIOLINESRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowChanging;
+            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowChanged;
+            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowDeleting;
+            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_LISTAR_RESPONSABLESRowChangeEventHandler SP_LISTAR_RESPONSABLESRowDeleted;
+            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSP_LISTAR_RESPONSABLESRow(SP_LISTAR_RESPONSABLESRow row) {
+            public void AddSP_CONSULTAR_VIOLINESRow(SP_CONSULTAR_VIOLINESRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_RESPONSABLESRow AddSP_LISTAR_RESPONSABLESRow(string nombre, string apellido, string tipo_responsable, int id_tipo_responsable) {
-                SP_LISTAR_RESPONSABLESRow rowSP_LISTAR_RESPONSABLESRow = ((SP_LISTAR_RESPONSABLESRow)(this.NewRow()));
+            public SP_CONSULTAR_VIOLINESRow AddSP_CONSULTAR_VIOLINESRow(int ID, string MEDIDA, string MARCA, decimal PRECIO, string _PERTENECE_A_) {
+                SP_CONSULTAR_VIOLINESRow rowSP_CONSULTAR_VIOLINESRow = ((SP_CONSULTAR_VIOLINESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        nombre,
-                        apellido,
-                        tipo_responsable,
-                        id_tipo_responsable};
-                rowSP_LISTAR_RESPONSABLESRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_LISTAR_RESPONSABLESRow);
-                return rowSP_LISTAR_RESPONSABLESRow;
+                        ID,
+                        MEDIDA,
+                        MARCA,
+                        PRECIO,
+                        _PERTENECE_A_};
+                rowSP_CONSULTAR_VIOLINESRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_CONSULTAR_VIOLINESRow);
+                return rowSP_CONSULTAR_VIOLINESRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_RESPONSABLESRow FindByid_responsable(int id_responsable) {
-                return ((SP_LISTAR_RESPONSABLESRow)(this.Rows.Find(new object[] {
-                            id_responsable})));
+            public SP_CONSULTAR_VIOLINESRow FindByID(int ID) {
+                return ((SP_CONSULTAR_VIOLINESRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SP_LISTAR_RESPONSABLESDataTable cln = ((SP_LISTAR_RESPONSABLESDataTable)(base.Clone()));
+                SP_CONSULTAR_VIOLINESDataTable cln = ((SP_CONSULTAR_VIOLINESDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1420,67 +1713,68 @@ namespace ViolinSuzuki_Leila {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_LISTAR_RESPONSABLESDataTable();
+                return new SP_CONSULTAR_VIOLINESDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid_responsable = base.Columns["id_responsable"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columnapellido = base.Columns["apellido"];
-                this.columntipo_responsable = base.Columns["tipo_responsable"];
-                this.columnid_tipo_responsable = base.Columns["id_tipo_responsable"];
+                this.columnID = base.Columns["ID"];
+                this.columnMEDIDA = base.Columns["MEDIDA"];
+                this.columnMARCA = base.Columns["MARCA"];
+                this.columnPRECIO = base.Columns["PRECIO"];
+                this._columnPERTENECE_A_ = base.Columns["PERTENECE A:"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid_responsable = new global::System.Data.DataColumn("id_responsable", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_responsable);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnapellido);
-                this.columntipo_responsable = new global::System.Data.DataColumn("tipo_responsable", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntipo_responsable);
-                this.columnid_tipo_responsable = new global::System.Data.DataColumn("id_tipo_responsable", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_tipo_responsable);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnMEDIDA = new global::System.Data.DataColumn("MEDIDA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMEDIDA);
+                this.columnMARCA = new global::System.Data.DataColumn("MARCA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMARCA);
+                this.columnPRECIO = new global::System.Data.DataColumn("PRECIO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRECIO);
+                this._columnPERTENECE_A_ = new global::System.Data.DataColumn("PERTENECE A:", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnPERTENECE_A_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnPERTENECE_A_");
+                this._columnPERTENECE_A_.ExtendedProperties.Add("Generator_UserColumnName", "PERTENECE A:");
+                base.Columns.Add(this._columnPERTENECE_A_);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_responsable}, true));
-                this.columnid_responsable.AutoIncrement = true;
-                this.columnid_responsable.AllowDBNull = false;
-                this.columnid_responsable.ReadOnly = true;
-                this.columnid_responsable.Unique = true;
-                this.columnnombre.MaxLength = 40;
-                this.columnapellido.MaxLength = 40;
-                this.columntipo_responsable.MaxLength = 20;
+                                this.columnID}, true));
+                this.columnID.AllowDBNull = false;
+                this.columnID.Unique = true;
+                this.columnMEDIDA.MaxLength = 10;
+                this.columnMARCA.MaxLength = 20;
+                this._columnPERTENECE_A_.ReadOnly = true;
+                this._columnPERTENECE_A_.MaxLength = 81;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_RESPONSABLESRow NewSP_LISTAR_RESPONSABLESRow() {
-                return ((SP_LISTAR_RESPONSABLESRow)(this.NewRow()));
+            public SP_CONSULTAR_VIOLINESRow NewSP_CONSULTAR_VIOLINESRow() {
+                return ((SP_CONSULTAR_VIOLINESRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_LISTAR_RESPONSABLESRow(builder);
+                return new SP_CONSULTAR_VIOLINESRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SP_LISTAR_RESPONSABLESRow);
+                return typeof(SP_CONSULTAR_VIOLINESRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SP_LISTAR_RESPONSABLESRowChanged != null)) {
-                    this.SP_LISTAR_RESPONSABLESRowChanged(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_VIOLINESRowChanged != null)) {
+                    this.SP_CONSULTAR_VIOLINESRowChanged(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1488,8 +1782,8 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SP_LISTAR_RESPONSABLESRowChanging != null)) {
-                    this.SP_LISTAR_RESPONSABLESRowChanging(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_VIOLINESRowChanging != null)) {
+                    this.SP_CONSULTAR_VIOLINESRowChanging(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1497,8 +1791,8 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SP_LISTAR_RESPONSABLESRowDeleted != null)) {
-                    this.SP_LISTAR_RESPONSABLESRowDeleted(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_VIOLINESRowDeleted != null)) {
+                    this.SP_CONSULTAR_VIOLINESRowDeleted(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1506,14 +1800,14 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SP_LISTAR_RESPONSABLESRowDeleting != null)) {
-                    this.SP_LISTAR_RESPONSABLESRowDeleting(this, new SP_LISTAR_RESPONSABLESRowChangeEvent(((SP_LISTAR_RESPONSABLESRow)(e.Row)), e.Action));
+                if ((this.SP_CONSULTAR_VIOLINESRowDeleting != null)) {
+                    this.SP_CONSULTAR_VIOLINESRowDeleting(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSP_LISTAR_RESPONSABLESRow(SP_LISTAR_RESPONSABLESRow row) {
+            public void RemoveSP_CONSULTAR_VIOLINESRow(SP_CONSULTAR_VIOLINESRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1540,7 +1834,7 @@ namespace ViolinSuzuki_Leila {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_LISTAR_RESPONSABLESDataTable";
+                attribute2.FixedValue = "SP_CONSULTAR_VIOLINESDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1890,22 +2184,34 @@ namespace ViolinSuzuki_Leila {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_CONSULTAR_VIOLINESDataTable : global::System.Data.TypedTableBase<SP_CONSULTAR_VIOLINESRow> {
+        public partial class SP_LISTAR_ALUMNOSDataTable : global::System.Data.TypedTableBase<SP_LISTAR_ALUMNOSRow> {
             
-            private global::System.Data.DataColumn columnID;
+            private global::System.Data.DataColumn columnid_alumno;
             
-            private global::System.Data.DataColumn columnMEDIDA;
+            private global::System.Data.DataColumn columnnombre;
             
-            private global::System.Data.DataColumn columnMARCA;
+            private global::System.Data.DataColumn columnapellido;
             
-            private global::System.Data.DataColumn columnPRECIO;
+            private global::System.Data.DataColumn columndni;
             
-            private global::System.Data.DataColumn _columnPERTENECE_A_;
+            private global::System.Data.DataColumn columncalle;
+            
+            private global::System.Data.DataColumn columnaltura;
+            
+            private global::System.Data.DataColumn columnid_ciudad;
+            
+            private global::System.Data.DataColumn columnfec_alta;
+            
+            private global::System.Data.DataColumn columnfec_nac;
+            
+            private global::System.Data.DataColumn columncolegio;
+            
+            private global::System.Data.DataColumn columnobservaciones;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_VIOLINESDataTable() {
-                this.TableName = "SP_CONSULTAR_VIOLINES";
+            public SP_LISTAR_ALUMNOSDataTable() {
+                this.TableName = "SP_LISTAR_ALUMNOS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1913,7 +2219,7 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_CONSULTAR_VIOLINESDataTable(global::System.Data.DataTable table) {
+            internal SP_LISTAR_ALUMNOSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1930,48 +2236,96 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected SP_CONSULTAR_VIOLINESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SP_LISTAR_ALUMNOSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn id_alumnoColumn {
                 get {
-                    return this.columnID;
+                    return this.columnid_alumno;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MEDIDAColumn {
+            public global::System.Data.DataColumn nombreColumn {
                 get {
-                    return this.columnMEDIDA;
+                    return this.columnnombre;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MARCAColumn {
+            public global::System.Data.DataColumn apellidoColumn {
                 get {
-                    return this.columnMARCA;
+                    return this.columnapellido;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PRECIOColumn {
+            public global::System.Data.DataColumn dniColumn {
                 get {
-                    return this.columnPRECIO;
+                    return this.columndni;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn _PERTENECE_A_Column {
+            public global::System.Data.DataColumn calleColumn {
                 get {
-                    return this._columnPERTENECE_A_;
+                    return this.columncalle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn alturaColumn {
+                get {
+                    return this.columnaltura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_ciudadColumn {
+                get {
+                    return this.columnid_ciudad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fec_altaColumn {
+                get {
+                    return this.columnfec_alta;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn fec_nacColumn {
+                get {
+                    return this.columnfec_nac;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn colegioColumn {
+                get {
+                    return this.columncolegio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn observacionesColumn {
+                get {
+                    return this.columnobservaciones;
                 }
             }
             
@@ -1986,56 +2340,62 @@ namespace ViolinSuzuki_Leila {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_VIOLINESRow this[int index] {
+            public SP_LISTAR_ALUMNOSRow this[int index] {
                 get {
-                    return ((SP_CONSULTAR_VIOLINESRow)(this.Rows[index]));
+                    return ((SP_LISTAR_ALUMNOSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowChanging;
+            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowChanged;
+            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowDeleting;
+            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_VIOLINESRowChangeEventHandler SP_CONSULTAR_VIOLINESRowDeleted;
+            public event SP_LISTAR_ALUMNOSRowChangeEventHandler SP_LISTAR_ALUMNOSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSP_CONSULTAR_VIOLINESRow(SP_CONSULTAR_VIOLINESRow row) {
+            public void AddSP_LISTAR_ALUMNOSRow(SP_LISTAR_ALUMNOSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_VIOLINESRow AddSP_CONSULTAR_VIOLINESRow(int ID, string MEDIDA, string MARCA, decimal PRECIO, string _PERTENECE_A_) {
-                SP_CONSULTAR_VIOLINESRow rowSP_CONSULTAR_VIOLINESRow = ((SP_CONSULTAR_VIOLINESRow)(this.NewRow()));
+            public SP_LISTAR_ALUMNOSRow AddSP_LISTAR_ALUMNOSRow(string nombre, string apellido, int dni, string calle, string altura, int id_ciudad, System.DateTime fec_alta, System.DateTime fec_nac, string colegio, string observaciones) {
+                SP_LISTAR_ALUMNOSRow rowSP_LISTAR_ALUMNOSRow = ((SP_LISTAR_ALUMNOSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
-                        MEDIDA,
-                        MARCA,
-                        PRECIO,
-                        _PERTENECE_A_};
-                rowSP_CONSULTAR_VIOLINESRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_CONSULTAR_VIOLINESRow);
-                return rowSP_CONSULTAR_VIOLINESRow;
+                        null,
+                        nombre,
+                        apellido,
+                        dni,
+                        calle,
+                        altura,
+                        id_ciudad,
+                        fec_alta,
+                        fec_nac,
+                        colegio,
+                        observaciones};
+                rowSP_LISTAR_ALUMNOSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_LISTAR_ALUMNOSRow);
+                return rowSP_LISTAR_ALUMNOSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_VIOLINESRow FindByID(int ID) {
-                return ((SP_CONSULTAR_VIOLINESRow)(this.Rows.Find(new object[] {
-                            ID})));
+            public SP_LISTAR_ALUMNOSRow FindByid_alumno(int id_alumno) {
+                return ((SP_LISTAR_ALUMNOSRow)(this.Rows.Find(new object[] {
+                            id_alumno})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SP_CONSULTAR_VIOLINESDataTable cln = ((SP_CONSULTAR_VIOLINESDataTable)(base.Clone()));
+                SP_LISTAR_ALUMNOSDataTable cln = ((SP_LISTAR_ALUMNOSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2043,68 +2403,88 @@ namespace ViolinSuzuki_Leila {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_CONSULTAR_VIOLINESDataTable();
+                return new SP_LISTAR_ALUMNOSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-                this.columnMEDIDA = base.Columns["MEDIDA"];
-                this.columnMARCA = base.Columns["MARCA"];
-                this.columnPRECIO = base.Columns["PRECIO"];
-                this._columnPERTENECE_A_ = base.Columns["PERTENECE A:"];
+                this.columnid_alumno = base.Columns["id_alumno"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columnapellido = base.Columns["apellido"];
+                this.columndni = base.Columns["dni"];
+                this.columncalle = base.Columns["calle"];
+                this.columnaltura = base.Columns["altura"];
+                this.columnid_ciudad = base.Columns["id_ciudad"];
+                this.columnfec_alta = base.Columns["fec_alta"];
+                this.columnfec_nac = base.Columns["fec_nac"];
+                this.columncolegio = base.Columns["colegio"];
+                this.columnobservaciones = base.Columns["observaciones"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.columnMEDIDA = new global::System.Data.DataColumn("MEDIDA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMEDIDA);
-                this.columnMARCA = new global::System.Data.DataColumn("MARCA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMARCA);
-                this.columnPRECIO = new global::System.Data.DataColumn("PRECIO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPRECIO);
-                this._columnPERTENECE_A_ = new global::System.Data.DataColumn("PERTENECE A:", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnPERTENECE_A_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnPERTENECE_A_");
-                this._columnPERTENECE_A_.ExtendedProperties.Add("Generator_UserColumnName", "PERTENECE A:");
-                base.Columns.Add(this._columnPERTENECE_A_);
+                this.columnid_alumno = new global::System.Data.DataColumn("id_alumno", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_alumno);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellido);
+                this.columndni = new global::System.Data.DataColumn("dni", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndni);
+                this.columncalle = new global::System.Data.DataColumn("calle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncalle);
+                this.columnaltura = new global::System.Data.DataColumn("altura", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaltura);
+                this.columnid_ciudad = new global::System.Data.DataColumn("id_ciudad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_ciudad);
+                this.columnfec_alta = new global::System.Data.DataColumn("fec_alta", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfec_alta);
+                this.columnfec_nac = new global::System.Data.DataColumn("fec_nac", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfec_nac);
+                this.columncolegio = new global::System.Data.DataColumn("colegio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncolegio);
+                this.columnobservaciones = new global::System.Data.DataColumn("observaciones", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnobservaciones);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
-                this.columnMEDIDA.MaxLength = 10;
-                this.columnMARCA.MaxLength = 20;
-                this._columnPERTENECE_A_.ReadOnly = true;
-                this._columnPERTENECE_A_.MaxLength = 81;
+                                this.columnid_alumno}, true));
+                this.columnid_alumno.AutoIncrement = true;
+                this.columnid_alumno.AllowDBNull = false;
+                this.columnid_alumno.ReadOnly = true;
+                this.columnid_alumno.Unique = true;
+                this.columnnombre.MaxLength = 40;
+                this.columnapellido.MaxLength = 40;
+                this.columncalle.MaxLength = 50;
+                this.columnaltura.MaxLength = 10;
+                this.columncolegio.MaxLength = 50;
+                this.columnobservaciones.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_VIOLINESRow NewSP_CONSULTAR_VIOLINESRow() {
-                return ((SP_CONSULTAR_VIOLINESRow)(this.NewRow()));
+            public SP_LISTAR_ALUMNOSRow NewSP_LISTAR_ALUMNOSRow() {
+                return ((SP_LISTAR_ALUMNOSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_CONSULTAR_VIOLINESRow(builder);
+                return new SP_LISTAR_ALUMNOSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SP_CONSULTAR_VIOLINESRow);
+                return typeof(SP_LISTAR_ALUMNOSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SP_CONSULTAR_VIOLINESRowChanged != null)) {
-                    this.SP_CONSULTAR_VIOLINESRowChanged(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
+                if ((this.SP_LISTAR_ALUMNOSRowChanged != null)) {
+                    this.SP_LISTAR_ALUMNOSRowChanged(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2112,8 +2492,8 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SP_CONSULTAR_VIOLINESRowChanging != null)) {
-                    this.SP_CONSULTAR_VIOLINESRowChanging(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
+                if ((this.SP_LISTAR_ALUMNOSRowChanging != null)) {
+                    this.SP_LISTAR_ALUMNOSRowChanging(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2121,8 +2501,8 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SP_CONSULTAR_VIOLINESRowDeleted != null)) {
-                    this.SP_CONSULTAR_VIOLINESRowDeleted(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
+                if ((this.SP_LISTAR_ALUMNOSRowDeleted != null)) {
+                    this.SP_LISTAR_ALUMNOSRowDeleted(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2130,14 +2510,14 @@ namespace ViolinSuzuki_Leila {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SP_CONSULTAR_VIOLINESRowDeleting != null)) {
-                    this.SP_CONSULTAR_VIOLINESRowDeleting(this, new SP_CONSULTAR_VIOLINESRowChangeEvent(((SP_CONSULTAR_VIOLINESRow)(e.Row)), e.Action));
+                if ((this.SP_LISTAR_ALUMNOSRowDeleting != null)) {
+                    this.SP_LISTAR_ALUMNOSRowDeleting(this, new SP_LISTAR_ALUMNOSRowChangeEvent(((SP_LISTAR_ALUMNOSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSP_CONSULTAR_VIOLINESRow(SP_CONSULTAR_VIOLINESRow row) {
+            public void RemoveSP_LISTAR_ALUMNOSRow(SP_LISTAR_ALUMNOSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2164,387 +2544,7 @@ namespace ViolinSuzuki_Leila {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_CONSULTAR_VIOLINESDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_CONSULTAR_RESPONSABLESDataTable : global::System.Data.TypedTableBase<SP_CONSULTAR_RESPONSABLESRow> {
-            
-            private global::System.Data.DataColumn columnID;
-            
-            private global::System.Data.DataColumn columnNombre;
-            
-            private global::System.Data.DataColumn columnDNI;
-            
-            private global::System.Data.DataColumn columnDIRECCION;
-            
-            private global::System.Data.DataColumn columnCIUDAD;
-            
-            private global::System.Data.DataColumn columnTELEFONO;
-            
-            private global::System.Data.DataColumn columnEMAIL;
-            
-            private global::System.Data.DataColumn columnOBSERVACIONES;
-            
-            private global::System.Data.DataColumn columnFECHA_DE_ALTA;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_RESPONSABLESDataTable() {
-                this.TableName = "SP_CONSULTAR_RESPONSABLES";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_CONSULTAR_RESPONSABLESDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected SP_CONSULTAR_RESPONSABLESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NombreColumn {
-                get {
-                    return this.columnNombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DNIColumn {
-                get {
-                    return this.columnDNI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DIRECCIONColumn {
-                get {
-                    return this.columnDIRECCION;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CIUDADColumn {
-                get {
-                    return this.columnCIUDAD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TELEFONOColumn {
-                get {
-                    return this.columnTELEFONO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EMAILColumn {
-                get {
-                    return this.columnEMAIL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn OBSERVACIONESColumn {
-                get {
-                    return this.columnOBSERVACIONES;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FECHA_DE_ALTAColumn {
-                get {
-                    return this.columnFECHA_DE_ALTA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_RESPONSABLESRow this[int index] {
-                get {
-                    return ((SP_CONSULTAR_RESPONSABLESRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_CONSULTAR_RESPONSABLESRowChangeEventHandler SP_CONSULTAR_RESPONSABLESRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSP_CONSULTAR_RESPONSABLESRow(SP_CONSULTAR_RESPONSABLESRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_RESPONSABLESRow AddSP_CONSULTAR_RESPONSABLESRow(int ID, string Nombre, int DNI, string DIRECCION, string CIUDAD, string TELEFONO, string EMAIL, string OBSERVACIONES, System.DateTime FECHA_DE_ALTA) {
-                SP_CONSULTAR_RESPONSABLESRow rowSP_CONSULTAR_RESPONSABLESRow = ((SP_CONSULTAR_RESPONSABLESRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        ID,
-                        Nombre,
-                        DNI,
-                        DIRECCION,
-                        CIUDAD,
-                        TELEFONO,
-                        EMAIL,
-                        OBSERVACIONES,
-                        FECHA_DE_ALTA};
-                rowSP_CONSULTAR_RESPONSABLESRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_CONSULTAR_RESPONSABLESRow);
-                return rowSP_CONSULTAR_RESPONSABLESRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_RESPONSABLESRow FindByID(int ID) {
-                return ((SP_CONSULTAR_RESPONSABLESRow)(this.Rows.Find(new object[] {
-                            ID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                SP_CONSULTAR_RESPONSABLESDataTable cln = ((SP_CONSULTAR_RESPONSABLESDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_CONSULTAR_RESPONSABLESDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-                this.columnNombre = base.Columns["Nombre"];
-                this.columnDNI = base.Columns["DNI"];
-                this.columnDIRECCION = base.Columns["DIRECCION"];
-                this.columnCIUDAD = base.Columns["CIUDAD"];
-                this.columnTELEFONO = base.Columns["TELEFONO"];
-                this.columnEMAIL = base.Columns["EMAIL"];
-                this.columnOBSERVACIONES = base.Columns["OBSERVACIONES"];
-                this.columnFECHA_DE_ALTA = base.Columns["FECHA_DE_ALTA"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombre);
-                this.columnDNI = new global::System.Data.DataColumn("DNI", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDNI);
-                this.columnDIRECCION = new global::System.Data.DataColumn("DIRECCION", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIRECCION);
-                this.columnCIUDAD = new global::System.Data.DataColumn("CIUDAD", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCIUDAD);
-                this.columnTELEFONO = new global::System.Data.DataColumn("TELEFONO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTELEFONO);
-                this.columnEMAIL = new global::System.Data.DataColumn("EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEMAIL);
-                this.columnOBSERVACIONES = new global::System.Data.DataColumn("OBSERVACIONES", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOBSERVACIONES);
-                this.columnFECHA_DE_ALTA = new global::System.Data.DataColumn("FECHA_DE_ALTA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFECHA_DE_ALTA);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
-                this.columnNombre.ReadOnly = true;
-                this.columnNombre.MaxLength = 81;
-                this.columnDIRECCION.ReadOnly = true;
-                this.columnDIRECCION.MaxLength = 61;
-                this.columnCIUDAD.MaxLength = 40;
-                this.columnTELEFONO.ReadOnly = true;
-                this.columnTELEFONO.MaxLength = 40;
-                this.columnEMAIL.ReadOnly = true;
-                this.columnEMAIL.MaxLength = 40;
-                this.columnOBSERVACIONES.MaxLength = 200;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_RESPONSABLESRow NewSP_CONSULTAR_RESPONSABLESRow() {
-                return ((SP_CONSULTAR_RESPONSABLESRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_CONSULTAR_RESPONSABLESRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(SP_CONSULTAR_RESPONSABLESRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.SP_CONSULTAR_RESPONSABLESRowChanged != null)) {
-                    this.SP_CONSULTAR_RESPONSABLESRowChanged(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.SP_CONSULTAR_RESPONSABLESRowChanging != null)) {
-                    this.SP_CONSULTAR_RESPONSABLESRowChanging(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.SP_CONSULTAR_RESPONSABLESRowDeleted != null)) {
-                    this.SP_CONSULTAR_RESPONSABLESRowDeleted(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.SP_CONSULTAR_RESPONSABLESRowDeleting != null)) {
-                    this.SP_CONSULTAR_RESPONSABLESRowDeleting(this, new SP_CONSULTAR_RESPONSABLESRowChangeEvent(((SP_CONSULTAR_RESPONSABLESRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSP_CONSULTAR_RESPONSABLESRow(SP_CONSULTAR_RESPONSABLESRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetPrincipal ds = new DataSetPrincipal();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_CONSULTAR_RESPONSABLESDataTable";
+                attribute2.FixedValue = "SP_LISTAR_ALUMNOSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2588,25 +2588,282 @@ namespace ViolinSuzuki_Leila {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SP_LISTAR_ALUMNOSRow : global::System.Data.DataRow {
+        public partial class SP_CONSULTAR_RESPONSABLESRow : global::System.Data.DataRow {
             
-            private SP_LISTAR_ALUMNOSDataTable tableSP_LISTAR_ALUMNOS;
+            private SP_CONSULTAR_RESPONSABLESDataTable tableSP_CONSULTAR_RESPONSABLES;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_LISTAR_ALUMNOSRow(global::System.Data.DataRowBuilder rb) : 
+            internal SP_CONSULTAR_RESPONSABLESRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSP_LISTAR_ALUMNOS = ((SP_LISTAR_ALUMNOSDataTable)(this.Table));
+                this.tableSP_CONSULTAR_RESPONSABLES = ((SP_CONSULTAR_RESPONSABLESDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_alumno {
+            public int ID {
                 get {
-                    return ((int)(this[this.tableSP_LISTAR_ALUMNOS.id_alumnoColumn]));
+                    return ((int)(this[this.tableSP_CONSULTAR_RESPONSABLES.IDColumn]));
                 }
                 set {
-                    this[this.tableSP_LISTAR_ALUMNOS.id_alumnoColumn] = value;
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int DNI {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DNI\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string DIRECCION {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DIRECCION\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string CIUDAD {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CIUDAD\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TELEFONO {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TELEFONO\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string EMAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'EMAIL\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string OBSERVACIONES {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FECHA_DE_ALTA {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_DE_ALTA\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDNINull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDNINull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDIRECCIONNull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDIRECCIONNull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCIUDADNull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCIUDADNull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTELEFONONull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTELEFONONull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsEMAILNull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetEMAILNull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOBSERVACIONESNull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOBSERVACIONESNull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFECHA_DE_ALTANull() {
+                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFECHA_DE_ALTANull() {
+                this[this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SP_LISTAR_RESPONSABLESRow : global::System.Data.DataRow {
+            
+            private SP_LISTAR_RESPONSABLESDataTable tableSP_LISTAR_RESPONSABLES;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_LISTAR_RESPONSABLESRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSP_LISTAR_RESPONSABLES = ((SP_LISTAR_RESPONSABLESDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_responsable {
+                get {
+                    return ((int)(this[this.tableSP_LISTAR_RESPONSABLES.id_responsableColumn]));
+                }
+                set {
+                    this[this.tableSP_LISTAR_RESPONSABLES.id_responsableColumn] = value;
                 }
             }
             
@@ -2615,14 +2872,14 @@ namespace ViolinSuzuki_Leila {
             public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.nombreColumn]));
+                        return ((string)(this[this.tableSP_LISTAR_RESPONSABLES.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'SP_LISTAR_RESPONSABLES\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_LISTAR_ALUMNOS.nombreColumn] = value;
+                    this[this.tableSP_LISTAR_RESPONSABLES.nombreColumn] = value;
                 }
             }
             
@@ -2631,264 +2888,98 @@ namespace ViolinSuzuki_Leila {
             public string apellido {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.apellidoColumn]));
+                        return ((string)(this[this.tableSP_LISTAR_RESPONSABLES.apellidoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.apellidoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int dni {
-                get {
-                    try {
-                        return ((int)(this[this.tableSP_LISTAR_ALUMNOS.dniColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'dni\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.dniColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string calle {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.calleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'calle\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.calleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string altura {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.alturaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'altura\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.alturaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_ciudad {
-                get {
-                    try {
-                        return ((int)(this[this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_ciudad\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime fec_alta {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSP_LISTAR_ALUMNOS.fec_altaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fec_alta\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.fec_altaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime fec_nac {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSP_LISTAR_ALUMNOS.fec_nacColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fec_nac\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.fec_nacColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string colegio {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.colegioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'colegio\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_ALUMNOS.colegioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string observaciones {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.observacionesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'observaciones\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull." +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'SP_LISTAR_RESPONSABLES\' es DBNull." +
                                 "", e);
                     }
                 }
                 set {
-                    this[this.tableSP_LISTAR_ALUMNOS.observacionesColumn] = value;
+                    this[this.tableSP_LISTAR_RESPONSABLES.apellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string tipo_responsable {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo_responsable\' de la tabla \'SP_LISTAR_RESPONSABLES\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_tipo_responsable {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_tipo_responsable\' de la tabla \'SP_LISTAR_RESPONSABLES\'" +
+                                " es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsnombreNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.nombreColumn);
+                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetnombreNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.nombreColumn] = global::System.Convert.DBNull;
+                this[this.tableSP_LISTAR_RESPONSABLES.nombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsapellidoNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.apellidoColumn);
+                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.apellidoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetapellidoNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.apellidoColumn] = global::System.Convert.DBNull;
+                this[this.tableSP_LISTAR_RESPONSABLES.apellidoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsdniNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.dniColumn);
+            public bool Istipo_responsableNull() {
+                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetdniNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.dniColumn] = global::System.Convert.DBNull;
+            public void Settipo_responsableNull() {
+                this[this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscalleNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.calleColumn);
+            public bool Isid_tipo_responsableNull() {
+                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcalleNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.calleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsalturaNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.alturaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetalturaNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.alturaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isid_ciudadNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setid_ciudadNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isfec_altaNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.fec_altaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setfec_altaNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.fec_altaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isfec_nacNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.fec_nacColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setfec_nacNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.fec_nacColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscolegioNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.colegioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcolegioNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.colegioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsobservacionesNull() {
-                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.observacionesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetobservacionesNull() {
-                this[this.tableSP_LISTAR_ALUMNOS.observacionesColumn] = global::System.Convert.DBNull;
+            public void Setid_tipo_responsableNull() {
+                this[this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3204,258 +3295,6 @@ namespace ViolinSuzuki_Leila {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SP_LISTAR_RESPONSABLESRow : global::System.Data.DataRow {
-            
-            private SP_LISTAR_RESPONSABLESDataTable tableSP_LISTAR_RESPONSABLES;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_LISTAR_RESPONSABLESRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSP_LISTAR_RESPONSABLES = ((SP_LISTAR_RESPONSABLESDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_responsable {
-                get {
-                    return ((int)(this[this.tableSP_LISTAR_RESPONSABLES.id_responsableColumn]));
-                }
-                set {
-                    this[this.tableSP_LISTAR_RESPONSABLES.id_responsableColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string nombre {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_LISTAR_RESPONSABLES.nombreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'SP_LISTAR_RESPONSABLES\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_RESPONSABLES.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string apellido {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_LISTAR_RESPONSABLES.apellidoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'SP_LISTAR_RESPONSABLES\' es DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_RESPONSABLES.apellidoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string tipo_responsable {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo_responsable\' de la tabla \'SP_LISTAR_RESPONSABLES\' es" +
-                                " DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_tipo_responsable {
-                get {
-                    try {
-                        return ((int)(this[this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_tipo_responsable\' de la tabla \'SP_LISTAR_RESPONSABLES\'" +
-                                " es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsnombreNull() {
-                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.nombreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetnombreNull() {
-                this[this.tableSP_LISTAR_RESPONSABLES.nombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsapellidoNull() {
-                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.apellidoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetapellidoNull() {
-                this[this.tableSP_LISTAR_RESPONSABLES.apellidoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Istipo_responsableNull() {
-                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Settipo_responsableNull() {
-                this[this.tableSP_LISTAR_RESPONSABLES.tipo_responsableColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isid_tipo_responsableNull() {
-                return this.IsNull(this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setid_tipo_responsableNull() {
-                this[this.tableSP_LISTAR_RESPONSABLES.id_tipo_responsableColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class SP_CONSULTAR_PROGRESOSRow : global::System.Data.DataRow {
-            
-            private SP_CONSULTAR_PROGRESOSDataTable tableSP_CONSULTAR_PROGRESOS;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_CONSULTAR_PROGRESOSRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSP_CONSULTAR_PROGRESOS = ((SP_CONSULTAR_PROGRESOSDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ID {
-                get {
-                    return ((int)(this[this.tableSP_CONSULTAR_PROGRESOS.IDColumn]));
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_PROGRESOS.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ALUMNO {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ALUMNO\' de la tabla \'SP_CONSULTAR_PROGRESOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string RESPONSABLE {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RESPONSABLE\' de la tabla \'SP_CONSULTAR_PROGRESOS\' es DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime fecha {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSP_CONSULTAR_PROGRESOS.fechaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'SP_CONSULTAR_PROGRESOS\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_PROGRESOS.fechaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsALUMNONull() {
-                return this.IsNull(this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetALUMNONull() {
-                this[this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRESPONSABLENull() {
-                return this.IsNull(this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRESPONSABLENull() {
-                this[this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsfechaNull() {
-                return this.IsNull(this.tableSP_CONSULTAR_PROGRESOS.fechaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetfechaNull() {
-                this[this.tableSP_CONSULTAR_PROGRESOS.fechaColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class SP_CONSULTAR_VIOLINESRow : global::System.Data.DataRow {
             
             private SP_CONSULTAR_VIOLINESDataTable tableSP_CONSULTAR_VIOLINES;
@@ -3595,257 +3434,418 @@ namespace ViolinSuzuki_Leila {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SP_CONSULTAR_RESPONSABLESRow : global::System.Data.DataRow {
+        public partial class SP_CONSULTAR_PROGRESOSRow : global::System.Data.DataRow {
             
-            private SP_CONSULTAR_RESPONSABLESDataTable tableSP_CONSULTAR_RESPONSABLES;
+            private SP_CONSULTAR_PROGRESOSDataTable tableSP_CONSULTAR_PROGRESOS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_CONSULTAR_RESPONSABLESRow(global::System.Data.DataRowBuilder rb) : 
+            internal SP_CONSULTAR_PROGRESOSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSP_CONSULTAR_RESPONSABLES = ((SP_CONSULTAR_RESPONSABLESDataTable)(this.Table));
+                this.tableSP_CONSULTAR_PROGRESOS = ((SP_CONSULTAR_PROGRESOSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableSP_CONSULTAR_RESPONSABLES.IDColumn]));
+                    return ((int)(this[this.tableSP_CONSULTAR_PROGRESOS.IDColumn]));
                 }
                 set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.IDColumn] = value;
+                    this[this.tableSP_CONSULTAR_PROGRESOS.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Nombre {
+            public string ALUMNO {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn]));
+                        return ((string)(this[this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ALUMNO\' de la tabla \'SP_CONSULTAR_PROGRESOS\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn] = value;
+                    this[this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int DNI {
+            public string RESPONSABLE {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn]));
+                        return ((string)(this[this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DNI\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string DIRECCION {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DIRECCION\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CIUDAD {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CIUDAD\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TELEFONO {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TELEFONO\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNu" +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RESPONSABLE\' de la tabla \'SP_CONSULTAR_PROGRESOS\' es DBNu" +
                                 "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn] = value;
+                    this[this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string EMAIL {
+            public System.DateTime fecha {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn]));
+                        return ((global::System.DateTime)(this[this.tableSP_CONSULTAR_PROGRESOS.fechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'EMAIL\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es DBNull." +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'SP_CONSULTAR_PROGRESOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_CONSULTAR_PROGRESOS.fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsALUMNONull() {
+                return this.IsNull(this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetALUMNONull() {
+                this[this.tableSP_CONSULTAR_PROGRESOS.ALUMNOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsRESPONSABLENull() {
+                return this.IsNull(this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetRESPONSABLENull() {
+                this[this.tableSP_CONSULTAR_PROGRESOS.RESPONSABLEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsfechaNull() {
+                return this.IsNull(this.tableSP_CONSULTAR_PROGRESOS.fechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetfechaNull() {
+                this[this.tableSP_CONSULTAR_PROGRESOS.fechaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SP_LISTAR_ALUMNOSRow : global::System.Data.DataRow {
+            
+            private SP_LISTAR_ALUMNOSDataTable tableSP_LISTAR_ALUMNOS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_LISTAR_ALUMNOSRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSP_LISTAR_ALUMNOS = ((SP_LISTAR_ALUMNOSDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_alumno {
+                get {
+                    return ((int)(this[this.tableSP_LISTAR_ALUMNOS.id_alumnoColumn]));
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.id_alumnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string apellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.apellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.apellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int dni {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_LISTAR_ALUMNOS.dniColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'dni\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.dniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string calle {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.calleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'calle\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.calleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string altura {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.alturaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'altura\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.alturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_ciudad {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_ciudad\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime fec_alta {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSP_LISTAR_ALUMNOS.fec_altaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fec_alta\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.fec_altaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime fec_nac {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSP_LISTAR_ALUMNOS.fec_nacColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fec_nac\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.fec_nacColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string colegio {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.colegioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'colegio\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_LISTAR_ALUMNOS.colegioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string observaciones {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_LISTAR_ALUMNOS.observacionesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'observaciones\' de la tabla \'SP_LISTAR_ALUMNOS\' es DBNull." +
                                 "", e);
                     }
                 }
                 set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn] = value;
+                    this[this.tableSP_LISTAR_ALUMNOS.observacionesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string OBSERVACIONES {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es" +
-                                " DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn] = value;
-                }
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime FECHA_DE_ALTA {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_DE_ALTA\' de la tabla \'SP_CONSULTAR_RESPONSABLES\' es" +
-                                " DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn] = value;
-                }
+            public void SetnombreNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.nombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNombreNull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn);
+            public bool IsapellidoNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.apellidoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNombreNull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.NombreColumn] = global::System.Convert.DBNull;
+            public void SetapellidoNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.apellidoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDNINull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn);
+            public bool IsdniNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.dniColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDNINull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.DNIColumn] = global::System.Convert.DBNull;
+            public void SetdniNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.dniColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDIRECCIONNull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn);
+            public bool IscalleNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.calleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDIRECCIONNull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.DIRECCIONColumn] = global::System.Convert.DBNull;
+            public void SetcalleNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.calleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCIUDADNull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn);
+            public bool IsalturaNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.alturaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCIUDADNull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.CIUDADColumn] = global::System.Convert.DBNull;
+            public void SetalturaNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.alturaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTELEFONONull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn);
+            public bool Isid_ciudadNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTELEFONONull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.TELEFONOColumn] = global::System.Convert.DBNull;
+            public void Setid_ciudadNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.id_ciudadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsEMAILNull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn);
+            public bool Isfec_altaNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.fec_altaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetEMAILNull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.EMAILColumn] = global::System.Convert.DBNull;
+            public void Setfec_altaNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.fec_altaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsOBSERVACIONESNull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn);
+            public bool Isfec_nacNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.fec_nacColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetOBSERVACIONESNull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.OBSERVACIONESColumn] = global::System.Convert.DBNull;
+            public void Setfec_nacNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.fec_nacColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFECHA_DE_ALTANull() {
-                return this.IsNull(this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn);
+            public bool IscolegioNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.colegioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFECHA_DE_ALTANull() {
-                this[this.tableSP_CONSULTAR_RESPONSABLES.FECHA_DE_ALTAColumn] = global::System.Convert.DBNull;
+            public void SetcolegioNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.colegioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsobservacionesNull() {
+                return this.IsNull(this.tableSP_LISTAR_ALUMNOS.observacionesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetobservacionesNull() {
+                this[this.tableSP_LISTAR_ALUMNOS.observacionesColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3853,56 +3853,22 @@ namespace ViolinSuzuki_Leila {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_LISTAR_ALUMNOSRowChangeEvent : global::System.EventArgs {
+        public class SP_CONSULTAR_RESPONSABLESRowChangeEvent : global::System.EventArgs {
             
-            private SP_LISTAR_ALUMNOSRow eventRow;
+            private SP_CONSULTAR_RESPONSABLESRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_ALUMNOSRowChangeEvent(SP_LISTAR_ALUMNOSRow row, global::System.Data.DataRowAction action) {
+            public SP_CONSULTAR_RESPONSABLESRowChangeEvent(SP_CONSULTAR_RESPONSABLESRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_LISTAR_ALUMNOSRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_CONSULTAR_ALUMNOSRowChangeEvent : global::System.EventArgs {
-            
-            private SP_CONSULTAR_ALUMNOSRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_ALUMNOSRowChangeEvent(SP_CONSULTAR_ALUMNOSRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_ALUMNOSRow Row {
+            public SP_CONSULTAR_RESPONSABLESRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3955,22 +3921,22 @@ namespace ViolinSuzuki_Leila {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_CONSULTAR_PROGRESOSRowChangeEvent : global::System.EventArgs {
+        public class SP_CONSULTAR_ALUMNOSRowChangeEvent : global::System.EventArgs {
             
-            private SP_CONSULTAR_PROGRESOSRow eventRow;
+            private SP_CONSULTAR_ALUMNOSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_PROGRESOSRowChangeEvent(SP_CONSULTAR_PROGRESOSRow row, global::System.Data.DataRowAction action) {
+            public SP_CONSULTAR_ALUMNOSRowChangeEvent(SP_CONSULTAR_ALUMNOSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_PROGRESOSRow Row {
+            public SP_CONSULTAR_ALUMNOSRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4023,22 +3989,56 @@ namespace ViolinSuzuki_Leila {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_CONSULTAR_RESPONSABLESRowChangeEvent : global::System.EventArgs {
+        public class SP_CONSULTAR_PROGRESOSRowChangeEvent : global::System.EventArgs {
             
-            private SP_CONSULTAR_RESPONSABLESRow eventRow;
+            private SP_CONSULTAR_PROGRESOSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_RESPONSABLESRowChangeEvent(SP_CONSULTAR_RESPONSABLESRow row, global::System.Data.DataRowAction action) {
+            public SP_CONSULTAR_PROGRESOSRowChangeEvent(SP_CONSULTAR_PROGRESOSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_CONSULTAR_RESPONSABLESRow Row {
+            public SP_CONSULTAR_PROGRESOSRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class SP_LISTAR_ALUMNOSRowChangeEvent : global::System.EventArgs {
+            
+            private SP_LISTAR_ALUMNOSRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_LISTAR_ALUMNOSRowChangeEvent(SP_LISTAR_ALUMNOSRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_LISTAR_ALUMNOSRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4066,7 +4066,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_LISTAR_ALUMNOSTableAdapter : global::System.ComponentModel.Component {
+    public partial class SP_CONSULTAR_RESPONSABLESTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4080,7 +4080,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SP_LISTAR_ALUMNOSTableAdapter() {
+        public SP_CONSULTAR_RESPONSABLESTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4177,18 +4177,16 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_LISTAR_ALUMNOS";
-            tableMapping.ColumnMappings.Add("id_alumno", "id_alumno");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("apellido", "apellido");
-            tableMapping.ColumnMappings.Add("dni", "dni");
-            tableMapping.ColumnMappings.Add("calle", "calle");
-            tableMapping.ColumnMappings.Add("altura", "altura");
-            tableMapping.ColumnMappings.Add("id_ciudad", "id_ciudad");
-            tableMapping.ColumnMappings.Add("fec_alta", "fec_alta");
-            tableMapping.ColumnMappings.Add("fec_nac", "fec_nac");
-            tableMapping.ColumnMappings.Add("colegio", "colegio");
-            tableMapping.ColumnMappings.Add("observaciones", "observaciones");
+            tableMapping.DataSetTable = "SP_CONSULTAR_RESPONSABLES";
+            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("DNI", "DNI");
+            tableMapping.ColumnMappings.Add("DIRECCION", "DIRECCION");
+            tableMapping.ColumnMappings.Add("CIUDAD", "CIUDAD");
+            tableMapping.ColumnMappings.Add("TELEFONO", "TELEFONO");
+            tableMapping.ColumnMappings.Add("EMAIL", "EMAIL");
+            tableMapping.ColumnMappings.Add("OBSERVACIONES", "OBSERVACIONES");
+            tableMapping.ColumnMappings.Add("FECHA_DE_ALTA", "FECHA_DE_ALTA");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4196,7 +4194,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString1;
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4205,7 +4203,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_LISTAR_ALUMNOS";
+            this._commandCollection[0].CommandText = "dbo.SP_CONSULTAR_RESPONSABLES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -4214,7 +4212,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable dataTable) {
+        public virtual int Fill(DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4227,9 +4225,181 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable GetData() {
+        public virtual DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable dataTable = new DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable();
+            DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable dataTable = new DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SP_LISTAR_RESPONSABLESTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public SP_LISTAR_RESPONSABLESTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SP_LISTAR_RESPONSABLES";
+            tableMapping.ColumnMappings.Add("id_responsable", "id_responsable");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("apellido", "apellido");
+            tableMapping.ColumnMappings.Add("tipo_responsable", "tipo_responsable");
+            tableMapping.ColumnMappings.Add("id_tipo_responsable", "id_tipo_responsable");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SP_LISTAR_RESPONSABLES";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable dataTable = new DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4374,7 +4544,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString1;
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4408,349 +4578,6 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         public virtual DataSetPrincipal.SP_CONSULTAR_ALUMNOSDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             DataSetPrincipal.SP_CONSULTAR_ALUMNOSDataTable dataTable = new DataSetPrincipal.SP_CONSULTAR_ALUMNOSDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_LISTAR_RESPONSABLESTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SP_LISTAR_RESPONSABLESTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_LISTAR_RESPONSABLES";
-            tableMapping.ColumnMappings.Add("id_responsable", "id_responsable");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("apellido", "apellido");
-            tableMapping.ColumnMappings.Add("tipo_responsable", "tipo_responsable");
-            tableMapping.ColumnMappings.Add("id_tipo_responsable", "id_tipo_responsable");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString1;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_LISTAR_RESPONSABLES";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable dataTable = new DataSetPrincipal.SP_LISTAR_RESPONSABLESDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_CONSULTAR_PROGRESOSTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SP_CONSULTAR_PROGRESOSTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_CONSULTAR_PROGRESOS";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ALUMNO", "ALUMNO");
-            tableMapping.ColumnMappings.Add("RESPONSABLE", "RESPONSABLE");
-            tableMapping.ColumnMappings.Add("fecha", "fecha");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString1;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_CONSULTAR_PROGRESOS";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable dataTable = new DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4889,7 +4716,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString1;
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4937,7 +4764,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_CONSULTAR_RESPONSABLESTableAdapter : global::System.ComponentModel.Component {
+    public partial class SP_CONSULTAR_PROGRESOSTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4951,7 +4778,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SP_CONSULTAR_RESPONSABLESTableAdapter() {
+        public SP_CONSULTAR_PROGRESOSTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5048,16 +4875,11 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_CONSULTAR_RESPONSABLES";
+            tableMapping.DataSetTable = "SP_CONSULTAR_PROGRESOS";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("DNI", "DNI");
-            tableMapping.ColumnMappings.Add("DIRECCION", "DIRECCION");
-            tableMapping.ColumnMappings.Add("CIUDAD", "CIUDAD");
-            tableMapping.ColumnMappings.Add("TELEFONO", "TELEFONO");
-            tableMapping.ColumnMappings.Add("EMAIL", "EMAIL");
-            tableMapping.ColumnMappings.Add("OBSERVACIONES", "OBSERVACIONES");
-            tableMapping.ColumnMappings.Add("FECHA_DE_ALTA", "FECHA_DE_ALTA");
+            tableMapping.ColumnMappings.Add("ALUMNO", "ALUMNO");
+            tableMapping.ColumnMappings.Add("RESPONSABLE", "RESPONSABLE");
+            tableMapping.ColumnMappings.Add("fecha", "fecha");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5065,7 +4887,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString1;
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5074,7 +4896,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_CONSULTAR_RESPONSABLES";
+            this._commandCollection[0].CommandText = "dbo.SP_CONSULTAR_PROGRESOS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -5083,7 +4905,7 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable dataTable) {
+        public virtual int Fill(DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5096,9 +4918,187 @@ namespace ViolinSuzuki_Leila.DataSetPrincipalTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable GetData() {
+        public virtual DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable dataTable = new DataSetPrincipal.SP_CONSULTAR_RESPONSABLESDataTable();
+            DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable dataTable = new DataSetPrincipal.SP_CONSULTAR_PROGRESOSDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SP_LISTAR_ALUMNOSTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public SP_LISTAR_ALUMNOSTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SP_LISTAR_ALUMNOS";
+            tableMapping.ColumnMappings.Add("id_alumno", "id_alumno");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("apellido", "apellido");
+            tableMapping.ColumnMappings.Add("dni", "dni");
+            tableMapping.ColumnMappings.Add("calle", "calle");
+            tableMapping.ColumnMappings.Add("altura", "altura");
+            tableMapping.ColumnMappings.Add("id_ciudad", "id_ciudad");
+            tableMapping.ColumnMappings.Add("fec_alta", "fec_alta");
+            tableMapping.ColumnMappings.Add("fec_nac", "fec_nac");
+            tableMapping.ColumnMappings.Add("colegio", "colegio");
+            tableMapping.ColumnMappings.Add("observaciones", "observaciones");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SP_LISTAR_ALUMNOS";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable dataTable = new DataSetPrincipal.SP_LISTAR_ALUMNOSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

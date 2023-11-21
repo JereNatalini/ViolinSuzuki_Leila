@@ -597,9 +597,13 @@ GO
 ALTER VIEW V_CONSULTAR_PROGRESOS
 AS
 SELECT P.id_progreso AS ID, A.nombre+' '+ A.apellido AS ALUMNO,COALESCE( R.nombre+' '+ R.apellido, 'SIN RESPONSABLE') AS RESPONSABLE, P.fecha
-FROM Progresos P, Alumnos A, Responsables R
-WHERE P.id_alumno = A.id_alumno
-AND P.id_responsable = R.id_responsable
+FROM
+    Progresos P
+INNER JOIN
+    Alumnos A ON P.id_alumno = A.id_alumno
+LEFT JOIN
+    Responsables R ON P.id_responsable = R.id_responsable;
+
 --SP CONSULTAR PROGRESOS
 CREATE PROCEDURE SP_CONSULTAR_PROGRESOS
 AS
@@ -612,14 +616,14 @@ alter PROCEDURE SP_REPORTE_PROGRESO
 @idProgreso int
 AS
 BEGIN
-	SELECT D.id_detalle_progreso as ID,A.nombre+' '+ A.apellido AS ALUMNO,R.nombre+' '+ R.apellido AS RESPONSABLE, D.id_detalle_progreso AS ACTIVIDAD, C.cancion AS CANCION, D.observaciones AS OBSERVACIONES
-	FROM Progresos P, Detalles_Progreso D, Alumnos A, Responsables R, Canciones C
-	WHERE P.id_progreso = D.id_progreso
-	AND P.id_alumno = A.id_alumno
-	AND P.id_responsable = R.id_responsable
-	AND C.id_cancion = D.id_cancion
-	AND P.id_progreso = @idProgreso
-	ORDER BY id_detalle_progreso
+	SELECT D.id_detalle_progreso as ID,A.nombre+' '+ A.apellido AS ALUMNO,COALESCE( R.nombre+' '+ R.apellido, 'SIN RESPONSABLE')AS RESPONSABLE, D.id_detalle_progreso AS ACTIVIDAD, C.cancion AS CANCION, D.observaciones AS OBSERVACIONES
+	FROM Progresos P
+JOIN Detalles_Progreso D ON P.id_progreso = D.id_progreso
+JOIN Alumnos A ON P.id_alumno = A.id_alumno
+LEFT JOIN Responsables R ON P.id_responsable = R.id_responsable
+JOIN Canciones C ON C.id_cancion = D.id_cancion
+WHERE P.id_progreso = @idProgreso
+ORDER BY D.id_detalle_progreso;
 END
 
 --SP CARGAR COMBO FORMA PAGO
@@ -641,3 +645,6 @@ BEGIN
 	INSERT INTO Pagos(monto, fecha_pago, id_alumno, id_responsable, id_forma_pago, concepto)
 	VALUES(@monto, @fecha_pago, @idAlumno, COALESCE(@idResponsable, null), @idFormaPago,@concepto)
 END
+
+
+SELECT * FROM Progresos

@@ -16,6 +16,8 @@ namespace ViolinSuzuki_Leila
         Helper helper;
         public Alumno alumno { get; set; }
         public Responsable responsable { get; set; }
+
+        public FormListarResponsablesPagos FormularioAnterior { get; set; }
         public FormCargarPago(Alumno alumno, Responsable responsable)
         {
             helper = new Helper();
@@ -30,7 +32,14 @@ namespace ViolinSuzuki_Leila
             responsable = null;
         }
 
-
+        private void MostrarFormularioAnterior()
+        {
+            if (FormularioAnterior != null)
+            {
+                FormularioAnterior.Show();
+                this.Hide();
+            }
+        }
         private void FormCargarPago_Load(object sender, EventArgs e)
         {
             CargarCombo("FORMA_PAGO", cboFormaPago);
@@ -88,6 +97,11 @@ namespace ViolinSuzuki_Leila
 
             }
             Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioAnterior();
         }
     }
 }

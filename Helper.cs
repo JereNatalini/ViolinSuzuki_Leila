@@ -17,8 +17,8 @@ namespace ViolinSuzuki_Leila
 
         public Helper()
         {
-            //cnnString = @"Data Source=JUANSANTACROCE\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
-            cnnString = @"Data Source=DESKTOP-EEU1F57\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
+            cnnString = @"Data Source=JUANSANTACROCE\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
+            //cnnString = @"Data Source=DESKTOP-EEU1F57\SQLEXPRESS;Initial Catalog=VIOLIN_SUZUKI_LEILA;Integrated Security=True";
             cnn = new SqlConnection(cnnString);
             cmd = new SqlCommand();
         }
@@ -136,7 +136,7 @@ namespace ViolinSuzuki_Leila
                 SqlCommand cmdM = new SqlCommand("SP_INSERTAR_MAESTRO", cnn, t);
                 cmdM.CommandType = CommandType.StoredProcedure;
                 cmdM.Parameters.AddWithValue("@idAlumno", p.pAlumno.IdAlumno);
-                cmdM.Parameters.AddWithValue("@idResponsable", p.pResponsable.IdResponsable);
+                cmdM.Parameters.AddWithValue("@idResponsable", p.pResponsable != null ? p.pResponsable.IdResponsable : (object)DBNull.Value);
                 //Parametro de salida
                 SqlParameter pOut = new SqlParameter();
                 pOut.ParameterName = "@progresoNro";

@@ -12,11 +12,19 @@ namespace ViolinSuzuki_Leila
 {
     public partial class FormConsultarAlumnos : Form
     {
+        public FormTiposDeConsulta FormularioAnterior { get; set; }
         public FormConsultarAlumnos()
         {
             InitializeComponent();
         }
-
+        private void MostrarFormularioAnterior()
+        {
+            if (FormularioAnterior != null)
+            {
+                FormularioAnterior.Show();
+                this.Hide();
+            }
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -27,6 +35,11 @@ namespace ViolinSuzuki_Leila
             // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.SP_CONSULTAR_ALUMNOS' Puede moverla o quitarla según sea necesario.
             this.sP_CONSULTAR_ALUMNOSTableAdapter.Fill(this.dataSetPrincipal.SP_CONSULTAR_ALUMNOS);
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioAnterior();
         }
     }
 }

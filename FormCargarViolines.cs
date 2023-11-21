@@ -13,13 +13,20 @@ namespace ViolinSuzuki_Leila
     public partial class FormCargarViolines : Form
     {
         Helper helper = new Helper();
-
+        public FormTiposDeCarga FormularioAnterior { get; set; }
         public FormCargarViolines()
         {
             InitializeComponent();
 
         }
-
+        private void MostrarFormularioAnterior()
+        {
+            if (FormularioAnterior != null)
+            {
+                FormularioAnterior.Show();
+                this.Hide();
+            }
+        }
         private void FormCargarViolines_Load(object sender, EventArgs e)
         {
             CargarCombo("MEDIDAS", cboMedidas);
@@ -70,7 +77,9 @@ namespace ViolinSuzuki_Leila
 
         }
 
-
-
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioAnterior();
+        }
     }
 }

@@ -12,11 +12,18 @@ namespace ViolinSuzuki_Leila
 {
     public partial class FormListarAlumnosPagos : Form
     {
+        private FormListarResponsablesPagos formResponsables;
         public FormListarAlumnosPagos()
         {
             InitializeComponent();
         }
-
+        private void AbrirFormListarResponsables(Alumno a)
+        {
+            formResponsables = new FormListarResponsablesPagos(a);
+            formResponsables.FormularioAnterior = this; // Establecer referencia al formulario anterior
+            formResponsables.Show();
+            this.Hide();
+        }
         private void FormListarAlumnosPagos_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.SP_LISTAR_ALUMNOS' Puede moverla o quitarla según sea necesario.
@@ -33,10 +40,13 @@ namespace ViolinSuzuki_Leila
                 a.IdAlumno = (int)filaSeleccionada.Cells[0].Value;
                 a.Nombre = filaSeleccionada.Cells[1].Value.ToString();
                 a.Apellido = filaSeleccionada.Cells[2].Value.ToString();
-                FormListarResponsablesPagos formListarResponsablesPagos = new FormListarResponsablesPagos(a);
-                formListarResponsablesPagos.ShowDialog();
-                this.Close();
+                AbrirFormListarResponsables(a);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

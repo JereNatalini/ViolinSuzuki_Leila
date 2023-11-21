@@ -14,12 +14,21 @@ namespace ViolinSuzuki_Leila
     public partial class FormListarResponsablesClases : Form
     {
         private Alumno alumno;
+
+        private FormCargarClase formCargarClase;
+        public FormListarAlumnosClases FormularioAnterior { get; set; }
         public FormListarResponsablesClases(Alumno Alumno)
         {
             alumno = Alumno;
             InitializeComponent();
         }
-
+        private void AbrirFormCargarClase(Progreso p)
+        {
+            formCargarClase = new FormCargarClase(p);
+            formCargarClase.FormularioAnterior = this; // Establecer referencia al formulario anterior
+            formCargarClase.Show();
+            this.Hide();
+        }
         private void FormListarResponsablesClases_Load(object sender, EventArgs e)
         {
             
@@ -28,6 +37,14 @@ namespace ViolinSuzuki_Leila
 
         }
 
+        private void MostrarFormularioAnterior()
+        {
+            if (FormularioAnterior != null)
+            {
+                FormularioAnterior.Show();
+                this.Hide();
+            }
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Responsable responsable = new Responsable();
@@ -41,9 +58,8 @@ namespace ViolinSuzuki_Leila
                 responsable.IdTipoResp = (int)filaSeleccionada.Cells[4].Value;
                 Progreso progreso = new Progreso(alumno, responsable);
 
-                FormCargarClase formCargarClase = new FormCargarClase(progreso);
-                formCargarClase.Show();
-                Close();
+                AbrirFormCargarClase(progreso);
+                
             }
         }
 
@@ -53,6 +69,12 @@ namespace ViolinSuzuki_Leila
             FormCargarClase formCargarClase = new FormCargarClase(progreso);
             formCargarClase.Show();
             Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            MostrarFormularioAnterior();
         }
     }
 }

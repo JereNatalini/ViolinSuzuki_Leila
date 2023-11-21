@@ -13,7 +13,7 @@ namespace ViolinSuzuki_Leila
     public partial class FormCargarPersona : Form
     {
         Helper helper;
-
+        public FormTiposDeCarga FormularioAnterior { get; set; }
         public FormCargarPersona()
         {
             InitializeComponent();
@@ -148,7 +148,14 @@ namespace ViolinSuzuki_Leila
             cboCiudad.ValueMember = dt.Columns[0].ColumnName;
             cboCiudad.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-
+        private void MostrarFormularioAnterior()
+        {
+            if (FormularioAnterior != null)
+            {
+                FormularioAnterior.Show();
+                this.Hide();
+            }
+        }
         private void FormCargarPersona_Load(object sender, EventArgs e)
         {
             limpiarCampos();
@@ -248,6 +255,11 @@ namespace ViolinSuzuki_Leila
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiarCampos();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioAnterior();
         }
     }
 }

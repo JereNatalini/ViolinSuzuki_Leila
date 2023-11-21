@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTiposDeCarga));
             this.btnPersona = new System.Windows.Forms.Button();
             this.btnViolines = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPersona
@@ -61,16 +63,30 @@
             this.btnViolines.UseVisualStyleBackColor = true;
             this.btnViolines.Click += new System.EventHandler(this.btnViolines_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FormTiposDeCarga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(761, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnViolines);
             this.Controls.Add(this.btnPersona);
             this.Name = "FormTiposDeCarga";
             this.Text = "FormTiposDeCarga";
+            this.Load += new System.EventHandler(this.FormTiposDeCarga_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -79,5 +95,6 @@
 
         private System.Windows.Forms.Button btnPersona;
         private System.Windows.Forms.Button btnViolines;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

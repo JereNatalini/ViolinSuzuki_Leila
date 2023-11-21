@@ -14,11 +14,19 @@ namespace ViolinSuzuki_Leila
 {
     public partial class FormConsultarClases : Form
     {
+        public FormTiposDeConsulta FormularioAnterior { get; set; }
         public FormConsultarClases()
         {
             InitializeComponent();
         }
-
+        private void MostrarFormularioAnterior()
+        {
+            if (FormularioAnterior != null)
+            {
+                FormularioAnterior.Show();
+                this.Hide();
+            }
+        }
         private void FormConsultarClases_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dataSetPrincipal.SP_CONSULTAR_PROGRESOS' Puede moverla o quitarla según sea necesario.
@@ -40,6 +48,11 @@ namespace ViolinSuzuki_Leila
                 
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioAnterior();
         }
     }
 }

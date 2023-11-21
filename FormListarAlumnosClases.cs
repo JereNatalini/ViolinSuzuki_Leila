@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace ViolinSuzuki_Leila
 {
+
     public partial class FormListarAlumnosClases : Form
     {
+        private FormListarResponsablesClases formResponsables;
+
         public FormListarAlumnosClases()
         {
             InitializeComponent();
@@ -25,6 +28,13 @@ namespace ViolinSuzuki_Leila
 
 
         }
+        private void AbrirFormListarResponsables(Alumno a)
+        {
+            formResponsables = new FormListarResponsablesClases(a);
+            formResponsables.FormularioAnterior = this; // Establecer referencia al formulario anterior
+            formResponsables.Show();
+            this.Hide();
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -36,9 +46,7 @@ namespace ViolinSuzuki_Leila
                 alumno.IdAlumno = (int)filaSeleccionada.Cells[0].Value;
                 alumno.Nombre = filaSeleccionada.Cells[1].Value.ToString();
                 alumno.Apellido = filaSeleccionada.Cells[2].Value.ToString();
-                FormListarResponsablesClases formListarResponsablesClases = new FormListarResponsablesClases(alumno);
-                formListarResponsablesClases.ShowDialog();
-                this.Close();
+                AbrirFormListarResponsables(alumno);
             }
 
             
@@ -47,6 +55,11 @@ namespace ViolinSuzuki_Leila
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

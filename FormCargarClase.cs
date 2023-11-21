@@ -15,14 +15,21 @@ namespace ViolinSuzuki_Leila
     {
         Progreso progreso;
         Helper helper;
-
+        public FormListarResponsablesClases FormularioAnterior { get; set; }
         public FormCargarClase(Progreso p)
         {
             helper = new Helper();
             progreso = p;
             InitializeComponent();
         }
-
+        private void MostrarFormularioAnterior()
+        {
+            if (FormularioAnterior != null)
+            {
+                FormularioAnterior.Show();
+                this.Hide();
+            }
+        }
         private void FormCargarClase_Load(object sender, EventArgs e)
         {
             if (progreso.pResponsable != null)
@@ -155,6 +162,11 @@ namespace ViolinSuzuki_Leila
             {
                 //Boton eliminar
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MostrarFormularioAnterior();
         }
     }
 }
