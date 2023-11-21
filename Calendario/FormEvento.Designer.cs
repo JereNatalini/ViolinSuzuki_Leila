@@ -48,7 +48,7 @@
             this.txtDesc.Location = new System.Drawing.Point(67, 166);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(200, 20);
-            this.txtDesc.TabIndex = 1;
+            this.txtDesc.TabIndex = 2;
             // 
             // linkLabel1
             // 
@@ -95,10 +95,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(27, 249);
+            this.btnSalir.Location = new System.Drawing.Point(32, 249);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -108,7 +108,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(438, 249);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
-            this.btnGrabar.TabIndex = 9;
+            this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
@@ -128,7 +128,7 @@
             this.txtEvento.Location = new System.Drawing.Point(67, 117);
             this.txtEvento.Name = "txtEvento";
             this.txtEvento.Size = new System.Drawing.Size(200, 20);
-            this.txtEvento.TabIndex = 10;
+            this.txtEvento.TabIndex = 1;
             // 
             // FormEvento
             // 

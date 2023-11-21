@@ -81,7 +81,7 @@ namespace ViolinSuzuki_Leila
 
                 if (res)
                 {
-                    MessageBox.Show("Exito");
+                    MessageBox.Show("Carga Exitosa","EXITO", MessageBoxButtons.OK);
                 }
 
             }
@@ -106,5 +106,9 @@ namespace ViolinSuzuki_Leila
 
         }
 
+        private void fillToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

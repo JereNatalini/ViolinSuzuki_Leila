@@ -215,7 +215,7 @@
             this.rbtAlumno.Margin = new System.Windows.Forms.Padding(2);
             this.rbtAlumno.Name = "rbtAlumno";
             this.rbtAlumno.Size = new System.Drawing.Size(60, 17);
-            this.rbtAlumno.TabIndex = 1;
+            this.rbtAlumno.TabIndex = 10;
             this.rbtAlumno.TabStop = true;
             this.rbtAlumno.Text = "Alumno";
             this.rbtAlumno.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             this.rbtResponsable.Margin = new System.Windows.Forms.Padding(2);
             this.rbtResponsable.Name = "rbtResponsable";
             this.rbtResponsable.Size = new System.Drawing.Size(87, 17);
-            this.rbtResponsable.TabIndex = 2;
+            this.rbtResponsable.TabIndex = 11;
             this.rbtResponsable.TabStop = true;
             this.rbtResponsable.Text = "Responsable";
             this.rbtResponsable.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(153, 20);
-            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
@@ -249,7 +249,7 @@
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(153, 20);
-            this.txtApellido.TabIndex = 4;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtCalle
             // 
@@ -257,7 +257,7 @@
             this.txtCalle.Margin = new System.Windows.Forms.Padding(2);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(122, 20);
-            this.txtCalle.TabIndex = 5;
+            this.txtCalle.TabIndex = 8;
             // 
             // txtAltura
             // 
@@ -265,7 +265,7 @@
             this.txtAltura.Margin = new System.Windows.Forms.Padding(2);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(122, 20);
-            this.txtAltura.TabIndex = 6;
+            this.txtAltura.TabIndex = 9;
             // 
             // txtColegio
             // 
@@ -273,7 +273,7 @@
             this.txtColegio.Margin = new System.Windows.Forms.Padding(2);
             this.txtColegio.Name = "txtColegio";
             this.txtColegio.Size = new System.Drawing.Size(153, 20);
-            this.txtColegio.TabIndex = 7;
+            this.txtColegio.TabIndex = 12;
             // 
             // txtDni
             // 
@@ -281,7 +281,7 @@
             this.txtDni.Margin = new System.Windows.Forms.Padding(2);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(153, 20);
-            this.txtDni.TabIndex = 8;
+            this.txtDni.TabIndex = 3;
             // 
             // txtTelefono
             // 
@@ -289,7 +289,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(153, 20);
-            this.txtTelefono.TabIndex = 9;
+            this.txtTelefono.TabIndex = 5;
             // 
             // txtEmail
             // 
@@ -297,7 +297,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(153, 20);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 4;
             // 
             // txtObservaciones
             // 
@@ -305,7 +305,7 @@
             this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2);
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(433, 20);
-            this.txtObservaciones.TabIndex = 11;
+            this.txtObservaciones.TabIndex = 15;
             // 
             // dtpFechaNac
             // 
@@ -314,11 +314,12 @@
             this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(153, 20);
-            this.dtpFechaNac.TabIndex = 12;
+            this.dtpFechaNac.TabIndex = 14;
             // 
             // cboProvincia
             // 
             this.cboProvincia.FormattingEnabled = true;
+            this.cboProvincia.ItemHeight = 13;
             this.cboProvincia.Location = new System.Drawing.Point(407, 31);
             this.cboProvincia.Margin = new System.Windows.Forms.Padding(2);
             this.cboProvincia.Name = "cboProvincia";
@@ -329,6 +330,7 @@
             // cboCiudad
             // 
             this.cboCiudad.FormattingEnabled = true;
+            this.cboCiudad.ItemHeight = 13;
             this.cboCiudad.Location = new System.Drawing.Point(407, 75);
             this.cboCiudad.Margin = new System.Windows.Forms.Padding(2);
             this.cboCiudad.Name = "cboCiudad";
@@ -353,6 +355,7 @@
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGrabar
             // 

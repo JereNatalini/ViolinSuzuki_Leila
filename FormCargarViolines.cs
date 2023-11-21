@@ -64,7 +64,7 @@ namespace ViolinSuzuki_Leila
                 bool res = helper.Insertar("SP_CARGAR_VIOLIN", lst);
                 if (res)
                 {
-                    MessageBox.Show("Bien ahi");
+                    MessageBox.Show("Carga Exitosa","Atencion",MessageBoxButtons.OK);
                 }
             }
 

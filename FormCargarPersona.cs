@@ -244,5 +244,10 @@ namespace ViolinSuzuki_Leila
         {
             Close();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
     }
 }

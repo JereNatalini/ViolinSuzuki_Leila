@@ -151,6 +151,10 @@ namespace ViolinSuzuki_Leila
         private void dgvDetalles_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            if (dgvDetalles.Rows.Count == 4)
+            {
+                //Boton eliminar
+            }
         }
     }
 }

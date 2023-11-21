@@ -579,3 +579,6 @@ C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\DaCapoApp\ViolinSuzuki_Leil
 C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\DaCapoApp\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarPago.resources
 C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\DaCapoApp\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarAlumnosPagos.resources
 C:\Users\juans\OneDrive\Escritorio\ViolinSuzukiLeila\DaCapoApp\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarResponsablesPagos.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormCargarPago.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarAlumnosPagos.resources
+C:\Users\Natalini\Desktop\Repos\ViolinSuzuki_Leila\obj\Debug\ViolinSuzuki_Leila.FormListarResponsablesPagos.resources

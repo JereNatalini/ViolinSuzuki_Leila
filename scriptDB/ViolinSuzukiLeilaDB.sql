@@ -530,10 +530,12 @@ CREATE PROCEDURE [dbo].[SP_INSERTAR_DETALLE]
 	@observaciones varchar(150)
 AS
 BEGIN
-	INSERT INTO Detalles_Progreso(id_progreso, id_detalle_progreso,id_cancion, observaciones)
+	INSERT INTO Detalles_Progreso(id_progreso, id_detalle_progreso,id_cancion, detalles)
     VALUES (@progresoNro, @detalle, @idCancion, @observaciones);
 END
 GO
+
+SELECT * FROM Detalles_Progreso
 --SP CARGAR COMBO LIBRO
 CREATE PROCEDURE SP_CARGAR_COMBO_LIBROS
 AS
