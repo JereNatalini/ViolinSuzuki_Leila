@@ -42,6 +42,7 @@
             this.cargarPersonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarViolinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCalendario = new System.Windows.Forms.ToolStripLabel();
+            this.btnPagos = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -159,10 +160,11 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
-            this.btnCalendario});
+            this.btnCalendario,
+            this.btnPagos});
             this.toolStrip1.Location = new System.Drawing.Point(4, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(162, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(205, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // toolStripDropDownButton1
@@ -181,14 +183,14 @@
             // cargarPersonaToolStripMenuItem
             // 
             this.cargarPersonaToolStripMenuItem.Name = "cargarPersonaToolStripMenuItem";
-            this.cargarPersonaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargarPersonaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.cargarPersonaToolStripMenuItem.Text = "Cargar Persona";
             this.cargarPersonaToolStripMenuItem.Click += new System.EventHandler(this.cargarPersonaToolStripMenuItem_Click);
             // 
             // cargarViolinToolStripMenuItem
             // 
             this.cargarViolinToolStripMenuItem.Name = "cargarViolinToolStripMenuItem";
-            this.cargarViolinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargarViolinToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.cargarViolinToolStripMenuItem.Text = "Cargar Violin";
             this.cargarViolinToolStripMenuItem.Click += new System.EventHandler(this.cargarViolinToolStripMenuItem_Click);
             // 
@@ -201,6 +203,16 @@
             this.btnCalendario.Size = new System.Drawing.Size(64, 22);
             this.btnCalendario.Text = "Calendario";
             this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
+            this.btnPagos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(43, 22);
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
             // 
             // MainForm
             // 
@@ -240,6 +252,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.ToolStripLabel btnCalendario;
+        private System.Windows.Forms.ToolStripButton btnPagos;
     }
 }
 

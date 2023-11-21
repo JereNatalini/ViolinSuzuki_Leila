@@ -10,7 +10,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_REPORTE_PROGRESOTableAdapter" GeneratorDataComponentClassName="SP_REPORTE_PROGRESOTableAdapter" Name="SP_REPORTE_PROGRESO" UserDataComponentName="SP_REPORTE_PROGRESOTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="VIOLIN_SUZUKI_LEILAConnectionString4 (Settings)" DbObjectName="VIOLIN_SUZUKI_LEILA.dbo.SP_REPORTE_PROGRESO" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="VIOLIN_SUZUKI_LEILAConnectionString2 (Settings)" DbObjectName="VIOLIN_SUZUKI_LEILA.dbo.SP_REPORTE_PROGRESO" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.SP_REPORTE_PROGRESO</CommandText>
@@ -59,7 +59,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ACTIVIDAD" msprop:Generator_ColumnPropNameInRow="ACTIVIDAD" msprop:Generator_ColumnPropNameInTable="ACTIVIDADColumn" msprop:Generator_ColumnVarNameInTable="columnACTIVIDAD" msprop:Generator_UserColumnName="ACTIVIDAD" type="xs:int" />
-              <xs:element name="CANCION" msprop:Generator_ColumnPropNameInRow="CANCION" msprop:Generator_ColumnPropNameInTable="CANCIONColumn" msprop:Generator_ColumnVarNameInTable="columnCANCION" msprop:Generator_UserColumnName="CANCION" type="xs:int" minOccurs="0" />
+              <xs:element name="CANCION" msprop:Generator_ColumnPropNameInRow="CANCION" msprop:Generator_ColumnPropNameInTable="CANCIONColumn" msprop:Generator_ColumnVarNameInTable="columnCANCION" msprop:Generator_UserColumnName="CANCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="OBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_UserColumnName="OBSERVACIONES" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

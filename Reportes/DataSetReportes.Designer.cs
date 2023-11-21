@@ -409,7 +409,7 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_REPORTE_PROGRESORow AddSP_REPORTE_PROGRESORow(int ID, string ALUMNO, string RESPONSABLE, int ACTIVIDAD, int CANCION, string OBSERVACIONES) {
+            public SP_REPORTE_PROGRESORow AddSP_REPORTE_PROGRESORow(int ID, string ALUMNO, string RESPONSABLE, int ACTIVIDAD, string CANCION, string OBSERVACIONES) {
                 SP_REPORTE_PROGRESORow rowSP_REPORTE_PROGRESORow = ((SP_REPORTE_PROGRESORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -459,7 +459,7 @@ namespace ViolinSuzuki_Leila.Reportes {
                 base.Columns.Add(this.columnRESPONSABLE);
                 this.columnACTIVIDAD = new global::System.Data.DataColumn("ACTIVIDAD", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnACTIVIDAD);
-                this.columnCANCION = new global::System.Data.DataColumn("CANCION", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnCANCION = new global::System.Data.DataColumn("CANCION", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCANCION);
                 this.columnOBSERVACIONES = new global::System.Data.DataColumn("OBSERVACIONES", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOBSERVACIONES);
@@ -469,6 +469,7 @@ namespace ViolinSuzuki_Leila.Reportes {
                 this.columnRESPONSABLE.ReadOnly = true;
                 this.columnRESPONSABLE.MaxLength = 81;
                 this.columnACTIVIDAD.AllowDBNull = false;
+                this.columnCANCION.MaxLength = 60;
                 this.columnOBSERVACIONES.MaxLength = 230;
             }
             
@@ -667,10 +668,10 @@ namespace ViolinSuzuki_Leila.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int CANCION {
+            public string CANCION {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_REPORTE_PROGRESO.CANCIONColumn]));
+                        return ((string)(this[this.tableSP_REPORTE_PROGRESO.CANCIONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CANCION\' de la tabla \'SP_REPORTE_PROGRESO\' es DBNull.", e);
@@ -919,7 +920,7 @@ namespace ViolinSuzuki_Leila.Reportes.DataSetReportesTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString4;
+            this._connection.ConnectionString = global::ViolinSuzuki_Leila.Properties.Settings.Default.VIOLIN_SUZUKI_LEILAConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

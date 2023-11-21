@@ -64,5 +64,11 @@ namespace ViolinSuzuki_Leila
             Calendar calendar = new Calendar();
             calendar.Show();
         }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            FormListarAlumnosPagos formListarAlumnosPagos = new FormListarAlumnosPagos();
+            formListarAlumnosPagos.ShowDialog();
+        }
     }
 }

@@ -606,18 +606,36 @@ BEGIN
 END
 GO
 -- SP MOSTRAR REPORTE CLASES
-create PROCEDURE SP_REPORTE_PROGRESO
+alter PROCEDURE SP_REPORTE_PROGRESO
 @idProgreso int
 AS
 BEGIN
-	SELECT D.id_detalle_progreso as ID,A.nombre+' '+ A.apellido AS ALUMNO,R.nombre+' '+ R.apellido AS RESPONSABLE, D.id_detalle_progreso AS ACTIVIDAD, D.id_cancion AS CANCION, D.observaciones AS OBSERVACIONES
-	FROM Progresos P, Detalles_Progreso D, Alumnos A, Responsables R
+	SELECT D.id_detalle_progreso as ID,A.nombre+' '+ A.apellido AS ALUMNO,R.nombre+' '+ R.apellido AS RESPONSABLE, D.id_detalle_progreso AS ACTIVIDAD, C.cancion AS CANCION, D.observaciones AS OBSERVACIONES
+	FROM Progresos P, Detalles_Progreso D, Alumnos A, Responsables R, Canciones C
 	WHERE P.id_progreso = D.id_progreso
 	AND P.id_alumno = A.id_alumno
 	AND P.id_responsable = R.id_responsable
+	AND C.id_cancion = D.id_cancion
 	AND P.id_progreso = @idProgreso
 	ORDER BY id_detalle_progreso
 END
 
--------SP_REPORTE_CLASE ELIMINAR
-DROP PROCEDURE SP_REPORTE_CLASES
+--SP CARGAR COMBO FORMA PAGO
+CREATE PROCEDURE SP_CARGAR_COMBO_FORMA_PAGO
+AS
+BEGIN
+	SELECT * FROM Formas_Pago
+END
+--SP INSERTAR PAGO
+CREATE PROCEDURE SP_INSERTAR_PAGO
+@monto int,
+@fecha_pago datetime,
+@idAlumno int,
+@idResponsable int,
+@idFormaPago int,
+@concepto varchar(120)
+AS
+BEGIN
+	INSERT INTO Pagos(monto, fecha_pago, id_alumno, id_responsable, id_forma_pago, concepto)
+	VALUES(@monto, @fecha_pago, @idAlumno, COALESCE(@idResponsable, null), @idFormaPago,@concepto)
+END
